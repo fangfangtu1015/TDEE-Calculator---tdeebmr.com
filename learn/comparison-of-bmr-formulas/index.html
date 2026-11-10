@@ -41,7 +41,7 @@
   "headline": "Comparison of Basal Metabolic Rate Formulas",
   "description": "A detailed comparison of the five most commonly used BMR prediction equations, with accuracy data, historical context, and worked examples.",
   "datePublished": "2026-11-04",
-  "dateModified": "2026-11-04",
+  "dateModified": "2026-11-10",
   "author": { "@type": "Organization", "name": "TDEEBMR" },
   "publisher": { "@type": "Organization", "name": "TDEEBMR", "url": "https://tdeebmr.com/" }
 }
@@ -81,7 +81,7 @@
       "name": "How much do different formulas vary for the same person?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For an average person, the variation between formulas is typically 50-200 kcal/day. For muscular or obese individuals, the variation can be 200-400+ kcal/day. For example, a 200 lb male athlete at 10% body fat might get: Owen = 1,804 kcal, Mifflin-St Jeor = 1,966 kcal, Katch-McArdle = 2,133 kcal. The 329 kcal spread between the lowest and highest estimate illustrates why empirical validation (tracking food and weight for 2-3 weeks) is essential regardless of which formula you choose."
+        "text": "For an average person, the variation between formulas is typically 50-200 kcal/day. For muscular or obese individuals, the variation can be 200-400+ kcal/day. For example, a 200 lb male athlete at 10% body fat might get: Owen = 1,804 kcal, Mifflin-St Jeor = 1,897 kcal, Katch-McArdle = 2,133 kcal. The 329 kcal spread between the lowest and highest estimate illustrates why empirical validation (tracking food and weight for 2-3 weeks) is essential regardless of which formula you choose."
       }
     }
   ]
@@ -131,7 +131,7 @@
   <h1>Comparison of Basal Metabolic Rate Formulas</h1>
 
   <div class="article-meta">
-    <span>November 4, 2026</span>
+    <span>November 10, 2026</span>
     <span>&bull;</span>
     <span>14 min read</span>
     <span class="tag">Science</span>
@@ -206,7 +206,7 @@
   <ul>
     <li>BMR = 370 + (21.6 &times; lean body mass in kg)</li>
   </ul>
-  <p>Where lean body mass = total body weight &times; (1 - body fat percentage)</p>
+  <p>Where lean body mass = total body weight &times; (1 - body fat percentage / 100)</p>
 
   <p><strong>Accuracy:</strong> Katch-McArdle is more accurate than weight-based equations for individuals with atypical body composition: very muscular athletes, bodybuilders, and those with obesity. For people with average body composition, it performs similarly to Mifflin-St Jeor. A study by <strong>Knuth et al. (2007)</strong> found that Katch-McArdle was the most accurate equation for individuals with body fat percentages above 25% or below 10%.</p>
 
@@ -302,34 +302,34 @@
       <tbody>
         <tr>
           <td>Mifflin-St Jeor</td>
-          <td><strong>1,787</strong></td>
+          <td><strong>1,759</strong></td>
           <td>&mdash;</td>
         </tr>
         <tr>
           <td>Harris-Benedict (Revised)</td>
-          <td>1,823</td>
-          <td>+36 (+2%)</td>
+          <td>1,837</td>
+          <td>+78 (+4.5%)</td>
         </tr>
         <tr>
           <td>Katch-McArdle (18% BF, LBM = 66.9 kg)</td>
           <td>1,815</td>
-          <td>+28 (+1.5%)</td>
+          <td>+56 (+3.2%)</td>
         </tr>
         <tr>
           <td>Owen</td>
           <td>1,711</td>
-          <td>-76 (-4%)</td>
+          <td>-47 (-2.7%)</td>
         </tr>
         <tr>
           <td>WHO/FAO (Schofield, age 30-60)</td>
-          <td>1,828</td>
-          <td>+41 (+2.3%)</td>
+          <td>1,826</td>
+          <td>+67 (+3.8%)</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <p>For this average male, the spread is approximately 117 kcal/day (from 1,711 to 1,828). This is a relatively small difference, and any of these formulas would give a reasonable estimate.</p>
+  <p>For this average male, the spread is approximately 126 kcal/day (from 1,711 to 1,837). This is a relatively small difference, and any of these formulas would give a reasonable estimate.</p>
 
   <h3>Subject B: Muscular Male Athlete</h3>
 
@@ -347,28 +347,28 @@
       <tbody>
         <tr>
           <td>Mifflin-St Jeor</td>
-          <td><strong>1,966</strong></td>
+          <td><strong>1,897</strong></td>
           <td>&mdash;</td>
         </tr>
         <tr>
           <td>Harris-Benedict (Revised)</td>
-          <td>2,025</td>
-          <td>+59 (+3%)</td>
+          <td>2,008</td>
+          <td>+111 (+5.9%)</td>
         </tr>
         <tr>
           <td>Katch-McArdle (10% BF, LBM = 81.6 kg)</td>
           <td><strong>2,133</strong></td>
-          <td><strong>+167 (+8.5%)</strong></td>
+          <td><strong>+236 (+12.5%)</strong></td>
         </tr>
         <tr>
           <td>Owen</td>
           <td>1,804</td>
-          <td>-162 (-8.2%)</td>
+          <td>-93 (-4.9%)</td>
         </tr>
         <tr>
           <td>WHO/FAO (Schofield, age 18-30)</td>
-          <td>2,066</td>
-          <td>+100 (+5.1%)</td>
+          <td>2,067</td>
+          <td>+170 (+8.9%)</td>
         </tr>
       </tbody>
     </table>
@@ -392,34 +392,34 @@
       <tbody>
         <tr>
           <td>Mifflin-St Jeor</td>
-          <td><strong>1,617</strong></td>
+          <td><strong>1,495</strong></td>
           <td>&mdash;</td>
         </tr>
         <tr>
           <td>Harris-Benedict (Revised)</td>
-          <td>1,706</td>
-          <td>+89 (+5.5%)</td>
+          <td>1,555</td>
+          <td>+60 (+4.0%)</td>
         </tr>
         <tr>
           <td>Katch-McArdle (35% BF, LBM = 56.0 kg)</td>
           <td>1,580</td>
-          <td>-37 (-2.3%)</td>
+          <td>+85 (+5.7%)</td>
         </tr>
         <tr>
           <td>Owen</td>
           <td>1,414</td>
-          <td>-203 (-12.6%)</td>
+          <td>-81 (-5.4%)</td>
         </tr>
         <tr>
           <td>WHO/FAO (Schofield, age 30-60)</td>
-          <td>1,578</td>
-          <td>-39 (-2.4%)</td>
+          <td>1,579</td>
+          <td>+84 (+5.6%)</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <p>For this overweight female, the spread is <strong>292 kcal/day</strong>. Harris-Benedict gives the highest estimate (overestimating because it was derived from a leaner population), while Owen gives the lowest. Katch-McArdle and WHO/FAO are in close agreement and are likely the most accurate for this individual because they account for her high body fat percentage (Katch-McArdle) or were derived from a more diverse population (WHO/FAO).</p>
+  <p>For this overweight female, the spread is <strong>166 kcal/day</strong> (from 1,414 to 1,580). Katch-McArdle and WHO/FAO sit within a single kcal of each other (1,580 vs. 1,579) and are the two highest estimates, while Owen is the lowest because it uses total body weight alone. That close agreement is the useful signal: one equation accounts for her actual lean body mass and the other was derived from a far more diverse population, so both are likely more accurate for this body type than a weight-and-height equation.</p>
 
   <h2>Summary: Which Formula Should You Use?</h2>
 
@@ -505,7 +505,7 @@
     <div class="faq-item">
       <button class="faq-question">How much do different formulas vary for the same person?</button>
       <div class="faq-answer">
-        <p>For an average person, the variation between formulas is typically 50-200 kcal/day. For muscular or obese individuals, the variation can be 200-400+ kcal/day. For example, a 200 lb male athlete at 10% body fat might get: Owen = 1,804 kcal, Mifflin-St Jeor = 1,966 kcal, Katch-McArdle = 2,133 kcal. The 329 kcal spread between the lowest and highest estimate illustrates why empirical validation (tracking food and weight for 2-3 weeks) is essential regardless of which formula you choose.</p>
+        <p>For an average person, the variation between formulas is typically 50-200 kcal/day. For muscular or obese individuals, the variation can be 200-400+ kcal/day. For example, a 200 lb male athlete at 10% body fat might get: Owen = 1,804 kcal, Mifflin-St Jeor = 1,897 kcal, Katch-McArdle = 2,133 kcal. The 329 kcal spread between the lowest and highest estimate illustrates why empirical validation (tracking food and weight for 2-3 weeks) is essential regardless of which formula you choose.</p>
       </div>
     </div>
   </div>
