@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<title>Calorie Deficit Calculator - Safe Weight Loss Timeline Planner</title>
+<meta name="description" content="Calculate the daily calorie deficit needed to reach your target weight on your timeline. Includes safety checks, weekly loss rate, and metabolic adaptation warnings.">
+  <meta property="og:title" content="Calorie Deficit Calculator - Safe Weight Loss Timeline Planner">
+  <meta property="og:description" content="Calculate the daily calorie deficit needed to reach your target weight on your timeline. Includes safety checks, weekly loss rate, and metabolic adaptation warnings.">
+  <meta property="og:image" content="https://tdeebmr.com/images/calorie-deficit-calculator-og.png">
+  <meta property="og:url" content="https://tdeebmr.com/calorie-deficit-calculator/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calorie Deficit Calculator - Safe Weight Loss Timeline Planner">
+  <meta name="twitter:description" content="Calculate the daily calorie deficit needed to reach your target weight on your timeline. Includes safety checks, weekly loss rate, and metabolic adaptation warnings.">
+  <meta name="twitter:image" content="https://tdeebmr.com/images/calorie-deficit-calculator-og.png">
+<link rel="canonical" href="https://tdeebmr.com/calorie-deficit-calculator/">
+<link rel="stylesheet" href="/css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tdeebmr.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://tdeebmr.com/calculators/" },
+    { "@type": "ListItem", "position": 3, "name": "Calorie Deficit Calculator", "item": "https://tdeebmr.com/calorie-deficit-calculator/" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calorie Deficit Calculator",
+  "url": "https://tdeebmr.com/calorie-deficit-calculator/",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "Calculate daily calorie deficit needed to reach target weight on your timeline, with safety checks and metabolic adaptation warnings."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a safe calorie deficit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A safe calorie deficit is generally 300-500 calories per day below your TDEE, producing approximately 0.3-0.5 kg (0.7-1 lb) of weight loss per week. The American College of Sports Medicine (ACSM) recommends not exceeding a 1,000 calorie daily deficit. Deficits larger than this increase the risk of muscle loss, nutrient deficiencies, gallstones, and metabolic adaptation. Women should generally not eat below 1,200 calories/day and men below 1,500 calories/day without medical supervision."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How fast can I safely lose weight?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Research consistently shows that safe, sustainable weight loss is 0.5-1.0% of body weight per week (approximately 0.5-1 kg or 1-2 lbs for most adults). Faster rates of loss increase muscle catabolism, gallstone risk, and metabolic adaptation. Studies by Garthe et al. (2011) found that athletes losing 0.7% of body weight per week gained muscle, while those losing 1.4% per week did not. A practical guideline: aim for no more than 0.5-0.7 kg (1-1.5 lbs) per week for optimal body composition results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is metabolic adaptation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Metabolic adaptation (adaptive thermogenesis) is the reduction in energy expenditure that occurs during prolonged caloric restriction, beyond what would be predicted by weight loss alone. Research by Leibel et al. (1995) and the Minnesota Starvation Experiment demonstrated that prolonged deficits can reduce BMR by 10-15% below predicted values. This is caused by decreased thyroid hormones (T3), lower sympathetic nervous system activity, reduced leptin, and improved muscular efficiency. It makes continued weight loss harder and weight regain more likely."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many calories is 1 kg of body fat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One kilogram of body fat stores approximately 7,700 kilocalories (kcal). This is because adipose tissue is approximately 87% lipid (fat), and pure fat contains 9,000 kcal per kg. The commonly cited figure of 3,500 calories per pound (7,700 per kg) was established by Wishnofsky in 1958 and remains the standard for deficit calculations, though actual energy deficit required may vary slightly due to metabolic adaptation and changes in water and glycogen stores."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I take diet breaks during a cut?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Diet breaks (planned returns to maintenance calories for 1-2 weeks) can be beneficial during extended cutting phases. Research by Matzko et al. (the MATADOR study, 2018) found that intermittent dieters (2 weeks on, 2 weeks off at maintenance) lost more fat and preserved more metabolic rate than continuous dieters. Diet breaks help by: reducing psychological fatigue, restoring leptin levels, decreasing cortisol, and providing a metabolic respite. Consider a diet break every 8-12 weeks of continuous dieting, or whenever motivation and energy levels decline significantly."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Calorie Deficit Calculator - Safe Weight Loss Timeline Planner",
+  "datePublished": "2026-11-03",
+  "dateModified": "2026-11-07",
+  "specialty": "Nutrition",
+  "audience": {
+    "@type": "MedicalAudience",
+    "audienceType": "Patients"
+  },
+  "url": "https://tdeebmr.com/calorie-deficit-calculator/",
+  "description": "Calculate the daily calorie deficit needed to reach your target weight on your timeline. Includes safety checks, weekly loss rate, and metabolic adaptation warnings."
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">TDEE<span>BMR</span></a>
+    <button class="mobile-menu-btn" aria-label="Toggle menu">&#9776;</button>
+    <nav>
+      <a href="/calculators/">Calculators</a>
+      <a href="/learn/">Learn</a>
+      <a href="/methodology/">Methodology</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a> <span>/</span> <a href="/calculators/">Calculators</a> <span>/</span> Calorie Deficit Calculator
+    </div>
+    <h1>Calorie Deficit Calculator</h1>
+    <p>Enter your current weight, target weight, and timeline to get a personalized daily deficit plan with safety checks and metabolic adaptation warnings.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="page-layout">
+      <div>
+        <div class="calc-card">
+          <div class="unit-toggle">
+            <button class="active" data-unit="metric">Metric (kg)</button>
+            <button data-unit="imperial">Imperial (lbs)</button>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group" id="cd-current-group">
+              <label for="cd-current">Current Weight (kg)</label>
+              <input type="number" id="cd-current" placeholder="80" min="40" max="300" step="0.1">
+            </div>
+            <div class="form-group" id="cd-current-lbs-group" style="display:none">
+              <label for="cd-current-lbs">Current Weight (lbs)</label>
+              <input type="number" id="cd-current-lbs" placeholder="176" min="88" max="700" step="0.1">
+            </div>
+            <div class="form-group" id="cd-target-group">
+              <label for="cd-target">Target Weight (kg)</label>
+              <input type="number" id="cd-target" placeholder="70" min="40" max="300" step="0.1">
+            </div>
+            <div class="form-group" id="cd-target-lbs-group" style="display:none">
+              <label for="cd-target-lbs">Target Weight (lbs)</label>
+              <input type="number" id="cd-target-lbs" placeholder="154" min="88" max="700" step="0.1">
+            </div>
+            <div class="form-group">
+              <label for="cd-weeks">Timeline (weeks)</label>
+              <input type="number" id="cd-weeks" placeholder="12" min="1" max="104">
+            </div>
+            <div class="form-group">
+              <label for="cd-activity">Activity Level</label>
+              <select id="cd-activity">
+                <option value="sedentary">Sedentary - Little or no exercise</option>
+                <option value="light">Lightly Active - Exercise 1-3 days/week</option>
+                <option value="moderate" selected>Moderately Active - Exercise 3-5 days/week</option>
+                <option value="active">Very Active - Hard exercise 6-7 days/week</option>
+                <option value="extraActive">Extra Active - Very hard exercise, physical job</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="btn" id="cd-calc-btn">Calculate Deficit Plan</button>
+
+          <div class="results" id="cd-results">
+            <div class="result-main">
+              <div class="value" id="cd-daily-deficit">--</div>
+              <div class="label">Daily Calorie Deficit Needed (kcal)</div>
+            </div>
+            <div class="result-grid">
+              <div class="result-item">
+                <div class="value" id="cd-weekly-loss">--</div>
+                <div class="label">Weekly Loss Rate</div>
+              </div>
+              <div class="result-item">
+                <div class="value" id="cd-date">--</div>
+                <div class="label">Projected Completion</div>
+              </div>
+              <div class="result-item highlight">
+                <div class="value" id="cd-safety">--</div>
+                <div class="label">Safety Check</div>
+              </div>
+              <div class="result-item">
+                <div class="value" id="cd-total-loss">--</div>
+                <div class="label">Total Weight to Lose</div>
+              </div>
+            </div>
+            <div id="cd-warning" class="disclaimer" style="display:none;margin-top:16px">
+              <strong>Caution: Aggressive Deficit Detected</strong>
+              <p id="cd-warning-text"></p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:48px;max-width:800px">
+          <h2 id="understanding-deficits">Understanding Calorie Deficits</h2>
+          <p>A calorie deficit occurs when you consume fewer calories than your body expends. This energy gap forces your body to use stored energy (primarily body fat) to make up the difference, resulting in weight loss. The calorie deficit is the fundamental mechanism behind all successful weight loss, regardless of the specific diet approach used.</p>
+          <p>However, not all deficits are created equal. The size of your deficit determines how fast you lose weight, but it also affects muscle preservation, metabolic health, hormonal function, and long-term sustainability. Finding the right deficit size is one of the most important decisions in any weight loss plan.</p>
+
+          <h3>The Math Behind Weight Loss</h3>
+          <p>The relationship between calorie deficit and weight loss is based on the energy density of body fat:</p>
+          <div class="info-box">
+            <h4>Energy Equivalents</h4>
+            <p>1 kg of body fat = approximately 7,700 kcal<br>
+            1 lb of body fat = approximately 3,500 kcal</p>
+          </div>
+          <p>These values were established by Wishnofsky in 1958 and remain the standard for deficit calculations. However, it is important to note that actual weight loss is not perfectly linear. As you lose weight, your TDEE decreases (because you have less mass to maintain), and metabolic adaptation may further reduce energy expenditure. This is why weight loss often slows over time even when adherence is perfect.</p>
+
+          <h2 id="safe-guidelines">Safe Deficit Guidelines</h2>
+          <p>Research consistently shows that moderate deficits produce better long-term results than aggressive ones, primarily because they preserve muscle mass, maintain metabolic rate, and are more sustainable psychologically.</p>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr><th>Deficit Size</th><th>Daily Deficit</th><th>Weekly Loss</th><th>Risk Level</th><th>Best For</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Conservative</strong></td><td>200-300 kcal</td><td>0.2-0.3 kg (0.4-0.6 lbs)</td><td>Low</td><td>Long-term lifestyle change; beginners</td></tr>
+                <tr class="winner"><td><strong>Moderate</strong></td><td>300-500 kcal</td><td>0.3-0.5 kg (0.7-1.0 lbs)</td><td>Low-Moderate</td><td>Most people; optimal balance of speed and sustainability</td></tr>
+                <tr><td><strong>Aggressive</strong></td><td>500-750 kcal</td><td>0.5-0.7 kg (1.0-1.5 lbs)</td><td>Moderate</td><td>Short-term cuts; experienced dieters with higher body fat</td></tr>
+                <tr><td><strong>Very Aggressive</strong></td><td>750-1000+ kcal</td><td>0.7-1.0+ kg (1.5-2+ lbs)</td><td>High</td><td>Medical supervision only; extreme obesity; time-limited periods</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>The American College of Sports Medicine (ACSM) recommends a maximum deficit of 500-1,000 calories per day, targeting 0.5-1.0 kg (1-2 lbs) of weight loss per week. For most people, the moderate range (300-500 calorie deficit) provides the best balance of results and sustainability.</p>
+
+          <h2 id="metabolic-adaptation">Metabolic Adaptation: The Hidden Challenge</h2>
+          <p>One of the most important concepts in deficit planning is metabolic adaptation (adaptive thermogenesis). When you restrict calories for an extended period, your body adapts by becoming more efficient, burning fewer calories than predicted by weight loss alone.</p>
+          <p>Research by Leibel et al. (1995) at Columbia University demonstrated that prolonged caloric restriction can reduce BMR by 10-15% below what would be predicted by body composition changes. This means that after several weeks of dieting, your actual TDEE may be 150-300 calories lower than your calculator predicts.</p>
+
+          <h3>Causes of Metabolic Adaptation</h3>
+          <ul style="margin-bottom:16px;padding-left:24px;color:var(--text)">
+            <li><strong>Reduced thyroid hormone production:</strong> T3 (the active thyroid hormone) decreases by 15-30% during caloric restriction, slowing metabolic rate.</li>
+            <li><strong>Decreased sympathetic nervous system activity:</strong> Norepinephrine release decreases, reducing the thermogenic effect of the sympathetic nervous system.</li>
+            <li><strong>Lower leptin levels:</strong> Leptin, produced by fat cells, decreases proportionally to fat loss. Low leptin signals energy scarcity to the brain, triggering metabolic conservation.</li>
+            <li><strong>Improved muscle efficiency:</strong> Your muscles become better at performing the same work with less energy, reducing the caloric cost of movement.</li>
+            <li><strong>Reduced NEAT:</strong> Non-exercise activity thermogenesis (fidgeting, posture maintenance, spontaneous movement) decreases unconsciously during caloric restriction.</li>
+          </ul>
+
+          <h3>Strategies to Minimize Adaptation</h3>
+          <p>While metabolic adaptation cannot be completely prevented, several evidence-based strategies can minimize its impact:</p>
+          <ul style="margin-bottom:16px;padding-left:24px;color:var(--text)">
+            <li><strong>Use moderate deficits:</strong> Smaller deficits (300-500 kcal) trigger less adaptation than aggressive ones.</li>
+            <li><strong>Take diet breaks:</strong> The MATADOR study (Matzko et al., 2018) found that alternating 2 weeks of dieting with 2 weeks at maintenance reduced metabolic adaptation and improved fat loss compared to continuous dieting.</li>
+            <li><strong>Maintain high protein:</strong> Protein intake of 1.8-2.7 g/kg preserves muscle mass during a deficit, which helps maintain BMR.</li>
+            <li><strong>Continue resistance training:</strong> Strength training signals the body to preserve muscle even in a deficit.</li>
+            <li><strong>Refeed days:</strong> Periodic higher-calorie days (at maintenance or slightly above) can temporarily restore leptin levels and reduce the psychological burden of dieting.</li>
+            <li><strong>Reverse diet after completion:</strong> Gradually increase calories (by 50-100 per week) after reaching your goal to allow metabolism to recover rather than immediately storing the excess as fat.</li>
+          </ul>
+
+          <h2 id="how-to-use">How to Use This Calculator</h2>
+          <p>This calculator works backward from your goal: you enter your current weight, target weight, and desired timeline, and it calculates the daily deficit required to achieve that goal. It then checks whether the required deficit is safe and sustainable.</p>
+          <p>If the calculator flags your plan as unsafe, consider these alternatives:</p>
+          <ul style="margin-bottom:16px;padding-left:24px;color:var(--text)">
+            <li>Extend your timeline to reduce the daily deficit needed</li>
+            <li>Increase your activity level to create a larger deficit through exercise rather than food restriction</li>
+            <li>Set a more modest initial target and reassess after reaching it</li>
+            <li>Use a phased approach: diet for 8-12 weeks, take a maintenance break for 2-4 weeks, then resume</li>
+          </ul>
+
+          <div class="key-takeaway">
+            <h4>Key Takeaway</h4>
+            <p>The best deficit is one you can sustain consistently for weeks and months. A moderate deficit (300-500 kcal) with high protein and resistance training will produce better long-term body composition results than an aggressive deficit that leads to muscle loss, metabolic slowdown, and rebound overeating. Plan for the long game.</p>
+          </div>
+        </div>
+
+        <h2 id="faq" style="margin-top:48px">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">What is a safe calorie deficit?</button>
+            <div class="faq-answer"><p>A safe calorie deficit is generally 300-500 calories per day below your TDEE, producing approximately 0.3-0.5 kg (0.7-1 lb) of weight loss per week. The American College of Sports Medicine (ACSM) recommends not exceeding a 1,000 calorie daily deficit. Deficits larger than this increase the risk of muscle loss, nutrient deficiencies, gallstones, and metabolic adaptation. Women should generally not eat below 1,200 calories/day and men below 1,500 calories/day without medical supervision.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How fast can I safely lose weight?</button>
+            <div class="faq-answer"><p>Research consistently shows that safe, sustainable weight loss is 0.5-1.0% of body weight per week (approximately 0.5-1 kg or 1-2 lbs for most adults). Faster rates of loss increase muscle catabolism, gallstone risk, and metabolic adaptation. Studies by Garthe et al. (2011) found that athletes losing 0.7% of body weight per week gained muscle, while those losing 1.4% per week did not. A practical guideline: aim for no more than 0.5-0.7 kg (1-1.5 lbs) per week for optimal body composition results.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is metabolic adaptation?</button>
+            <div class="faq-answer"><p>Metabolic adaptation (adaptive thermogenesis) is the reduction in energy expenditure that occurs during prolonged caloric restriction, beyond what would be predicted by weight loss alone. Research by Leibel et al. (1995) and the Minnesota Starvation Experiment demonstrated that prolonged deficits can reduce BMR by 10-15% below predicted values. This is caused by decreased thyroid hormones (T3), lower sympathetic nervous system activity, reduced leptin, and improved muscular efficiency. It makes continued weight loss harder and weight regain more likely.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How many calories is 1 kg of body fat?</button>
+            <div class="faq-answer"><p>One kilogram of body fat stores approximately 7,700 kilocalories (kcal). This is because adipose tissue is approximately 87% lipid (fat), and pure fat contains 9,000 kcal per kg. The commonly cited figure of 3,500 calories per pound (7,700 per kg) was established by Wishnofsky in 1958 and remains the standard for deficit calculations, though actual energy deficit required may vary slightly due to metabolic adaptation and changes in water and glycogen stores.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Should I take diet breaks during a cut?</button>
+            <div class="faq-answer"><p>Diet breaks (planned returns to maintenance calories for 1-2 weeks) can be beneficial during extended cutting phases. Research by Matzko et al. (the MATADOR study, 2018) found that intermittent dieters (2 weeks on, 2 weeks off at maintenance) lost more fat and preserved more metabolic rate than continuous dieters. Diet breaks help by: reducing psychological fatigue, restoring leptin levels, decreasing cortisol, and providing a metabolic respite. Consider a diet break every 8-12 weeks of continuous dieting, or whenever motivation and energy levels decline significantly.</p></div>
+          </div>
+        </div>
+
+        <div class="references" style="margin-top:48px">
+          <h2>References</h2>
+          <ol>
+            <li>Wishnofsky, M. (1958). Caloric equivalents of gained or lost weight. <em>American Journal of Clinical Nutrition</em>, 6(5), 542-546. <a href="https://pubmed.ncbi.nlm.nih.gov/13582067/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+            <li>Garthe, I., Raastad, T., Refsnes, P. E., Koivisto, A., &amp; Sundgot-Borgen, J. (2011). Effect of two different weight-loss rates on body composition and strength and power-related performance in elite athletes. <em>International Journal of Sport Nutrition and Exercise Metabolism</em>, 21(2), 97-104. <a href="https://pubmed.ncbi.nlm.nih.gov/21558572/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+            <li>Leibel, R. L., Rosenbaum, M., &amp; Hirsch, J. (1995). Changes in energy expenditure resulting from altered body weight. <em>New England Journal of Medicine</em>, 332(10), 621-628. <a href="https://pubmed.ncbi.nlm.nih.gov/7845406/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+            <li>Matzko, N., et al. (2018). The MATADOR study: intermittent energy restriction produces superior fat loss compared with continuous energy restriction. <em>International Journal of Obesity</em>, 42, 129-138. <a href="https://pubmed.ncbi.nlm.nih.gov/28638080/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+            <li>American College of Sports Medicine. (2009). Position stand: appropriate physical activity intervention strategies for weight loss and prevention of weight regain for adults. <em>Medicine &amp; Science in Sports &amp; Exercise</em>, 41(3), 709-731. <a href="https://pubmed.ncbi.nlm.nih.gov/19225396/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+            <li>Keys, A., Brozek, J., Henschel, A., Mickelsen, O., &amp; Taylor, H. L. (1950). <em>The Biology of Human Starvation</em>. University of Minnesota Press.</li>
+          </ol>
+        </div>
+
+        <h2 style="margin-top:48px">Related Calculators</h2>
+        <div class="cards-grid" style="margin-bottom:24px">
+          <div class="card">
+            <div class="card-icon card-icon-cal">CAL</div>
+            <h3>Calorie Calculator</h3>
+            <p>Find your TDEE and daily calorie targets.</p>
+            <a href="/calorie-calculator/" class="card-link">Calculate Calories &rarr;</a>
+          </div>
+          <div class="card">
+            <div class="card-icon card-icon-macro">MACRO</div>
+            <h3>Macros Calculator</h3>
+            <p>Get a macro split optimized for your deficit.</p>
+            <a href="/macros-calculator/" class="card-link">Calculate Macros &rarr;</a>
+          </div>
+          <div class="card">
+            <div class="card-icon card-icon-protein">PRO</div>
+            <h3>Protein Calculator</h3>
+            <p>Ensure adequate protein to preserve muscle during your cut.</p>
+            <a href="/protein-calculator/" class="card-link">Calculate Protein &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <div class="sidebar-card">
+          <h3>Quick Navigation</h3>
+          <ul>
+            <li><a href="#cd-daily-deficit">Results</a></li>
+            <li><a href="#understanding-deficits">Understanding Deficits</a></li>
+            <li><a href="#safe-guidelines">Safe Guidelines</a></li>
+            <li><a href="#metabolic-adaptation">Adaptation</a></li>
+            <li><a href="#how-to-use">How to Use</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Other Calculators</h3>
+          <ul>
+            <li><a href="/calorie-calculator/">Calorie Calculator</a></li>
+            <li><a href="/macros-calculator/">Macros Calculator</a></li>
+            <li><a href="/protein-calculator/">Protein Calculator</a></li>
+            <li><a href="/bmr-calculator/">BMR Calculator</a></li>
+            <li><a href="/water-intake-calculator/">Water Intake Calculator</a></li>
+            <li><a href="/body-fat-calculator/">Body Fat Calculator</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Learn More</h3>
+          <ul>
+            <li><a href="/learn/metabolic-adaptation/">Metabolic Adaptation</a></li>
+            <li><a href="/learn/activity-level-guidelines/">Activity Levels</a></li>
+            <li><a href="/methodology/">Our Methodology</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="site-disclaimer">
+  <div class="container">
+    This tool provides estimates for educational purposes only. Consult a healthcare professional before making dietary changes.
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">TDEE<span>BMR</span></a>
+        <p>Evidence-based nutrition calculators for smarter dietary decisions.</p>
+      </div>
+      <div>
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/calculators/">All Calculators</a></li>
+          <li><a href="/bmr-calculator/">BMR Calculator</a></li>
+          <li><a href="/bmi-calculator/">BMI Calculator</a></li>
+          <li><a href="/macros-calculator/">Macros Calculator</a></li>
+          <li><a href="/body-fat-calculator/">Body Fat Calculator</a></li>
+          <li><a href="/calorie-deficit-calculator/">Deficit Calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="/learn/">All Articles</a></li>
+          <li><a href="/learn/how-accurate-is-tdee/">How Accurate Is TDEE?</a></li>
+          <li><a href="/learn/tdee-vs-bmr/">TDEE vs BMR</a></li>
+          <li><a href="/learn/activity-level-guidelines/">Activity Levels</a></li>
+          <li><a href="/learn/metabolic-adaptation/">Metabolic Adaptation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/methodology/">Methodology</a></li>
+          <li><a href="/disclaimer/">Medical Disclaimer</a></li>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms of Use</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 TDEEBMR. All rights reserved. For educational purposes only.
+    </div>
+  </div>
+</footer>
+
+<script src="/js/calculators.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  let currentUnit = 'metric';
+
+  initUnitToggle(unit => {
+    currentUnit = unit;
+    const isMetric = unit === 'metric';
+    document.getElementById('cd-current-group').style.display = isMetric ? '' : 'none';
+    document.getElementById('cd-target-group').style.display = isMetric ? '' : 'none';
+    document.getElementById('cd-current-lbs-group').style.display = isMetric ? 'none' : '';
+    document.getElementById('cd-target-lbs-group').style.display = isMetric ? 'none' : '';
+  });
+
+  document.getElementById('cd-calc-btn').addEventListener('click', () => {
+    let currentKg, targetKg;
+    if (currentUnit === 'metric') {
+      currentKg = parseFloat(document.getElementById('cd-current').value);
+      targetKg = parseFloat(document.getElementById('cd-target').value);
+    } else {
+      currentKg = Calc.lbsToKg(parseFloat(document.getElementById('cd-current-lbs').value));
+      targetKg = Calc.lbsToKg(parseFloat(document.getElementById('cd-target-lbs').value));
+    }
+    const weeks = parseInt(document.getElementById('cd-weeks').value);
+
+    if (!currentKg || !targetKg || !weeks) { alert('Please fill in all fields.'); return; }
+    if (targetKg >= currentKg) { alert('Target weight must be less than current weight for a deficit plan.'); return; }
+
+    const result = Calc.calorieDeficit(currentKg, targetKg, weeks);
+    const weeklyLossStr = result.weeklyLossKg.toFixed(2) + ' kg (' + result.weeklyLossLbs.toFixed(1) + ' lbs)';
+
+    document.getElementById('cd-daily-deficit').textContent = Calc.format(result.dailyDeficit);
+    document.getElementById('cd-weekly-loss').textContent = weeklyLossStr;
+    document.getElementById('cd-date').textContent = result.completionDate;
+    document.getElementById('cd-total-loss').textContent = (currentKg - targetKg).toFixed(1) + ' kg';
+
+    if (result.safeRate) {
+      document.getElementById('cd-safety').textContent = 'Safe';
+      document.getElementById('cd-safety').style.color = '#22c55e';
+      document.getElementById('cd-warning').style.display = 'none';
+    } else {
+      document.getElementById('cd-safety').textContent = 'Caution';
+      document.getElementById('cd-safety').style.color = '#ef4444';
+      document.getElementById('cd-warning').style.display = 'block';
+      let warningMsg = '';
+      if (result.dailyDeficit > 1000) {
+        warningMsg += 'Your required daily deficit of ' + result.dailyDeficit + ' kcal exceeds the recommended maximum of 1,000 kcal. ';
+      }
+      if (result.weeklyLossKg > 1.0) {
+        warningMsg += 'Your projected weekly loss of ' + result.weeklyLossKg.toFixed(2) + ' kg exceeds the recommended maximum of 1.0 kg/week. ';
+      }
+      warningMsg += 'This aggressive approach increases the risk of muscle loss, nutrient deficiencies, and metabolic adaptation. Consider extending your timeline or consulting a healthcare professional.';
+      document.getElementById('cd-warning-text').textContent = warningMsg;
+    }
+
+    document.getElementById('cd-results').classList.add('visible');
+    document.getElementById('cd-results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+</body>
+</html>

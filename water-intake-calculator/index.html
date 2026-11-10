@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<title>Water Intake Calculator - Daily Hydration Needs Based on Weight &amp; Activity</title>
+<meta name="description" content="Calculate your optimal daily water intake based on body weight, activity level, and climate. Get results in liters, ml, cups, and ounces.">
+  <meta property="og:title" content="Water Intake Calculator - Daily Hydration Needs Based on Weight &amp; Activity">
+  <meta property="og:description" content="Calculate your optimal daily water intake based on body weight, activity level, and climate. Get results in liters, ml, cups, and ounces.">
+  <meta property="og:image" content="https://tdeebmr.com/images/water-intake-calculator-og.png">
+  <meta property="og:url" content="https://tdeebmr.com/water-intake-calculator/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Water Intake Calculator - Daily Hydration Needs Based on Weight &amp; Activity">
+  <meta name="twitter:description" content="Calculate your optimal daily water intake based on body weight, activity level, and climate. Get results in liters, ml, cups, and ounces.">
+  <meta name="twitter:image" content="https://tdeebmr.com/images/water-intake-calculator-og.png">
+<link rel="canonical" href="https://tdeebmr.com/water-intake-calculator/">
+<link rel="stylesheet" href="/css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tdeebmr.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://tdeebmr.com/calculators/" },
+    { "@type": "ListItem", "position": 3, "name": "Water Intake Calculator", "item": "https://tdeebmr.com/water-intake-calculator/" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Water Intake Calculator",
+  "url": "https://tdeebmr.com/water-intake-calculator/",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "Calculate optimal daily water intake based on body weight, activity level, and climate conditions."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Water Intake Calculator - Daily Hydration Needs Based on Weight & Activity",
+  "datePublished": "2026-11-03",
+  "dateModified": "2026-11-07",
+  "specialty": "Nutrition",
+  "audience": {
+    "@type": "MedicalAudience",
+    "audienceType": "Patients"
+  },
+  "url": "https://tdeebmr.com/water-intake-calculator/",
+  "description": "Calculate your optimal daily water intake based on body weight, activity level, and climate. Get results in liters, ml, cups, and ounces."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much water should I drink per day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The U.S. National Academies of Sciences, Engineering, and Medicine recommends approximately 3.7 liters (125 oz) per day for men and 2.7 liters (91 oz) for women, including water from food and all beverages. However, individual needs vary significantly based on body weight (approximately 30-35 ml per kg), activity level, climate, and health status. A practical guideline is 33 ml per kg of body weight, adjusted upward for exercise and hot climates. Thirst is generally a reliable indicator for healthy individuals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does coffee count toward daily water intake?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Despite caffeine's mild diuretic effect, research by Killer et al. (2014) found that moderate coffee consumption (3-4 cups per day) does not cause dehydration and contributes to daily fluid intake similarly to water. The diuretic effect of caffeine is approximately 1 ml of extra urine per 1 mg of caffeine, meaning a 200mg cup of coffee causes only about 200ml of additional fluid loss while providing 240ml of fluid. Net hydration is still positive."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know if I'm dehydrated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Signs of dehydration include: dark yellow urine (pale straw color indicates adequate hydration), thirst, dry mouth, fatigue, headache, dizziness, and reduced urine output. A simple self-check is the urine color test: aim for pale yellow (like lemonade). Dark yellow or amber indicates dehydration. Mild dehydration (1-2% body weight loss) can impair cognitive function and physical performance by 10-20%. Chronic mild dehydration is common and often mistaken for hunger or fatigue."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need more water when exercising?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Exercise increases water loss through sweat and respiration. The American College of Sports Medicine recommends drinking an additional 350-700 ml (12-24 oz) per hour of exercise, depending on intensity and conditions. For intense sessions lasting over 60 minutes, consider a beverage containing electrolytes (sodium, potassium) to replace what is lost in sweat. Weigh yourself before and after exercise: each kg lost represents approximately 1 liter of fluid that should be replaced."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you drink too much water?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, though it is rare. Excessive water intake can cause hyponatremia (dangerously low blood sodium), which can be life-threatening. This typically occurs when consuming more than 1 liter per hour for several hours, particularly during endurance events. The kidneys can process approximately 0.8-1.0 liters per hour in healthy adults. Symptoms of hyponatremia include nausea, headache, confusion, and in severe cases, seizures. For normal daily hydration, drinking to thirst is sufficient and safe."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">TDEE<span>BMR</span></a>
+    <button class="mobile-menu-btn" aria-label="Toggle menu">&#9776;</button>
+    <nav>
+      <a href="/calculators/">Calculators</a>
+      <a href="/learn/">Learn</a>
+      <a href="/methodology/">Methodology</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a> <span>/</span> <a href="/calculators/">Calculators</a> <span>/</span> Water Intake Calculator
+    </div>
+    <h1>Water Intake Calculator</h1>
+    <p>Calculate your optimal daily hydration target based on body weight, activity level, and climate. Get results in liters, ml, cups, and ounces.</p>
+    <img src="/images/water-hydration.png" alt="Daily hydration guide showing water intake calculation based on weight and activity" width="600" height="340" style="border-radius:12px;margin-top:20px;max-width:100%">
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="page-layout">
+      <div>
+        <div class="calc-card">
+          <div class="unit-toggle">
+            <button class="active" data-unit="metric">Metric (kg)</button>
+            <button data-unit="imperial">Imperial (lbs)</button>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group" id="water-weight-group">
+              <label for="water-weight">Weight (kg)</label>
+              <input type="number" id="water-weight" placeholder="70" min="30" max="300" step="0.1">
+            </div>
+            <div class="form-group" id="water-weight-lbs-group" style="display:none">
+              <label for="water-weight-lbs">Weight (lbs)</label>
+              <input type="number" id="water-weight-lbs" placeholder="154" min="60" max="700" step="0.1">
+            </div>
+            <div class="form-group">
+              <label for="water-activity">Activity Level</label>
+              <select id="water-activity">
+                <option value="sedentary">Sedentary - Little or no exercise</option>
+                <option value="light">Lightly Active - Exercise 1-3 days/week</option>
+                <option value="moderate" selected>Moderately Active - Exercise 3-5 days/week</option>
+                <option value="active">Very Active - Hard exercise 6-7 days/week</option>
+                <option value="extraActive">Extra Active - Very hard exercise, physical job</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="water-climate">Climate</label>
+              <select id="water-climate">
+                <option value="temperate" selected>Temperate</option>
+                <option value="hot">Hot / Tropical</option>
+                <option value="cold">Cold / Dry</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="btn" id="water-calc-btn">Calculate Water Intake</button>
+
+          <div class="results" id="water-results">
+            <div class="result-main">
+              <div class="value" id="water-liters">--</div>
+              <div class="label">Liters per Day</div>
+            </div>
+            <div class="result-grid">
+              <div class="result-item">
+                <div class="value" id="water-ml">--</div>
+                <div class="label">Milliliters</div>
+              </div>
+              <div class="result-item">
+                <div class="value" id="water-cups">--</div>
+                <div class="label">Cups (240ml)</div>
+              </div>
+              <div class="result-item">
+                <div class="value" id="water-oz">--</div>
+                <div class="label">Fluid Ounces</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:48px;max-width:800px">
+          <h2 id="understanding-hydration">Understanding Daily Hydration Needs</h2>
+          <p>Water is the most essential nutrient for human survival. The body can survive weeks without food but only days without water. Despite its importance, hydration is one of the most misunderstood aspects of nutrition, with recommendations ranging wildly from "8 glasses a day" to "drink whenever you feel thirsty." The truth is more nuanced.</p>
+          <p>Your daily water needs depend on several factors: body size (larger bodies need more water), physical activity (exercise increases fluid loss through sweat and respiration), environmental conditions (heat and altitude increase needs), diet composition (foods contribute approximately 20% of total water intake), and health status (fever, diarrhea, and certain medications increase fluid requirements).</p>
+
+          <h3>How Much Water Do You Actually Need?</h3>
+          <p>The U.S. National Academies of Sciences, Engineering, and Medicine (2004) established adequate intake (AI) levels for total water (from all beverages and foods):</p>
+          <ul style="margin-bottom:16px;padding-left:24px;color:var(--text)">
+            <li><strong>Men:</strong> approximately 3.7 liters (125 oz) per day total water</li>
+            <li><strong>Women:</strong> approximately 2.7 liters (91 oz) per day total water</li>
+          </ul>
+          <p>However, these figures include water from food (which typically contributes about 20% of total intake) and metabolic water produced during cellular respiration. The actual drinking water requirement is therefore lower: approximately 3.0 liters for men and 2.2 liters for women under moderate conditions.</p>
+          <p>A more personalized approach uses body weight as the primary determinant, with adjustments for activity and climate. This calculator uses the evidence-based formula of 33 ml per kg of body weight as the baseline, with additions for activity level and climate adjustments.</p>
+
+          <h2 id="increasing-factors">Factors That Increase Water Needs</h2>
+          <h3>Exercise and Physical Activity</h3>
+          <p>Physical activity increases water needs through sweat loss and increased respiratory water vapor. The American College of Sports Medicine (ACSM) provides the following guidelines:</p>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr><th>Activity Level</th><th>Additional Water Needed</th><th>Notes</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Sedentary</strong></td><td>Baseline only</td><td>No additional water beyond base calculation</td></tr>
+                <tr><td><strong>Light Activity</strong></td><td>+250 ml/day</td><td>Daily walks, light household activity</td></tr>
+                <tr><td><strong>Moderate Activity</strong></td><td>+500 ml/day</td><td>Regular gym sessions, active commute</td></tr>
+                <tr><td><strong>High Activity</strong></td><td>+750 ml/day</td><td>Intense daily training, physical job</td></tr>
+                <tr><td><strong>Very High Activity</strong></td><td>+1,000 ml/day</td><td>Athletes, heavy labor, 2x/day training</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>For individual exercise sessions, the ACSM recommends drinking 350-700 ml (12-24 oz) per hour of exercise, adjusted for sweat rate. To determine your personal sweat rate, weigh yourself before and after a training session (without clothing): each kilogram lost represents approximately 1 liter of fluid that should be replaced.</p>
+
+          <h3>Climate and Environment</h3>
+          <p>Environmental conditions significantly affect hydration needs:</p>
+          <ul style="margin-bottom:16px;padding-left:24px;color:var(--text)">
+            <li><strong>Hot climates:</strong> Increase water intake by approximately 15%. Sweat rates can reach 1-2 liters per hour during intense activity in heat. Acclimatization to heat takes approximately 7-14 days, during which sweat efficiency improves.</li>
+            <li><strong>Cold climates:</strong> Increase by approximately 5%. Cold air is typically dry, increasing respiratory water loss. Additionally, cold-induced diuresis (increased urine production in cold conditions) can increase fluid loss. People often feel less thirsty in cold weather despite still needing adequate hydration.</li>
+            <li><strong>High altitude:</strong> Above 2,500 meters (8,200 feet), increase by 10-20%. Altitude increases respiratory water loss and urine output. Acclimatization increases fluid needs further.</li>
+          </ul>
+
+          <h2 id="dehydration-signs">Signs of Dehydration</h2>
+          <p>Recognizing dehydration early is important for maintaining both physical and cognitive performance. Research shows that even mild dehydration (1-2% body weight loss) can impair:</p>
+          <ul style="margin-bottom:16px;padding-left:24px;color:var(--text)">
+            <li>Cognitive function and concentration (reduced by 10-15%)</li>
+            <li>Physical performance (reduced by 10-20% in endurance activities)</li>
+            <li>Mood (increased feelings of fatigue, tension, and confusion)</li>
+            <li>Headache frequency and intensity</li>
+          </ul>
+
+          <h3>The Urine Color Test</h3>
+          <p>The simplest and most reliable self-assessment of hydration status is urine color:</p>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr><th>Color</th><th>Appearance</th><th>Hydration Status</th><th>Action</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>1 - Clear</strong></td><td>Transparent/colorless</td><td>Overhydrated</td><td>Reduce intake slightly</td></tr>
+                <tr class="winner"><td><strong>2-3 - Pale Yellow</strong></td><td>Light straw/lemonade</td><td>Optimally hydrated</td><td>Maintain current intake</td></tr>
+                <tr><td><strong>4-5 - Yellow</strong></td><td>Apple juice color</td><td>Mildly dehydrated</td><td>Drink 1-2 glasses now</td></tr>
+                <tr><td><strong>6-7 - Dark Yellow</strong></td><td>Concentrated yellow</td><td>Dehydrated</td><td>Drink 500ml immediately</td></tr>
+                <tr><td><strong>8+</strong></td><td>Amber/brown</td><td>Severely dehydrated</td><td>Seek medical attention if persistent</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size:0.85rem;color:var(--text-light)">Note: Certain vitamins (especially B-complex), medications, and foods (beets, blackberries) can alter urine color independently of hydration status.</p>
+
+          <h2 id="myths">Hydration Myths Debunked</h2>
+          <p><strong>"You need 8 glasses of water per day":</strong> The origin of this recommendation is unclear. The actual research suggests that total water intake (including food and other beverages) of approximately 2-3 liters is adequate for most adults. There is no scientific basis for exactly 8 glasses.</p>
+          <p><strong>"Coffee dehydrates you":</strong> While caffeine has a mild diuretic effect, research by Killer et al. (2014) demonstrated that moderate coffee consumption (3-4 cups/day) does not cause net fluid loss. Coffee contributes positively to daily hydration.</p>
+          <p><strong>"You should drink as much water as possible":</strong> Overhydration (hyponatremia) is rare but dangerous. The kidneys can process approximately 0.8-1.0 liters per hour. Drinking beyond this rate, particularly during endurance events, can dilute blood sodium to dangerous levels. Drink to thirst and do not force excessive intake.</p>
+          <p><strong>"If you're thirsty, you're already dehydrated":</strong> For healthy individuals in normal conditions, thirst is a reliable indicator of hydration needs. The idea that thirst indicates significant dehydration is a myth perpetuated by the sports drink industry. However, during intense exercise or in elderly populations, thirst may lag behind actual needs, so proactive drinking is advisable in those situations.</p>
+
+          <div class="key-takeaway">
+            <h4>Key Takeaway</h4>
+            <p>Use this calculator as a starting point for your daily hydration target. Monitor your urine color (aim for pale yellow) and adjust based on exercise, heat, and individual variation. Most people need between 2-4 liters per day, with higher needs for athletes and those in hot climates. Drink consistently throughout the day rather than large amounts at once.</p>
+          </div>
+        </div>
+
+        <h2 id="faq" style="margin-top:48px">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">How much water should I drink per day?</button>
+            <div class="faq-answer"><p>The U.S. National Academies of Sciences, Engineering, and Medicine recommends approximately 3.7 liters (125 oz) per day for men and 2.7 liters (91 oz) for women, including water from food and all beverages. However, individual needs vary significantly based on body weight (approximately 30-35 ml per kg), activity level, climate, and health status. A practical guideline is 33 ml per kg of body weight, adjusted upward for exercise and hot climates. Thirst is generally a reliable indicator for healthy individuals.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Does coffee count toward daily water intake?</button>
+            <div class="faq-answer"><p>Yes. Despite caffeine's mild diuretic effect, research by Killer et al. (2014) found that moderate coffee consumption (3-4 cups per day) does not cause dehydration and contributes to daily fluid intake similarly to water. The diuretic effect of caffeine is approximately 1 ml of extra urine per 1 mg of caffeine, meaning a 200mg cup of coffee causes only about 200ml of additional fluid loss while providing 240ml of fluid. Net hydration is still positive.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How do I know if I'm dehydrated?</button>
+            <div class="faq-answer"><p>Signs of dehydration include: dark yellow urine (pale straw color indicates adequate hydration), thirst, dry mouth, fatigue, headache, dizziness, and reduced urine output. A simple self-check is the urine color test: aim for pale yellow (like lemonade). Dark yellow or amber indicates dehydration. Mild dehydration (1-2% body weight loss) can impair cognitive function and physical performance by 10-20%. Chronic mild dehydration is common and often mistaken for hunger or fatigue.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Do I need more water when exercising?</button>
+            <div class="faq-answer"><p>Yes. Exercise increases water loss through sweat and respiration. The American College of Sports Medicine recommends drinking an additional 350-700 ml (12-24 oz) per hour of exercise, depending on intensity and conditions. For intense sessions lasting over 60 minutes, consider a beverage containing electrolytes (sodium, potassium) to replace what is lost in sweat. Weigh yourself before and after exercise: each kg lost represents approximately 1 liter of fluid that should be replaced.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Can you drink too much water?</button>
+            <div class="faq-answer"><p>Yes, though it is rare. Excessive water intake can cause hyponatremia (dangerously low blood sodium), which can be life-threatening. This typically occurs when consuming more than 1 liter per hour for several hours, particularly during endurance events. The kidneys can process approximately 0.8-1.0 liters per hour in healthy adults. Symptoms of hyponatremia include nausea, headache, confusion, and in severe cases, seizures. For normal daily hydration, drinking to thirst is sufficient and safe.</p></div>
+          </div>
+        </div>
+
+        <div class="references" style="margin-top:48px">
+          <h2>References</h2>
+          <ol>
+            <li>Institute of Medicine, National Academies. (2004). <em>Dietary Reference Intakes for Water, Potassium, Sodium, Chloride, and Sulfate</em>. The National Academies Press. <a href="https://pubmed.ncbi.nlm.nih.gov/20669454/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+            <li>Killer, S. C., Blannin, A. K., &amp; Jeukendrup, A. E. (2014). No evidence of dehydration with moderate daily coffee intake: a doubly labeled water study. <em>PLoS ONE</em>, 9(1), e84154. <a href="https://pubmed.ncbi.nlm.nih.gov/24391706/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+            <li>American College of Sports Medicine. (2007). Position stand: exercise and fluid replacement. <em>Medicine &amp; Science in Sports &amp; Exercise</em>, 39(2), 377-390. <a href="https://pubmed.ncbi.nlm.nih.gov/17277604/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+            <li>Armstrong, L. E., et al. (1994). Human water turnover: a new paradigm. <em>American Journal of Clinical Nutrition</em>, 59(4), 853-858. <a href="https://pubmed.ncbi.nlm.nih.gov/8147320/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+          </ol>
+        </div>
+
+        <h2 style="margin-top:48px">Related Calculators</h2>
+        <div class="cards-grid" style="margin-bottom:24px">
+          <div class="card">
+            <div class="card-icon card-icon-tdee">TDEE</div>
+            <h3>TDEE Calculator</h3>
+            <p>Calculate your total energy expenditure to complement hydration planning.</p>
+            <a href="/" class="card-link">Open Calculator &rarr;</a>
+          </div>
+          <div class="card">
+            <div class="card-icon card-icon-protein">PRO</div>
+            <h3>Protein Calculator</h3>
+            <p>Higher protein intake increases hydration needs slightly.</p>
+            <a href="/protein-calculator/" class="card-link">Calculate Protein &rarr;</a>
+          </div>
+          <div class="card">
+            <div class="card-icon card-icon-macro">MACRO</div>
+            <h3>Macros Calculator</h3>
+            <p>Plan your complete nutrition including hydration.</p>
+            <a href="/macros-calculator/" class="card-link">Calculate Macros &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <div class="sidebar-card">
+          <h3>Quick Navigation</h3>
+          <ul>
+            <li><a href="#water-liters">Results</a></li>
+            <li><a href="#understanding-hydration">Understanding Hydration</a></li>
+            <li><a href="#increasing-factors">Factors</a></li>
+            <li><a href="#dehydration-signs">Signs of Dehydration</a></li>
+            <li><a href="#myths">Myths Debunked</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Other Calculators</h3>
+          <ul>
+            <li><a href="/calorie-calculator/">Calorie Calculator</a></li>
+            <li><a href="/protein-calculator/">Protein Calculator</a></li>
+            <li><a href="/macros-calculator/">Macros Calculator</a></li>
+            <li><a href="/bmr-calculator/">BMR Calculator</a></li>
+            <li><a href="/body-fat-calculator/">Body Fat Calculator</a></li>
+            <li><a href="/calorie-deficit-calculator/">Calorie Deficit Calculator</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="site-disclaimer">
+  <div class="container">
+    This tool provides estimates for educational purposes only. Consult a healthcare professional before making dietary changes.
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">TDEE<span>BMR</span></a>
+        <p>Evidence-based nutrition calculators for smarter dietary decisions.</p>
+      </div>
+      <div>
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/calculators/">All Calculators</a></li>
+          <li><a href="/bmr-calculator/">BMR Calculator</a></li>
+          <li><a href="/bmi-calculator/">BMI Calculator</a></li>
+          <li><a href="/macros-calculator/">Macros Calculator</a></li>
+          <li><a href="/body-fat-calculator/">Body Fat Calculator</a></li>
+          <li><a href="/calorie-deficit-calculator/">Deficit Calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="/learn/">All Articles</a></li>
+          <li><a href="/learn/how-accurate-is-tdee/">How Accurate Is TDEE?</a></li>
+          <li><a href="/learn/tdee-vs-bmr/">TDEE vs BMR</a></li>
+          <li><a href="/learn/activity-level-guidelines/">Activity Levels</a></li>
+          <li><a href="/learn/metabolic-adaptation/">Metabolic Adaptation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/methodology/">Methodology</a></li>
+          <li><a href="/disclaimer/">Medical Disclaimer</a></li>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms of Use</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 TDEEBMR. All rights reserved. For educational purposes only.
+    </div>
+  </div>
+</footer>
+
+<script src="/js/calculators.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  let currentUnit = 'metric';
+
+  initUnitToggle(unit => {
+    currentUnit = unit;
+    const isMetric = unit === 'metric';
+    document.getElementById('water-weight-group').style.display = isMetric ? '' : 'none';
+    document.getElementById('water-weight-lbs-group').style.display = isMetric ? 'none' : '';
+  });
+
+  document.getElementById('water-calc-btn').addEventListener('click', () => {
+    let weightKg;
+    if (currentUnit === 'metric') {
+      weightKg = parseFloat(document.getElementById('water-weight').value);
+    } else {
+      weightKg = Calc.lbsToKg(parseFloat(document.getElementById('water-weight-lbs').value));
+    }
+
+    if (!weightKg) { alert('Please enter your weight.'); return; }
+
+    const activity = document.getElementById('water-activity').value;
+    const climate = document.getElementById('water-climate').value;
+    const result = Calc.waterIntake(weightKg, activity, climate);
+
+    document.getElementById('water-liters').textContent = result.liters.toFixed(1);
+    document.getElementById('water-ml').textContent = Calc.format(result.ml);
+    document.getElementById('water-cups').textContent = result.cups;
+    document.getElementById('water-oz').textContent = result.oz;
+    document.getElementById('water-results').classList.add('visible');
+    document.getElementById('water-results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+</body>
+</html>

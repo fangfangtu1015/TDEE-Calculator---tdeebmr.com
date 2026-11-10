@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<title>Protein Calculator - Daily Protein Intake Based on Science</title>
+<meta name="description" content="Calculate your optimal daily protein intake based on body weight, activity level, and goals. References ISSN, RDA, and peer-reviewed research on protein needs.">
+  <meta property="og:title" content="Protein Calculator - Daily Protein Intake Based on Science">
+  <meta property="og:description" content="Calculate your optimal daily protein intake based on body weight, activity level, and goals. References ISSN, RDA, and peer-reviewed research on protein needs.">
+  <meta property="og:image" content="https://tdeebmr.com/images/protein-calculator-og.png">
+  <meta property="og:url" content="https://tdeebmr.com/protein-calculator/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Protein Calculator - Daily Protein Intake Based on Science">
+  <meta name="twitter:description" content="Calculate your optimal daily protein intake based on body weight, activity level, and goals. References ISSN, RDA, and peer-reviewed research on protein needs.">
+  <meta name="twitter:image" content="https://tdeebmr.com/images/protein-calculator-og.png">
+<link rel="canonical" href="https://tdeebmr.com/protein-calculator/">
+<link rel="stylesheet" href="/css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tdeebmr.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://tdeebmr.com/calculators/" },
+    { "@type": "ListItem", "position": 3, "name": "Protein Calculator", "item": "https://tdeebmr.com/protein-calculator/" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Protein Calculator",
+  "url": "https://tdeebmr.com/protein-calculator/",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "Calculate optimal daily protein intake based on body weight, activity level, and fitness goals using evidence-based guidelines."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much protein do I need per day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Protein needs vary based on activity level and goals. The RDA (0.8 g/kg) is the minimum to prevent deficiency in sedentary adults. The International Society of Sports Nutrition (ISSN) recommends 1.4-2.0 g/kg for physically active individuals. For muscle building, 1.6-2.2 g/kg is optimal according to a 2018 meta-analysis by Morton et al. During caloric deficit, higher protein (1.8-2.7 g/kg) helps preserve lean muscle mass. For a 70 kg person, this translates to 112-154 g/day for active individuals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is too much protein harmful?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For healthy individuals, protein intakes up to 2.2 g/kg/day (and even up to 3.4 g/kg in some studies) have been shown to be safe with no adverse effects on kidney function, liver function, or bone health. A comprehensive review by Antonio et al. (2016) found no evidence of harm in healthy people consuming high-protein diets long-term. However, individuals with pre-existing kidney disease should follow medical guidance on protein restriction. The tolerable upper limit has not been firmly established."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I eat protein for muscle growth?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Total daily protein intake matters most, but distribution can optimize muscle protein synthesis (MPS). Research suggests consuming 0.4-0.55 g/kg per meal across 3-5 meals spaced 3-5 hours apart maximizes the MPS response. The post-workout window is broader than previously thought: consuming 20-40g of protein within 2 hours after training is beneficial, but the 'anabolic window' extends several hours. Pre-sleep protein (30-40g casein) can support overnight recovery."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best source of protein?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The best protein sources are those with high biological value (containing all essential amino acids) and good digestibility. Animal sources include eggs (BV 100), whey protein (BV 104), chicken breast (BV 79), fish (BV 70-80), and lean beef (BV 80). Plant sources include soy (BV 74), quinoa, lentils, and beans. Combining complementary plant proteins (e.g., rice and beans) throughout the day provides all essential amino acids. The leucine content (trigger for MPS) is highest in whey, eggs, and meat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need more protein if I'm cutting calories?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. During caloric deficit, protein needs increase significantly to preserve lean muscle mass. Research by Helms et al. (2014) recommends 2.3-3.1 g/kg of fat-free mass (approximately 1.8-2.7 g/kg of total body weight) for natural athletes during competition preparation. Higher protein during a cut also increases satiety (reducing hunger) and leverages protein's high thermic effect (20-30% of protein calories are burned during digestion), effectively increasing your net deficit."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Protein Calculator - Daily Protein Intake Based on Science",
+  "datePublished": "2026-11-03",
+  "dateModified": "2026-11-07",
+  "specialty": "Nutrition",
+  "audience": {
+    "@type": "MedicalAudience",
+    "audienceType": "Patients"
+  },
+  "url": "https://tdeebmr.com/protein-calculator/",
+  "description": "Calculate your optimal daily protein intake based on body weight, activity level, and goals. References ISSN, RDA, and peer-reviewed research on protein needs."
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">TDEE<span>BMR</span></a>
+    <button class="mobile-menu-btn" aria-label="Toggle menu">&#9776;</button>
+    <nav>
+      <a href="/calculators/">Calculators</a>
+      <a href="/learn/">Learn</a>
+      <a href="/methodology/">Methodology</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a> <span>/</span> <a href="/calculators/">Calculators</a> <span>/</span> Protein Calculator
+    </div>
+    <h1>Protein Calculator</h1>
+    <p>Determine your optimal daily protein intake based on body weight, activity level, and fitness goals. Backed by ISSN and peer-reviewed research.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="page-layout">
+      <div>
+        <div class="calc-card">
+          <div class="unit-toggle">
+            <button class="active" data-unit="metric">Metric (kg)</button>
+            <button data-unit="imperial">Imperial (lbs)</button>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group" id="prot-weight-group">
+              <label for="prot-weight">Weight (kg)</label>
+              <input type="number" id="prot-weight" placeholder="70" min="30" max="300" step="0.1">
+            </div>
+            <div class="form-group" id="prot-weight-lbs-group" style="display:none">
+              <label for="prot-weight-lbs">Weight (lbs)</label>
+              <input type="number" id="prot-weight-lbs" placeholder="154" min="60" max="700" step="0.1">
+            </div>
+            <div class="form-group">
+              <label for="prot-activity">Activity Level</label>
+              <select id="prot-activity">
+                <option value="sedentary">Sedentary - Little or no exercise</option>
+                <option value="light">Lightly Active - Exercise 1-3 days/week</option>
+                <option value="moderate" selected>Moderately Active - Exercise 3-5 days/week</option>
+                <option value="active">Very Active - Hard exercise 6-7 days/week</option>
+                <option value="extraActive">Extra Active - Very hard exercise, physical job</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="prot-goal">Goal</label>
+              <select id="prot-goal">
+                <option value="maintain">Maintain Weight</option>
+                <option value="cut">Fat Loss (Cut)</option>
+                <option value="bulk">Muscle Building (Bulk)</option>
+                <option value="athlete">Athletic Performance</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="btn" id="prot-calc-btn">Calculate Protein</button>
+
+          <div class="results" id="prot-results">
+            <div class="result-main">
+              <div class="value" id="prot-target">--</div>
+              <div class="label">Daily Protein Target (grams)</div>
+            </div>
+            <div class="result-grid">
+              <div class="result-item">
+                <div class="value" id="prot-per-kg">--</div>
+                <div class="label">g per kg Body Weight</div>
+              </div>
+              <div class="result-item">
+                <div class="value" id="prot-per-lb">--</div>
+                <div class="label">g per lb Body Weight</div>
+              </div>
+              <div class="result-item">
+                <div class="value" id="prot-calories">--</div>
+                <div class="label">Calories from Protein</div>
+              </div>
+              <div class="result-item">
+                <div class="value" id="prot-range">--</div>
+                <div class="label">Research Range (g)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:48px;max-width:800px">
+          <h2 id="understanding-protein">Understanding Daily Protein Needs</h2>
+          <p>Protein is the most important macronutrient for body composition, recovery, and long-term health. It provides the amino acids your body needs to build and repair muscle tissue, produce enzymes and hormones, support immune function, and maintain structural integrity of skin, hair, and bones.</p>
+          <p>Despite its importance, protein recommendations have been controversial and frequently misunderstood. The gap between minimum requirements (to prevent deficiency) and optimal intake (for body composition and performance) is substantial.</p>
+
+          <h3>The RDA vs. Optimal Intake</h3>
+          <p>The Recommended Dietary Allowance (RDA) for protein is 0.8 grams per kilogram of body weight per day (0.36 g/lb). This was established to prevent nitrogen balance negativity in 97.5% of the population. However, the RDA represents the <em>minimum</em> to avoid deficiency, not the optimal amount for active individuals or those seeking body composition changes.</p>
+          <p>Research consistently shows that the RDA is insufficient for optimizing muscle protein synthesis, supporting athletic performance, or preserving lean mass during caloric restriction. A 2015 position stand by the International Society of Sports Nutrition (ISSN) concluded that 1.4-2.0 g/kg/day is not only safe but beneficial for physically active individuals.</p>
+
+          <h2 id="recommendations">Protein Recommendations by Goal</h2>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr><th>Goal / Population</th><th>Protein (g/kg/day)</th><th>Protein (g/lb/day)</th><th>Key Research</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Sedentary Adult (RDA)</strong></td><td>0.8</td><td>0.36</td><td>WHO/FAO, 2007</td></tr>
+                <tr><td><strong>Active Individual (Maintain)</strong></td><td>1.0 - 1.4</td><td>0.45 - 0.64</td><td>ISSN Position Stand, 2017</td></tr>
+                <tr class="winner"><td><strong>Muscle Building</strong></td><td>1.6 - 2.2</td><td>0.73 - 1.0</td><td>Morton et al., 2018 (meta-analysis)</td></tr>
+                <tr><td><strong>Fat Loss (Cutting)</strong></td><td>1.8 - 2.7</td><td>0.82 - 1.23</td><td>Helms et al., 2014</td></tr>
+                <tr><td><strong>Athlete (In Training)</strong></td><td>1.4 - 2.0</td><td>0.64 - 0.91</td><td>ACSM/ISSN Joint Position, 2016</td></tr>
+                <tr><td><strong>Older Adult (50+)</strong></td><td>1.0 - 1.2</td><td>0.45 - 0.55</td><td>PROT-AGE Study Group, 2013</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Why Higher Protein During a Cut?</h3>
+          <p>When you are in a caloric deficit, your body is more likely to break down muscle tissue for energy (gluconeogenesis). Higher protein intake during a cut serves three critical functions:</p>
+          <ul style="margin-bottom:16px;padding-left:24px;color:var(--text)">
+            <li><strong>Muscle preservation:</strong> Adequate protein provides the amino acids needed to maintain muscle protein synthesis even when energy intake is reduced. Research by Mettler et al. (2010) showed that consuming 2.3 g/kg preserved lean mass during a 2-week aggressive deficit.</li>
+            <li><strong>Increased satiety:</strong> Protein is the most satiating macronutrient. Higher protein diets consistently reduce hunger and spontaneous calorie intake in both short-term and long-term studies.</li>
+            <li><strong>Higher thermic effect:</strong> Protein has a thermic effect of 20-30% (compared to 5-10% for carbs and 0-3% for fat), meaning your body burns more calories just digesting protein. This effectively increases your net deficit by 100-200 calories per day on a high-protein diet.</li>
+          </ul>
+
+          <h2 id="timing">Protein Timing and Distribution</h2>
+          <p>While total daily protein intake is the most important factor, research suggests that how you distribute protein across meals can optimize muscle protein synthesis (MPS).</p>
+          <p><strong>Per-meal threshold:</strong> Research indicates that approximately 0.4-0.55 g/kg per meal (20-40g for most adults) maximally stimulates MPS. Consuming more protein in a single meal does not further increase MPS, though the excess amino acids are still utilized for other bodily functions.</p>
+          <p><strong>Optimal frequency:</strong> A 2018 study by Schoenfeld and Aragon suggested spreading protein intake across 3-5 meals, spaced 3-5 hours apart for optimal MPS stimulation throughout the day.</p>
+          <p><strong>Peri-workout nutrition:</strong> The "anabolic window" (the idea that you must consume protein within 30 minutes of training) has been largely debunked. Total daily intake matters far more. However, consuming 20-40g of protein within 2 hours post-training is still beneficial, especially if you trained fasted.</p>
+          <p><strong>Pre-sleep protein:</strong> Consuming 30-40g of casein protein (slow-digesting) before bed has been shown to increase overnight MPS rates. Research by Res et al. (2012) demonstrated that pre-sleep protein is effectively digested and absorbed, supporting muscle recovery during sleep.</p>
+
+          <h2 id="sources">Best Protein Sources</h2>
+          <p>Not all protein is created equal. The quality of a protein source is determined by its amino acid profile (whether it contains all nine essential amino acids) and its digestibility (how much of the protein is actually absorbed).</p>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr><th>Protein Source</th><th>Protein per 100g</th><th>Biological Value</th><th>Leucine Content</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Whey Protein Isolate</strong></td><td>90g</td><td>104</td><td>High (11%)</td></tr>
+                <tr><td><strong>Whole Eggs</strong></td><td>13g</td><td>100</td><td>Moderate (7%)</td></tr>
+                <tr><td><strong>Chicken Breast</strong></td><td>31g</td><td>79</td><td>Moderate (8%)</td></tr>
+                <tr><td><strong>Salmon</strong></td><td>25g</td><td>70</td><td>Moderate (7%)</td></tr>
+                <tr><td><strong>Greek Yogurt</strong></td><td>10g</td><td>—</td><td>Moderate</td></tr>
+                <tr><td><strong>Lean Beef</strong></td><td>26g</td><td>80</td><td>Moderate (8%)</td></tr>
+                <tr><td><strong>Soy (Tofu)</strong></td><td>8g</td><td>74</td><td>Moderate</td></tr>
+                <tr><td><strong>Lentils</strong></td><td>9g</td><td>—</td><td>Lower</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size:0.85rem;color:var(--text-light)">Biological Value (BV) measures how efficiently a protein source is utilized by the body, with egg protein set as the reference at 100.</p>
+
+          <div class="key-takeaway">
+            <h4>Key Takeaway</h4>
+            <p>For most active individuals, aim for 1.6-2.2 g/kg (0.73-1.0 g/lb) of protein per day. During a caloric deficit, increase to 1.8-2.7 g/kg to preserve muscle. Spread intake across 3-5 meals for optimal muscle protein synthesis. Total daily intake matters more than precise timing.</p>
+          </div>
+        </div>
+
+        <h2 id="faq" style="margin-top:48px">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">How much protein do I need per day?</button>
+            <div class="faq-answer"><p>Protein needs vary based on activity level and goals. The RDA (0.8 g/kg) is the minimum to prevent deficiency in sedentary adults. The International Society of Sports Nutrition (ISSN) recommends 1.4-2.0 g/kg for physically active individuals. For muscle building, 1.6-2.2 g/kg is optimal according to a 2018 meta-analysis by Morton et al. During caloric deficit, higher protein (1.8-2.7 g/kg) helps preserve lean muscle mass. For a 70 kg person, this translates to 112-154 g/day for active individuals.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Is too much protein harmful?</button>
+            <div class="faq-answer"><p>For healthy individuals, protein intakes up to 2.2 g/kg/day (and even up to 3.4 g/kg in some studies) have been shown to be safe with no adverse effects on kidney function, liver function, or bone health. A comprehensive review by Antonio et al. (2016) found no evidence of harm in healthy people consuming high-protein diets long-term. However, individuals with pre-existing kidney disease should follow medical guidance on protein restriction. The tolerable upper limit has not been firmly established.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">When should I eat protein for muscle growth?</button>
+            <div class="faq-answer"><p>Total daily protein intake matters most, but distribution can optimize muscle protein synthesis (MPS). Research suggests consuming 0.4-0.55 g/kg per meal across 3-5 meals spaced 3-5 hours apart maximizes the MPS response. The post-workout window is broader than previously thought: consuming 20-40g of protein within 2 hours after training is beneficial, but the 'anabolic window' extends several hours. Pre-sleep protein (30-40g casein) can support overnight recovery.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is the best source of protein?</button>
+            <div class="faq-answer"><p>The best protein sources are those with high biological value (containing all essential amino acids) and good digestibility. Animal sources include eggs (BV 100), whey protein (BV 104), chicken breast (BV 79), fish (BV 70-80), and lean beef (BV 80). Plant sources include soy (BV 74), quinoa, lentils, and beans. Combining complementary plant proteins (e.g., rice and beans) throughout the day provides all essential amino acids. The leucine content (trigger for MPS) is highest in whey, eggs, and meat.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Do I need more protein if I'm cutting calories?</button>
+            <div class="faq-answer"><p>Yes. During caloric deficit, protein needs increase significantly to preserve lean muscle mass. Research by Helms et al. (2014) recommends 2.3-3.1 g/kg of fat-free mass (approximately 1.8-2.7 g/kg of total body weight) for natural athletes during competition preparation. Higher protein during a cut also increases satiety (reducing hunger) and leverages protein's high thermic effect (20-30% of protein calories are burned during digestion), effectively increasing your net deficit.</p></div>
+          </div>
+        </div>
+
+        <div class="references" style="margin-top:48px">
+          <h2>References</h2>
+          <ol>
+            <li>Morton, R. W., et al. (2018). A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength. <em>British Journal of Sports Medicine</em>, 52(6), 376-384. <a href="https://pubmed.ncbi.nlm.nih.gov/28698222/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+            <li>Helms, E. R., Aragon, A. A., &amp; Fitschen, P. J. (2014). Evidence-based recommendations for natural bodybuilding contest preparation: nutrition and supplementation. <em>Journal of the International Society of Sports Nutrition</em>, 11(1), 20. <a href="https://pubmed.ncbi.nlm.nih.gov/24860294/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+            <li>Antonio, J., et al. (2016). A high protein diet (4.4 g/kg/d) has no harmful effects on healthy, resistance-trained men. <em>Journal of Nutrition &amp; Metabolism</em>, 2016, Article 8394187. <a href="https://pubmed.ncbi.nlm.nih.gov/27800279/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+            <li>Schoenfeld, B. J., &amp; Aragon, A. A. (2018). How much protein can the body use in a single meal for muscle-building? <em>Journal of the International Society of Sports Nutrition</em>, 15(1), 10. <a href="https://pubmed.ncbi.nlm.nih.gov/29467747/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+            <li>Mettler, S., Mitchell, N., &amp; Tipton, K. D. (2010). Increased protein intake reduces lean body mass loss during weight loss in athletes. <em>Medicine &amp; Science in Sports &amp; Exercise</em>, 42(2), 326-337. <a href="https://pubmed.ncbi.nlm.nih.gov/19927027/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+            <li>Res, P. T., et al. (2012). Protein supplementation before sleep improves skeletal muscle hypertrophy and strength gains. <em>Medicine &amp; Science in Sports &amp; Exercise</em>, 44(8), 1560-1569. <a href="https://pubmed.ncbi.nlm.nih.gov/22344021/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+            <li>International Society of Sports Nutrition. (2017). Position stand: protein and exercise. <em>Journal of the International Society of Sports Nutrition</em>, 14, 20. <a href="https://pubmed.ncbi.nlm.nih.gov/28698208/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+            <li>WHO/FAO. (2007). Protein and amino acid requirements in human nutrition. <em>WHO Technical Report Series</em>, 935. <a href="https://www.who.int/publications/i/item/9789241209359" rel="nofollow noopener" target="_blank">WHO</a></li>
+          </ol>
+        </div>
+
+        <h2 style="margin-top:48px">Related Calculators</h2>
+        <div class="cards-grid" style="margin-bottom:24px">
+          <div class="card">
+            <div class="card-icon card-icon-macro">MACRO</div>
+            <h3>Macros Calculator</h3>
+            <p>Get a complete macronutrient split including your protein target.</p>
+            <a href="/macros-calculator/" class="card-link">Calculate Macros &rarr;</a>
+          </div>
+          <div class="card">
+            <div class="card-icon card-icon-cal">CAL</div>
+            <h3>Calorie Calculator</h3>
+            <p>Find your calorie target to pair with your protein intake.</p>
+            <a href="/calorie-calculator/" class="card-link">Calculate Calories &rarr;</a>
+          </div>
+          <div class="card">
+            <div class="card-icon card-icon-lbm">LBM</div>
+            <h3>Lean Body Mass Calculator</h3>
+            <p>Calculate LBM for more precise protein-per-kg-FFM targets.</p>
+            <a href="/lean-body-mass-calculator/" class="card-link">Calculate LBM &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <div class="sidebar-card">
+          <h3>Quick Navigation</h3>
+          <ul>
+            <li><a href="#prot-target">Results</a></li>
+            <li><a href="#understanding-protein">Understanding Protein</a></li>
+            <li><a href="#recommendations">By Goal</a></li>
+            <li><a href="#timing">Timing &amp; Distribution</a></li>
+            <li><a href="#sources">Best Sources</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Other Calculators</h3>
+          <ul>
+            <li><a href="/macros-calculator/">Macros Calculator</a></li>
+            <li><a href="/calorie-calculator/">Calorie Calculator</a></li>
+            <li><a href="/bmr-calculator/">BMR Calculator</a></li>
+            <li><a href="/body-fat-calculator/">Body Fat Calculator</a></li>
+            <li><a href="/calorie-deficit-calculator/">Calorie Deficit Calculator</a></li>
+            <li><a href="/water-intake-calculator/">Water Intake Calculator</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="site-disclaimer">
+  <div class="container">
+    This tool provides estimates for educational purposes only. Consult a healthcare professional before making dietary changes.
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">TDEE<span>BMR</span></a>
+        <p>Evidence-based nutrition calculators for smarter dietary decisions.</p>
+      </div>
+      <div>
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/calculators/">All Calculators</a></li>
+          <li><a href="/bmr-calculator/">BMR Calculator</a></li>
+          <li><a href="/bmi-calculator/">BMI Calculator</a></li>
+          <li><a href="/macros-calculator/">Macros Calculator</a></li>
+          <li><a href="/body-fat-calculator/">Body Fat Calculator</a></li>
+          <li><a href="/calorie-deficit-calculator/">Deficit Calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="/learn/">All Articles</a></li>
+          <li><a href="/learn/how-accurate-is-tdee/">How Accurate Is TDEE?</a></li>
+          <li><a href="/learn/tdee-vs-bmr/">TDEE vs BMR</a></li>
+          <li><a href="/learn/activity-level-guidelines/">Activity Levels</a></li>
+          <li><a href="/learn/metabolic-adaptation/">Metabolic Adaptation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/methodology/">Methodology</a></li>
+          <li><a href="/disclaimer/">Medical Disclaimer</a></li>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms of Use</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 TDEEBMR. All rights reserved. For educational purposes only.
+    </div>
+  </div>
+</footer>
+
+<script src="/js/calculators.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  let currentUnit = 'metric';
+
+  initUnitToggle(unit => {
+    currentUnit = unit;
+    const isMetric = unit === 'metric';
+    document.getElementById('prot-weight-group').style.display = isMetric ? '' : 'none';
+    document.getElementById('prot-weight-lbs-group').style.display = isMetric ? 'none' : '';
+  });
+
+  document.getElementById('prot-calc-btn').addEventListener('click', () => {
+    let weightKg;
+    if (currentUnit === 'metric') {
+      weightKg = parseFloat(document.getElementById('prot-weight').value);
+    } else {
+      weightKg = Calc.lbsToKg(parseFloat(document.getElementById('prot-weight-lbs').value));
+    }
+
+    if (!weightKg) { alert('Please enter your weight.'); return; }
+
+    const activity = document.getElementById('prot-activity').value;
+    const goal = document.getElementById('prot-goal').value;
+
+    let factor;
+    let rangeLow, rangeHigh;
+    if (goal === 'cut') {
+      const factors = { sedentary: 1.8, light: 2.0, moderate: 2.2, active: 2.4, extraActive: 2.6 };
+      factor = factors[activity] || 2.2;
+      rangeLow = Math.round(weightKg * 1.8);
+      rangeHigh = Math.round(weightKg * 2.7);
+    } else if (goal === 'bulk') {
+      const factors = { sedentary: 1.4, light: 1.6, moderate: 1.8, active: 2.0, extraActive: 2.2 };
+      factor = factors[activity] || 1.8;
+      rangeLow = Math.round(weightKg * 1.6);
+      rangeHigh = Math.round(weightKg * 2.2);
+    } else if (goal === 'athlete') {
+      const factors = { sedentary: 1.4, light: 1.6, moderate: 1.8, active: 2.0, extraActive: 2.0 };
+      factor = factors[activity] || 1.8;
+      rangeLow = Math.round(weightKg * 1.4);
+      rangeHigh = Math.round(weightKg * 2.0);
+    } else {
+      const factors = { sedentary: 0.8, light: 1.0, moderate: 1.2, active: 1.4, extraActive: 1.6 };
+      factor = factors[activity] || 1.2;
+      rangeLow = Math.round(weightKg * 1.0);
+      rangeHigh = Math.round(weightKg * 1.6);
+    }
+
+    const target = Math.round(weightKg * factor);
+    const perKg = factor.toFixed(1);
+    const perLb = (factor / 2.20462).toFixed(2);
+    const calories = target * 4;
+
+    document.getElementById('prot-target').textContent = target;
+    document.getElementById('prot-per-kg').textContent = perKg + ' g/kg';
+    document.getElementById('prot-per-lb').textContent = perLb + ' g/lb';
+    document.getElementById('prot-calories').textContent = calories + ' kcal';
+    document.getElementById('prot-range').textContent = rangeLow + ' - ' + rangeHigh;
+    document.getElementById('prot-results').classList.add('visible');
+    document.getElementById('prot-results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<title>Comparison of BMR Formulas: Which Should You Use? | TDEEBMR</title>
+<meta name="description" content="Head-to-head comparison of Mifflin-St Jeor, Harris-Benedict, Katch-McArdle, Owen, and WHO BMR equations. Accuracy data, historical context, and worked examples showing different results for the same person.">
+  <meta property="og:title" content="Comparison of BMR Formulas: Which Should You Use? | TDEEBMR">
+  <meta property="og:description" content="Head-to-head comparison of Mifflin-St Jeor, Harris-Benedict, Katch-McArdle, Owen, and WHO BMR equations. Accuracy data, historical context, and worked examples showing different results for the same person.">
+  <meta property="og:image" content="https://tdeebmr.com/images/bmr-formulas.png">
+  <meta property="og:url" content="https://tdeebmr.com/learn/comparison-of-bmr-formulas/">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Comparison of BMR Formulas: Which Should You Use? | TDEEBMR">
+  <meta name="twitter:description" content="Head-to-head comparison of Mifflin-St Jeor, Harris-Benedict, Katch-McArdle, Owen, and WHO BMR equations. Accuracy data, historical context, and worked examples showing different results for the same person.">
+  <meta name="twitter:image" content="https://tdeebmr.com/images/bmr-formulas.png">
+<link rel="canonical" href="https://tdeebmr.com/learn/comparison-of-bmr-formulas/">
+<link rel="stylesheet" href="/css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tdeebmr.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Learn", "item": "https://tdeebmr.com/learn/" },
+    { "@type": "ListItem", "position": 3, "name": "Comparison of BMR Formulas", "item": "https://tdeebmr.com/learn/comparison-of-bmr-formulas/" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Comparison of Basal Metabolic Rate Formulas",
+  "description": "A detailed comparison of the five most commonly used BMR prediction equations, with accuracy data, historical context, and worked examples.",
+  "datePublished": "2026-11-04",
+  "dateModified": "2026-11-04",
+  "author": { "@type": "Organization", "name": "TDEEBMR" },
+  "publisher": { "@type": "Organization", "name": "TDEEBMR", "url": "https://tdeebmr.com/" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which BMR formula is the most accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For the general population, the Mifflin-St Jeor equation (1990) is considered the most accurate, predicting BMR within +/-10% for approximately 82% of individuals. For muscular individuals or those with known body fat percentages, the Katch-McArdle formula is more accurate because it uses lean body mass directly. The original Harris-Benedict equation (1919) tends to overestimate BMR by about 5% for modern populations, while the revised Harris-Benedict (1984) improved accuracy but still slightly overestimates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do different BMR formulas give different results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Different formulas were derived from different populations using different methodologies. Harris-Benedict (1919) was based on 239 subjects in the early 1900s when people were generally smaller and less overweight. Mifflin-St Jeor (1990) used 498 subjects from a more modern, diverse population. Katch-McArdle uses lean body mass rather than total weight, making it more accurate for people with unusual body compositions. Each formula reflects the average metabolic characteristics of its derivation population."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I use Katch-McArdle or Mifflin-St Jeor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you know your body fat percentage (from DEXA, hydrostatic weighing, or reliable skinfold measurements), use Katch-McArdle. It is more accurate for muscular individuals and those with obesity because it accounts for body composition. If you do not know your body fat percentage, use Mifflin-St Jeor, which is the most accurate weight-based formula for the general population. Our TDEE Calculator offers both options."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much do different formulas vary for the same person?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For an average person, the variation between formulas is typically 50-200 kcal/day. For muscular or obese individuals, the variation can be 200-400+ kcal/day. For example, a 200 lb male athlete at 10% body fat might get: Owen = 1,804 kcal, Mifflin-St Jeor = 1,966 kcal, Katch-McArdle = 2,133 kcal. The 329 kcal spread between the lowest and highest estimate illustrates why empirical validation (tracking food and weight for 2-3 weeks) is essential regardless of which formula you choose."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Comparison of BMR Formulas: Which Should You Use? | TDEEBMR",
+  "specialty": "Nutrition",
+  "audience": {
+    "@type": "MedicalAudience",
+    "audienceType": "Patients"
+  },
+  "url": "https://tdeebmr.com/learn/comparison-of-bmr-formulas/",
+  "description": "Head-to-head comparison of Mifflin-St Jeor, Harris-Benedict, Katch-McArdle, Owen, and WHO BMR equations. Accuracy data, historical context, and worked examples showing different results for the same person."
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">TDEE<span>BMR</span></a>
+    <button class="mobile-menu-btn" aria-label="Toggle menu">&#9776;</button>
+    <nav>
+      <a href="/calculators/">Calculators</a>
+      <a href="/learn/">Learn</a>
+      <a href="/methodology/">Methodology</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">Home</a> <span>&rsaquo;</span>
+    <a href="/learn/">Learn</a> <span>&rsaquo;</span>
+    Comparison of BMR Formulas
+  </div>
+</div>
+
+<div class="article-content container">
+
+  <h1>Comparison of Basal Metabolic Rate Formulas</h1>
+
+  <div class="article-meta">
+    <span>November 4, 2026</span>
+    <span>&bull;</span>
+    <span>14 min read</span>
+    <span class="tag">Science</span>
+    <span class="tag accent">Fundamentals</span>
+  </div>
+
+  <img src="/images/bmr-formulas.png" alt="Comparison of BMR formulas including Mifflin-St Jeor, Harris-Benedict, and Katch-McArdle equations" style="border-radius:12px;margin-bottom:24px">
+
+  <p>There are at least half a dozen equations in common use for predicting basal metabolic rate (BMR). They give different results for the same person, they were developed from different populations using different methods, and they have different accuracy profiles depending on who you are calculating for. Choosing the right formula matters: a 200-kcal difference in BMR translates to a 200-kcal difference in your <a href="/learn/tdee-vs-bmr/">TDEE</a>, which over a month equals roughly 1.7 lbs of unintended fat gain or loss.</p>
+
+  <p>This article provides a comprehensive comparison of the five most commonly used BMR equations: <strong>Mifflin-St Jeor</strong>, <strong>Harris-Benedict</strong> (original and revised), <strong>Katch-McArdle</strong>, <strong>Owen</strong>, and <strong>WHO/FAO</strong>. We cover the history, derivation population, accuracy data, strengths, and limitations of each, and then show exactly how they produce different results for the same person.</p>
+
+  <h2>Why Do Different Formulas Exist?</h2>
+
+  <p>BMR prediction equations are statistical models. They are derived by measuring actual BMR (via indirect calorimetry) in a sample population and then finding the mathematical relationship between BMR and easily measurable variables like weight, height, age, and sex.</p>
+
+  <p>Different formulas exist because:</p>
+
+  <ul>
+    <li><strong>Different populations:</strong> A formula derived from young athletes will not accurately predict BMR for elderly obese individuals, and vice versa.</li>
+    <li><strong>Different eras:</strong> People in 1919 (when Harris-Benedict was published) had different body compositions than people in 1990 (when Mifflin-St Jeor was published) or today.</li>
+    <li><strong>Different variables:</strong> Some formulas use total body weight; others use lean body mass. Some include age; others do not.</li>
+    <li><strong>Different statistical methods:</strong> The sample size, measurement precision, and regression techniques have improved over the decades.</li>
+  </ul>
+
+  <h2>The Five Major BMR Equations</h2>
+
+  <h3>1. Harris-Benedict Equation (1919, Revised 1984)</h3>
+
+  <p><strong>Historical context:</strong> Published by James Harris and Benedict in 1919, this was the first widely used BMR prediction equation. It was derived from indirect calorimetry measurements on 239 subjects (143 men, 96 women) who were mostly young, lean, and of normal weight. The revised equation by Roza and Shizgal (1984) used updated statistical methods on the same original dataset.</p>
+
+  <p><strong>Original (1919):</strong></p>
+  <ul>
+    <li>Men: BMR = 66.5 + (13.75 &times; weight kg) + (5.003 &times; height cm) - (6.75 &times; age)</li>
+    <li>Women: BMR = 655.1 + (9.563 &times; weight kg) + (1.850 &times; height cm) - (4.676 &times; age)</li>
+  </ul>
+
+  <p><strong>Revised (Roza &amp; Shizgal, 1984):</strong></p>
+  <ul>
+    <li>Men: BMR = 88.362 + (13.397 &times; weight kg) + (4.799 &times; height cm) - (5.677 &times; age)</li>
+    <li>Women: BMR = 447.593 + (9.247 &times; weight kg) + (3.098 &times; height cm) - (4.330 &times; age)</li>
+  </ul>
+
+  <p><strong>Accuracy:</strong> The Harris-Benedict equation was the standard for over 70 years but is now known to <strong>overestimate BMR by approximately 5%</strong> for modern populations. This is because the original sample was drawn from a leaner, younger population than today's average. A 2005 review by <strong>Frankenfield et al.</strong> in the <em>Journal of the American Dietetic Association</em> found that Harris-Benedict was less accurate than Mifflin-St Jeor for both non-obese and obese individuals.</p>
+
+  <p><strong>When to use:</strong> Harris-Benedict is still widely used in clinical settings due to familiarity, but it should not be the first choice for modern applications. If you are young, lean, and athletic, it may actually give a reasonable estimate. For older or overweight populations, it tends to overestimate.</p>
+
+  <h3>2. Mifflin-St Jeor Equation (1990)</h3>
+
+  <p><strong>Historical context:</strong> Published by Mifflin, St Jeor, and colleagues in 1990, this equation was derived from 498 subjects (247 men, 251 women) recruited over a 9-year period. The sample was more diverse than Harris-Benedict's, including individuals with a wider range of ages and body compositions, and was considered more representative of the contemporary (1990s) American population.</p>
+
+  <p><strong>Equations:</strong></p>
+  <ul>
+    <li>Men: BMR = (10 &times; weight kg) + (6.25 &times; height cm) - (5 &times; age) + 5</li>
+    <li>Women: BMR = (10 &times; weight kg) + (6.25 &times; height cm) - (5 &times; age) - 161</li>
+  </ul>
+
+  <p><strong>Accuracy:</strong> Mifflin-St Jeor is the most widely recommended equation in current clinical and sports nutrition practice. The Frankenfield et al. (2005) review found it accurate within &plusmn;10% for approximately <strong>82% of non-obese individuals</strong> and <strong>71% of obese individuals</strong>. It is considered the gold standard for BMR prediction in the general population.</p>
+
+  <p><strong>When to use:</strong> This should be your default choice when you do not know body fat percentage. It is the equation used by our <a href="/calculators/">TDEE Calculator</a> as the primary option. It works well for most adults regardless of age, sex, or moderate variations in body composition.</p>
+
+  <div class="key-takeaway">
+    <h4>Recommendation</h4>
+    <p>For most people, Mifflin-St Jeor is the best available BMR prediction equation. It was validated on a modern, diverse population and has the strongest evidence base for accuracy. If you know your body fat percentage, however, Katch-McArdle may give a more precise estimate.</p>
+  </div>
+
+  <h3>3. Katch-McArdle Equation (1996)</h3>
+
+  <p><strong>Historical context:</strong> Developed by Katch and McArdle, this equation uses <strong>lean body mass (LBM)</strong> rather than total body weight as the primary predictor. It was derived from athletic and active populations where body composition varies widely.</p>
+
+  <p><strong>Equation (same for men and women):</strong></p>
+  <ul>
+    <li>BMR = 370 + (21.6 &times; lean body mass in kg)</li>
+  </ul>
+  <p>Where lean body mass = total body weight &times; (1 - body fat percentage)</p>
+
+  <p><strong>Accuracy:</strong> Katch-McArdle is more accurate than weight-based equations for individuals with atypical body composition: very muscular athletes, bodybuilders, and those with obesity. For people with average body composition, it performs similarly to Mifflin-St Jeor. A study by <strong>Knuth et al. (2007)</strong> found that Katch-McArdle was the most accurate equation for individuals with body fat percentages above 25% or below 10%.</p>
+
+  <p><strong>When to use:</strong> When you know your body fat percentage with reasonable accuracy (from DEXA scan, hydrostatic weighing, or reliable skinfold measurements). It is also the best choice for very muscular individuals or those with significant obesity, as weight-based equations tend to misestimate their BMR.</p>
+
+  <p><strong>Limitation:</strong> The equation is only as good as your body fat measurement. If you are estimating body fat percentage from a consumer smart scale or visual assessment, the error in the body fat measurement will propagate into the BMR estimate, potentially making Katch-McArdle <em>less</em> accurate than Mifflin-St Jeor.</p>
+
+  <h3>4. Owen Equation (1987, 1988)</h3>
+
+  <p><strong>Historical context:</strong> Published by Owen et al. in two papers (1987 for men, 1988 for women), these equations were derived from larger samples than Harris-Benedict and were intended to update BMR prediction for contemporary populations.</p>
+
+  <p><strong>Equations:</strong></p>
+  <ul>
+    <li>Men: BMR = 879 + (10.2 &times; weight kg)</li>
+    <li>Women: BMR = 795 + (7.18 &times; weight kg)</li>
+  </ul>
+
+  <p><strong>Accuracy:</strong> The Owen equations are simpler than Harris-Benedict or Mifflin-St Jeor because they use only body weight (no height or age). This simplicity makes them less precise for individuals who deviate from the average height and age of the derivation population. They tend to perform reasonably well for average-sized adults but are less accurate for very tall, very short, very young, or very old individuals.</p>
+
+  <p><strong>When to use:</strong> Rarely. The Owen equations are not commonly used in modern practice because Mifflin-St Jeor and Katch-McArdle are more accurate. They are included here for completeness and because you may encounter them in older literature.</p>
+
+  <h3>5. WHO/FAO Equations (1985, 2001, 2004)</h3>
+
+  <p><strong>Historical context:</strong> The World Health Organization and Food and Agriculture Organization have published several sets of BMR prediction equations over the decades, based on large international datasets. The most commonly cited are the Schofield equations (1985), which were used by the WHO until they were superseded.</p>
+
+  <p><strong>Equations (Schofield, 1985, for adults):</strong></p>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Sex</th>
+          <th>Age Range</th>
+          <th>Equation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Male</td>
+          <td>18-30</td>
+          <td>BMR = (15.3 &times; weight kg) + 679</td>
+        </tr>
+        <tr>
+          <td>Male</td>
+          <td>30-60</td>
+          <td>BMR = (11.6 &times; weight kg) + 879</td>
+        </tr>
+        <tr>
+          <td>Male</td>
+          <td>60+</td>
+          <td>BMR = (13.5 &times; weight kg) + 487</td>
+        </tr>
+        <tr>
+          <td>Female</td>
+          <td>18-30</td>
+          <td>BMR = (14.7 &times; weight kg) + 496</td>
+        </tr>
+        <tr>
+          <td>Female</td>
+          <td>30-60</td>
+          <td>BMR = (8.7 &times; weight kg) + 829</td>
+        </tr>
+        <tr>
+          <td>Female</td>
+          <td>60+</td>
+          <td>BMR = (10.5 &times; weight kg) + 596</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><strong>Accuracy:</strong> The WHO/FAO equations were derived from large international datasets and are considered reasonably accurate for population-level estimates. However, they have been shown to overestimate BMR by approximately 5-7% for individuals in developed nations. The 2001 and 2004 updates attempted to address this by using more modern data, but the Schofield equations remain the most widely cited in the WHO/FAO family.</p>
+
+  <p><strong>When to use:</strong> These equations are primarily used in international public health and clinical nutrition settings. For individual diet planning, Mifflin-St Jeor or Katch-McArdle are preferred due to their superior accuracy for modern populations.</p>
+
+  <h2>Head-to-Head Comparison: Same Person, Different Results</h2>
+
+  <p>To illustrate how much these formulas can differ, let's calculate BMR for three hypothetical individuals using all five equations.</p>
+
+  <h3>Subject A: Average Male</h3>
+
+  <p><strong>Profile:</strong> Male, 35 years old, 180 lbs (81.6 kg), 5'10" (178 cm), 18% body fat</p>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Formula</th>
+          <th>BMR (kcal/day)</th>
+          <th>Difference from Mifflin-St Jeor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Mifflin-St Jeor</td>
+          <td><strong>1,787</strong></td>
+          <td>&mdash;</td>
+        </tr>
+        <tr>
+          <td>Harris-Benedict (Revised)</td>
+          <td>1,823</td>
+          <td>+36 (+2%)</td>
+        </tr>
+        <tr>
+          <td>Katch-McArdle (18% BF, LBM = 66.9 kg)</td>
+          <td>1,815</td>
+          <td>+28 (+1.5%)</td>
+        </tr>
+        <tr>
+          <td>Owen</td>
+          <td>1,711</td>
+          <td>-76 (-4%)</td>
+        </tr>
+        <tr>
+          <td>WHO/FAO (Schofield, age 30-60)</td>
+          <td>1,828</td>
+          <td>+41 (+2.3%)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>For this average male, the spread is approximately 117 kcal/day (from 1,711 to 1,828). This is a relatively small difference, and any of these formulas would give a reasonable estimate.</p>
+
+  <h3>Subject B: Muscular Male Athlete</h3>
+
+  <p><strong>Profile:</strong> Male, 28 years old, 200 lbs (90.7 kg), 5'11" (180 cm), 10% body fat</p>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Formula</th>
+          <th>BMR (kcal/day)</th>
+          <th>Difference from Mifflin-St Jeor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Mifflin-St Jeor</td>
+          <td><strong>1,966</strong></td>
+          <td>&mdash;</td>
+        </tr>
+        <tr>
+          <td>Harris-Benedict (Revised)</td>
+          <td>2,025</td>
+          <td>+59 (+3%)</td>
+        </tr>
+        <tr>
+          <td>Katch-McArdle (10% BF, LBM = 81.6 kg)</td>
+          <td><strong>2,133</strong></td>
+          <td><strong>+167 (+8.5%)</strong></td>
+        </tr>
+        <tr>
+          <td>Owen</td>
+          <td>1,804</td>
+          <td>-162 (-8.2%)</td>
+        </tr>
+        <tr>
+          <td>WHO/FAO (Schofield, age 18-30)</td>
+          <td>2,066</td>
+          <td>+100 (+5.1%)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>For this muscular athlete, the spread is much larger: <strong>329 kcal/day</strong> (from 1,804 to 2,133). Katch-McArdle gives the highest estimate because it accounts for his high lean body mass. Owen gives the lowest because it uses only total weight without considering composition. For this individual, Katch-McArdle is likely the most accurate, as his high muscle mass drives a higher-than-predicted BMR.</p>
+
+  <h3>Subject C: Overweight Female</h3>
+
+  <p><strong>Profile:</strong> Female, 45 years old, 190 lbs (86.2 kg), 5'4" (163 cm), 35% body fat</p>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Formula</th>
+          <th>BMR (kcal/day)</th>
+          <th>Difference from Mifflin-St Jeor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Mifflin-St Jeor</td>
+          <td><strong>1,617</strong></td>
+          <td>&mdash;</td>
+        </tr>
+        <tr>
+          <td>Harris-Benedict (Revised)</td>
+          <td>1,706</td>
+          <td>+89 (+5.5%)</td>
+        </tr>
+        <tr>
+          <td>Katch-McArdle (35% BF, LBM = 56.0 kg)</td>
+          <td>1,580</td>
+          <td>-37 (-2.3%)</td>
+        </tr>
+        <tr>
+          <td>Owen</td>
+          <td>1,414</td>
+          <td>-203 (-12.6%)</td>
+        </tr>
+        <tr>
+          <td>WHO/FAO (Schofield, age 30-60)</td>
+          <td>1,578</td>
+          <td>-39 (-2.4%)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>For this overweight female, the spread is <strong>292 kcal/day</strong>. Harris-Benedict gives the highest estimate (overestimating because it was derived from a leaner population), while Owen gives the lowest. Katch-McArdle and WHO/FAO are in close agreement and are likely the most accurate for this individual because they account for her high body fat percentage (Katch-McArdle) or were derived from a more diverse population (WHO/FAO).</p>
+
+  <h2>Summary: Which Formula Should You Use?</h2>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Situation</th>
+          <th>Recommended Formula</th>
+          <th>Why</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>General population, no body fat % known</td>
+          <td><strong>Mifflin-St Jeor</strong></td>
+          <td>Best validated for modern populations; most accurate overall</td>
+        </tr>
+        <tr>
+          <td>Body fat % known (from reliable measurement)</td>
+          <td><strong>Katch-McArdle</strong></td>
+          <td>Accounts for body composition; more accurate for muscular or obese individuals</td>
+        </tr>
+        <tr>
+          <td>Clinical or research setting requiring international standards</td>
+          <td><strong>WHO/FAO (Schofield)</strong></td>
+          <td>Widely accepted in global health; large derivation dataset</td>
+        </tr>
+        <tr>
+          <td>Quick estimate with only body weight available</td>
+          <td><strong>Owen</strong></td>
+          <td>Simplest formula; reasonable for average-sized adults</td>
+        </tr>
+        <tr>
+          <td>Historical reference or legacy clinical use</td>
+          <td><strong>Harris-Benedict (Revised)</strong></td>
+          <td>Still widely used but tends to overestimate by ~5% for modern populations</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="info-box">
+    <h4>The Bottom Line</h4>
+    <p>No formula is perfectly accurate for every individual. The best approach is to: (1) Choose the formula most appropriate for your situation using the table above, (2) Calculate your BMR and TDEE using our <a href="/calculators/">TDEE Calculator</a> (which supports both Mifflin-St Jeor and Katch-McArdle), and (3) Validate the result empirically by tracking your food intake and body weight for 2-3 weeks. See our <a href="/learn/how-accurate-is-tdee/">accuracy guide</a> for the full protocol.</p>
+  </div>
+
+  <h2>How to Learn More About Manual Calculation</h2>
+
+  <p>If you want to understand the math behind these formulas and work through calculations by hand, see our <a href="/learn/how-to-calculate-tdee-manually/">step-by-step guide to manual TDEE calculation</a>. It covers both Mifflin-St Jeor and Katch-McArdle with worked examples for different body types and goals.</p>
+
+  <h2>Related Resources</h2>
+
+  <ul>
+    <li><a href="/calculators/">TDEE Calculator</a> &mdash; Supports both Mifflin-St Jeor and Katch-McArdle</li>
+    <li><a href="/learn/how-to-calculate-tdee-manually/">How to Calculate TDEE Manually</a> &mdash; Step-by-step walkthrough with worked examples</li>
+    <li><a href="/learn/how-accurate-is-tdee/">How Accurate Is TDEE?</a> &mdash; Understanding prediction equation limitations</li>
+    <li><a href="/learn/tdee-vs-bmr/">TDEE vs. BMR</a> &mdash; Understanding the components of energy expenditure</li>
+    <li><a href="/learn/metabolic-adaptation/">Metabolic Adaptation</a> &mdash; What happens to BMR during prolonged dieting</li>
+  </ul>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question">Which BMR formula is the most accurate?</button>
+      <div class="faq-answer">
+        <p>For the general population, the Mifflin-St Jeor equation (1990) is considered the most accurate, predicting BMR within +/-10% for approximately 82% of individuals. For muscular individuals or those with known body fat percentages, the Katch-McArdle formula is more accurate because it uses lean body mass directly. The original Harris-Benedict equation (1919) tends to overestimate BMR by about 5% for modern populations, while the revised Harris-Benedict (1984) improved accuracy but still slightly overestimates.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Why do different BMR formulas give different results?</button>
+      <div class="faq-answer">
+        <p>Different formulas were derived from different populations using different methodologies. Harris-Benedict (1919) was based on 239 subjects in the early 1900s when people were generally smaller and less overweight. Mifflin-St Jeor (1990) used 498 subjects from a more modern, diverse population. Katch-McArdle uses lean body mass rather than total weight, making it more accurate for people with unusual body compositions. Each formula reflects the average metabolic characteristics of its derivation population.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Should I use Katch-McArdle or Mifflin-St Jeor?</button>
+      <div class="faq-answer">
+        <p>If you know your body fat percentage (from DEXA, hydrostatic weighing, or reliable skinfold measurements), use Katch-McArdle. It is more accurate for muscular individuals and those with obesity because it accounts for body composition. If you do not know your body fat percentage, use Mifflin-St Jeor, which is the most accurate weight-based formula for the general population. Our <a href="/calculators/">TDEE Calculator</a> offers both options.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">How much do different formulas vary for the same person?</button>
+      <div class="faq-answer">
+        <p>For an average person, the variation between formulas is typically 50-200 kcal/day. For muscular or obese individuals, the variation can be 200-400+ kcal/day. For example, a 200 lb male athlete at 10% body fat might get: Owen = 1,804 kcal, Mifflin-St Jeor = 1,966 kcal, Katch-McArdle = 2,133 kcal. The 329 kcal spread between the lowest and highest estimate illustrates why empirical validation (tracking food and weight for 2-3 weeks) is essential regardless of which formula you choose.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    <strong>Medical Disclaimer</strong>
+    This article is for educational purposes only and does not constitute medical or dietary advice. BMR prediction equations provide estimates that may differ from actual metabolic rate. Consult a registered dietitian or healthcare professional for individualized nutritional guidance.
+  </div>
+
+</div>
+
+<div class="site-disclaimer">
+  <div class="container">
+    This tool provides estimates for educational purposes only. Consult a healthcare professional before making dietary changes.
+  </div>
+</div>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">TDEE<span>BMR</span></a>
+        <p>Evidence-based nutrition calculators for smarter dietary decisions.</p>
+      </div>
+      <div>
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/calculators/">All Calculators</a></li>
+          <li><a href="/bmr-calculator/">BMR Calculator</a></li>
+          <li><a href="/bmi-calculator/">BMI Calculator</a></li>
+          <li><a href="/macros-calculator/">Macros Calculator</a></li>
+          <li><a href="/body-fat-calculator/">Body Fat Calculator</a></li>
+          <li><a href="/calorie-deficit-calculator/">Deficit Calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="/learn/">All Articles</a></li>
+          <li><a href="/learn/how-accurate-is-tdee/">How Accurate Is TDEE?</a></li>
+          <li><a href="/learn/tdee-vs-bmr/">TDEE vs BMR</a></li>
+          <li><a href="/learn/activity-level-guidelines/">Activity Levels</a></li>
+          <li><a href="/learn/metabolic-adaptation/">Metabolic Adaptation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/methodology/">Methodology</a></li>
+          <li><a href="/disclaimer/">Medical Disclaimer</a></li>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms of Use</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 TDEEBMR. All rights reserved. For educational purposes only.
+    </div>
+  </div>
+</footer>
+
+<script src="/js/calculators.js"></script>
+</body>
+</html>

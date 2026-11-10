@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<title>Macros Calculator - Protein, Carbs &amp; Fat Split for Your Goals</title>
+<meta name="description" content="Calculate your ideal macronutrient split (protein, carbs, fat) based on your TDEE and fitness goals. Choose balanced, high-protein, or keto macro ratios.">
+  <meta property="og:title" content="Macros Calculator - Protein, Carbs &amp; Fat Split for Your Goals">
+  <meta property="og:description" content="Calculate your ideal macronutrient split (protein, carbs, fat) based on your TDEE and fitness goals. Choose balanced, high-protein, or keto macro ratios.">
+  <meta property="og:image" content="https://tdeebmr.com/images/macros-calculator-og.png">
+  <meta property="og:url" content="https://tdeebmr.com/macros-calculator/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Macros Calculator - Protein, Carbs &amp; Fat Split for Your Goals">
+  <meta name="twitter:description" content="Calculate your ideal macronutrient split (protein, carbs, fat) based on your TDEE and fitness goals. Choose balanced, high-protein, or keto macro ratios.">
+  <meta name="twitter:image" content="https://tdeebmr.com/images/macros-calculator-og.png">
+<link rel="canonical" href="https://tdeebmr.com/macros-calculator/">
+<link rel="stylesheet" href="/css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tdeebmr.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://tdeebmr.com/calculators/" },
+    { "@type": "ListItem", "position": 3, "name": "Macros Calculator", "item": "https://tdeebmr.com/macros-calculator/" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Macros Calculator - Protein, Carbs & Fat Split for Your Goals",
+  "datePublished": "2026-11-03",
+  "dateModified": "2026-11-07",
+  "specialty": "Nutrition",
+  "audience": {
+    "@type": "MedicalAudience",
+    "audienceType": "Patients"
+  },
+  "url": "https://tdeebmr.com/macros-calculator/",
+  "description": "Calculate your ideal macronutrient split (protein, carbs, fat) based on your TDEE and fitness goals. Choose balanced, high-protein, or keto macro ratios."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Macros Calculator",
+  "url": "https://tdeebmr.com/macros-calculator/",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "Calculate optimal macronutrient ratios (protein, carbs, fat) for cutting, maintaining, or bulking based on your TDEE."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are macronutrients?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Macronutrients (macros) are the three nutrient categories that provide calories: protein (4 kcal/g), carbohydrates (4 kcal/g), and fat (9 kcal/g). Each serves distinct physiological roles. Protein builds and repairs tissues, carbohydrates provide the body's preferred energy source, and fats support hormone production, nutrient absorption, and cell membrane structure. Alcohol provides 7 kcal/g but is not considered a macronutrient."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best macro split for fat loss?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Research supports higher protein intake during caloric deficit to preserve lean muscle mass. A common evidence-based split for cutting is 35% protein, 30% fat, 35% carbohydrates. The International Society of Sports Nutrition recommends 1.6-2.2 g/kg of body weight per day for those in a deficit. Fat should not drop below 0.5 g/kg to maintain hormonal function. The remaining calories can be allocated to carbohydrates based on personal preference and activity type."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a high-protein diet safe for kidneys?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For individuals with healthy kidney function, high-protein diets (up to 2.2 g/kg/day) have been shown to be safe in numerous studies. A 2018 review by Antonio et al. found no evidence of adverse renal effects in healthy individuals consuming up to 2.8 g/kg/day. However, those with pre-existing kidney disease should consult a physician before increasing protein intake. Adequate hydration is important with higher protein consumption."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the keto macro ratio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A standard ketogenic diet typically follows a ratio of approximately 70-75% fat, 20-25% protein, and 5-10% carbohydrates. For a 2,000 calorie diet, this translates to roughly 155-167g fat, 100-125g protein, and 25-50g carbs. The goal is to restrict carbohydrates enough to shift the body into ketosis, where it primarily burns fat for fuel instead of glucose. This typically requires keeping net carbs below 20-50g per day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate macros for bulking?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a lean bulk, start with your TDEE plus 250-350 calories. A balanced bulking split is approximately 25% protein, 25% fat, and 50% carbohydrates. The higher carbohydrate ratio supports intense training performance and recovery. Protein should be at least 1.6 g/kg of body weight. Adjust based on weekly weight gain: aim for 0.25-0.5% of body weight per week to maximize muscle gain while minimizing fat accumulation."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">TDEE<span>BMR</span></a>
+    <button class="mobile-menu-btn" aria-label="Toggle menu">&#9776;</button>
+    <nav>
+      <a href="/calculators/">Calculators</a>
+      <a href="/learn/">Learn</a>
+      <a href="/methodology/">Methodology</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a> <span>/</span> <a href="/calculators/">Calculators</a> <span>/</span> Macros Calculator
+    </div>
+    <h1>Macros Calculator</h1>
+    <p>Get a detailed macronutrient breakdown tailored to your calorie target and fitness goal. Choose from balanced, high-protein, or ketogenic splits.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="page-layout">
+      <div>
+        <div class="calc-card">
+          <h2>Enter Your Details</h2>
+          <div class="unit-toggle">
+            <button class="active" data-unit="metric">Metric (kg/cm)</button>
+            <button data-unit="imperial">Imperial (lbs/in)</button>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="macro-sex">Sex</label>
+              <select id="macro-sex"><option value="male">Male</option><option value="female">Female</option></select>
+            </div>
+            <div class="form-group">
+              <label for="macro-age">Age</label>
+              <input type="number" id="macro-age" placeholder="30" min="15" max="100">
+            </div>
+            <div class="form-group" id="macro-weight-group">
+              <label for="macro-weight">Weight (kg)</label>
+              <input type="number" id="macro-weight" placeholder="70" min="30" max="300" step="0.1">
+            </div>
+            <div class="form-group" id="macro-height-group">
+              <label for="macro-height">Height (cm)</label>
+              <input type="number" id="macro-height" placeholder="175" min="100" max="250" step="0.1">
+            </div>
+            <div class="form-group" id="macro-weight-lbs-group" style="display:none">
+              <label for="macro-weight-lbs">Weight (lbs)</label>
+              <input type="number" id="macro-weight-lbs" placeholder="154" min="60" max="700" step="0.1">
+            </div>
+            <div class="form-group" id="macro-height-ft-group" style="display:none">
+              <label for="macro-height-ft">Height (ft)</label>
+              <input type="number" id="macro-height-ft" placeholder="5" min="3" max="8">
+            </div>
+            <div class="form-group" id="macro-height-in-group" style="display:none">
+              <label for="macro-height-in">Height (in)</label>
+              <input type="number" id="macro-height-in" placeholder="9" min="0" max="11">
+            </div>
+            <div class="form-group full-width">
+              <label for="macro-activity">Activity Level</label>
+              <select id="macro-activity">
+                <option value="sedentary">Sedentary - Little or no exercise</option>
+                <option value="light">Lightly Active - Exercise 1-3 days/week</option>
+                <option value="moderate" selected>Moderately Active - Exercise 3-5 days/week</option>
+                <option value="active">Very Active - Hard exercise 6-7 days/week</option>
+                <option value="extraActive">Extra Active - Very hard exercise, physical job</option>
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <label for="macro-goal">Goal</label>
+              <select id="macro-goal">
+                <option value="cut">Fat Loss (Cut)</option>
+                <option value="maintain" selected>Maintain Weight</option>
+                <option value="bulk">Lean Bulk</option>
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <label for="macro-split">Macro Split Style</label>
+              <select id="macro-split">
+                <option value="balanced" selected>Balanced (30P / 30F / 40C)</option>
+                <option value="highprotein">High Protein (35P / 25F / 40C)</option>
+                <option value="lowcarb">Low Carb (30P / 35F / 35C)</option>
+                <option value="keto">Ketogenic (25P / 65F / 10C)</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="btn" id="macro-calc-btn">Calculate Macros</button>
+
+          <div class="results" id="macro-results">
+            <div class="result-main">
+              <div class="value" id="macro-calories">--</div>
+              <div class="label">Daily Calorie Target (kcal)</div>
+            </div>
+            <div class="result-grid">
+              <div class="result-item">
+                <div class="value" id="macro-protein-g">--</div>
+                <div class="label">Protein (g)</div>
+              </div>
+              <div class="result-item">
+                <div class="value" id="macro-protein-cal">--</div>
+                <div class="label">Protein Calories</div>
+              </div>
+              <div class="result-item">
+                <div class="value" id="macro-fat-g">--</div>
+                <div class="label">Fat (g)</div>
+              </div>
+              <div class="result-item">
+                <div class="value" id="macro-fat-cal">--</div>
+                <div class="label">Fat Calories</div>
+              </div>
+              <div class="result-item">
+                <div class="value" id="macro-carbs-g">--</div>
+                <div class="label">Carbs (g)</div>
+              </div>
+              <div class="result-item">
+                <div class="value" id="macro-carbs-cal">--</div>
+                <div class="label">Carbs Calories</div>
+              </div>
+            </div>
+            <div style="margin-top:16px;padding:16px;background:var(--bg);border-radius:var(--radius-sm);border:1px solid var(--border)">
+              <div style="display:flex;height:24px;border-radius:12px;overflow:hidden">
+                <div id="macro-bar-protein" style="background:var(--primary);transition:width 0.3s"></div>
+                <div id="macro-bar-fat" style="background:var(--accent);transition:width 0.3s"></div>
+                <div id="macro-bar-carbs" style="background:#3b82f6;transition:width 0.3s"></div>
+              </div>
+              <div style="display:flex;justify-content:space-between;margin-top:8px;font-size:0.8rem;color:var(--text-light)">
+                <span><span style="display:inline-block;width:10px;height:10px;background:var(--primary);border-radius:2px;margin-right:4px"></span>Protein</span>
+                <span><span style="display:inline-block;width:10px;height:10px;background:var(--accent);border-radius:2px;margin-right:4px"></span>Fat</span>
+                <span><span style="display:inline-block;width:10px;height:10px;background:#3b82f6;border-radius:2px;margin-right:4px"></span>Carbs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:48px;max-width:800px">
+          <h2 id="understanding-macros">Understanding Macronutrients</h2>
+          <p>Macronutrients, commonly called "macros," are the three categories of nutrients that provide the body with calories (energy). Every food you eat derives its caloric content from some combination of these three macros, plus potentially alcohol (which provides 7 kcal/g but is not essential for bodily function).</p>
+
+          <h3>The Three Macronutrients</h3>
+          <p><strong>Protein (4 kcal/g):</strong> Protein is the building block of muscles, organs, skin, enzymes, and hormones. It is composed of amino acids, nine of which are "essential" meaning the body cannot synthesize them and they must come from diet. Protein has the highest thermic effect of food (TEF), with the body expending 20-30% of protein calories just to digest and process it. Research by Leidy et al. (2015) demonstrated that higher protein intake (1.6-2.2 g/kg) improves body composition during caloric restriction by preserving lean mass.</p>
+          <p><strong>Carbohydrates (4 kcal/g):</strong> Carbohydrates are the body's preferred fuel source, especially for high-intensity exercise and brain function. They are stored as glycogen in muscles and the liver. Carbohydrates are classified as simple (sugars) or complex (starches and fiber). The fiber component of carbohydrates is not fully digested and contributes to gut health. The Dietary Guidelines for Americans recommend that carbohydrates comprise 45-65% of total daily calories.</p>
+          <p><strong>Fat (9 kcal/g):</strong> Dietary fat is essential for hormone production (including testosterone and estrogen), absorption of fat-soluble vitamins (A, D, E, K), cell membrane structure, and insulation of vital organs. Fats are categorized as saturated, monounsaturated, or polyunsaturated. The WHO recommends that fat comprise 20-35% of total energy intake, with saturated fats below 10%.</p>
+
+          <h2 id="macro-ratios">Macro Ratios for Different Goals</h2>
+          <h3>Fat Loss (Cutting)</h3>
+          <p>During a caloric deficit, protein needs increase to preserve lean muscle mass. The International Society of Sports Nutrition (ISSN) recommends 1.6-2.2 g/kg of body weight per day for athletes in a deficit. A higher protein intake also increases satiety and the thermic effect of food, making the deficit easier to maintain. Fat should not drop below 0.5 g/kg to preserve hormonal function. The remaining calories can be allocated to carbohydrates based on training intensity and personal preference.</p>
+          <div class="info-box">
+            <h4>Recommended Cutting Split</h4>
+            <p>Protein: 30-35% of calories | Fat: 25-30% | Carbohydrates: 35-45%</p>
+          </div>
+
+          <h3>Maintenance</h3>
+          <p>At maintenance calories, you have more flexibility with macro ratios. The key is finding a sustainable balance that supports your activity level, health markers, and personal preferences. A balanced split works well for most people at maintenance.</p>
+          <div class="info-box">
+            <h4>Recommended Maintenance Split</h4>
+            <p>Protein: 25-30% of calories | Fat: 25-35% | Carbohydrates: 40-50%</p>
+          </div>
+
+          <h3>Lean Bulk</h3>
+          <p>During a caloric surplus aimed at muscle gain, carbohydrates become more important as they fuel intense training sessions and support recovery through glycogen replenishment. Protein should remain adequate (at least 1.6 g/kg) but the additional calories can come primarily from carbohydrates to support performance.</p>
+          <div class="info-box">
+            <h4>Recommended Bulking Split</h4>
+            <p>Protein: 20-25% of calories | Fat: 20-30% | Carbohydrates: 45-60%</p>
+          </div>
+
+          <h2 id="ketogenic-approach">The Ketogenic Approach</h2>
+          <p>The ketogenic diet dramatically shifts macro ratios to approximately 70-75% fat, 20-25% protein, and 5-10% carbohydrates (typically under 20-50g net carbs per day). This forces the body into a metabolic state called ketosis, where it primarily burns fat for fuel instead of glucose.</p>
+          <p>Research by Paoli et al. (2013) found that ketogenic diets can be effective for fat loss and may offer therapeutic benefits for certain neurological conditions. However, long-term adherence is challenging for most people, and performance in high-intensity activities may decline due to reduced glycogen availability. The ketogenic approach is not inherently superior for fat loss when protein and calories are equated; its primary advantage is the appetite-suppressing effect of high fat intake and the simplicity of carbohydrate restriction.</p>
+
+          <h3>Protein Timing and Distribution</h3>
+          <p>While total daily protein intake matters most, research suggests that distributing protein evenly across meals (approximately 0.4 g/kg per meal across 3-5 meals) optimizes muscle protein synthesis. A meta-analysis by Schoenfeld and Aragon (2018) concluded that a protein intake window of 0.4-0.55 g/kg/meal across 3-5 meals maximizes the anabolic response. Post-exercise protein consumption within 2 hours of training remains important but the "anabolic window" is wider than previously believed.</p>
+
+          <div class="key-takeaway">
+            <h4>Key Takeaway</h4>
+            <p>There is no single "best" macro split. The optimal ratio depends on your goal, activity type, food preferences, and metabolic health. Total calorie intake and protein adequacy matter far more than the exact carb-to-fat ratio. Start with a split that feels sustainable, track your results for 3-4 weeks, and adjust based on progress.</p>
+          </div>
+        </div>
+
+        <h2 id="faq" style="margin-top:48px">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">What are macronutrients?</button>
+            <div class="faq-answer"><p>Macronutrients (macros) are the three nutrient categories that provide calories: protein (4 kcal/g), carbohydrates (4 kcal/g), and fat (9 kcal/g). Each serves distinct physiological roles. Protein builds and repairs tissues, carbohydrates provide the body's preferred energy source, and fats support hormone production, nutrient absorption, and cell membrane structure. Alcohol provides 7 kcal/g but is not considered a macronutrient.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is the best macro split for fat loss?</button>
+            <div class="faq-answer"><p>Research supports higher protein intake during caloric deficit to preserve lean muscle mass. A common evidence-based split for cutting is 35% protein, 30% fat, 35% carbohydrates. The International Society of Sports Nutrition recommends 1.6-2.2 g/kg of body weight per day for those in a deficit. Fat should not drop below 0.5 g/kg to maintain hormonal function. The remaining calories can be allocated to carbohydrates based on personal preference and activity type.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Is a high-protein diet safe for kidneys?</button>
+            <div class="faq-answer"><p>For individuals with healthy kidney function, high-protein diets (up to 2.2 g/kg/day) have been shown to be safe in numerous studies. A 2018 review by Antonio et al. found no evidence of adverse renal effects in healthy individuals consuming up to 2.8 g/kg/day. However, those with pre-existing kidney disease should consult a physician before increasing protein intake. Adequate hydration is important with higher protein consumption.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is the keto macro ratio?</button>
+            <div class="faq-answer"><p>A standard ketogenic diet typically follows a ratio of approximately 70-75% fat, 20-25% protein, and 5-10% carbohydrates. For a 2,000 calorie diet, this translates to roughly 155-167g fat, 100-125g protein, and 25-50g carbs. The goal is to restrict carbohydrates enough to shift the body into ketosis, where it primarily burns fat for fuel instead of glucose. This typically requires keeping net carbs below 20-50g per day.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How do I calculate macros for bulking?</button>
+            <div class="faq-answer"><p>For a lean bulk, start with your TDEE plus 250-350 calories. A balanced bulking split is approximately 25% protein, 25% fat, and 50% carbohydrates. The higher carbohydrate ratio supports intense training performance and recovery. Protein should be at least 1.6 g/kg of body weight. Adjust based on weekly weight gain: aim for 0.25-0.5% of body weight per week to maximize muscle gain while minimizing fat accumulation.</p></div>
+          </div>
+        </div>
+
+        <div class="references" style="margin-top:48px">
+          <h2>References</h2>
+          <ol>
+            <li>International Society of Sports Nutrition. (2017). Position stand: protein and exercise. <em>Journal of the International Society of Sports Nutrition</em>, 14, 20. <a href="https://pubmed.ncbi.nlm.nih.gov/28698208/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+            <li>Morton, R. W., et al. (2018). A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength. <em>British Journal of Sports Medicine</em>, 52(6), 376-384. <a href="https://pubmed.ncbi.nlm.nih.gov/28698222/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+            <li>Schoenfeld, B. J., &amp; Aragon, A. A. (2018). How much protein can the body use in a single meal for muscle-building? Implications for daily protein distribution. <em>Journal of the International Society of Sports Nutrition</em>, 15(1), 10. <a href="https://pubmed.ncbi.nlm.nih.gov/29467747/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+            <li>Paoli, A., Rubini, A., Volek, J. S., &amp; Grimaldi, K. A. (2013). Beyond weight loss: a review of the therapeutic uses of very-low-carbohydrate (ketogenic) diets. <em>European Journal of Clinical Nutrition</em>, 67(8), 789-796. <a href="https://pubmed.ncbi.nlm.nih.gov/23801097/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+            <li>Antonio, J., et al. (2018). A high protein diet (3.4 g/kg/d) combined with a heavy resistance training program improves body composition in healthy trained men and women. <em>Journal of the International Society of Sports Nutrition</em>, 15(Suppl 1), 44. <a href="https://pubmed.ncbi.nlm.nih.gov/30283312/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+          </ol>
+        </div>
+
+        <h2 style="margin-top:48px">Related Calculators</h2>
+        <div class="cards-grid" style="margin-bottom:24px">
+          <div class="card">
+            <div class="card-icon card-icon-tdee">TDEE</div>
+            <h3>TDEE Calculator</h3>
+            <p>Calculate your total daily energy expenditure as the basis for macro planning.</p>
+            <a href="/" class="card-link">Open Calculator &rarr;</a>
+          </div>
+          <div class="card">
+            <div class="card-icon card-icon-protein">PRO</div>
+            <h3>Protein Calculator</h3>
+            <p>Get a precise protein target based on your body weight and activity level.</p>
+            <a href="/protein-calculator/" class="card-link">Calculate Protein &rarr;</a>
+          </div>
+          <div class="card">
+            <div class="card-icon card-icon-cal">CAL</div>
+            <h3>Calorie Calculator</h3>
+            <p>Find your calorie target for cutting, maintaining, or bulking.</p>
+            <a href="/calorie-calculator/" class="card-link">Calculate Calories &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <div class="sidebar-card">
+          <h3>Quick Navigation</h3>
+          <ul>
+            <li><a href="#macro-calories">Results</a></li>
+            <li><a href="#understanding-macros">Understanding Macros</a></li>
+            <li><a href="#macro-ratios">Ratios by Goal</a></li>
+            <li><a href="#ketogenic-approach">Keto Approach</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Other Calculators</h3>
+          <ul>
+            <li><a href="/bmr-calculator/">BMR Calculator</a></li>
+            <li><a href="/calorie-calculator/">Calorie Calculator</a></li>
+            <li><a href="/protein-calculator/">Protein Calculator</a></li>
+            <li><a href="/calorie-deficit-calculator/">Calorie Deficit Calculator</a></li>
+            <li><a href="/body-fat-calculator/">Body Fat Calculator</a></li>
+            <li><a href="/water-intake-calculator/">Water Intake Calculator</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="site-disclaimer">
+  <div class="container">
+    This tool provides estimates for educational purposes only. Consult a healthcare professional before making dietary changes.
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">TDEE<span>BMR</span></a>
+        <p>Evidence-based nutrition calculators for smarter dietary decisions.</p>
+      </div>
+      <div>
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/calculators/">All Calculators</a></li>
+          <li><a href="/bmr-calculator/">BMR Calculator</a></li>
+          <li><a href="/bmi-calculator/">BMI Calculator</a></li>
+          <li><a href="/macros-calculator/">Macros Calculator</a></li>
+          <li><a href="/body-fat-calculator/">Body Fat Calculator</a></li>
+          <li><a href="/calorie-deficit-calculator/">Deficit Calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="/learn/">All Articles</a></li>
+          <li><a href="/learn/how-accurate-is-tdee/">How Accurate Is TDEE?</a></li>
+          <li><a href="/learn/tdee-vs-bmr/">TDEE vs BMR</a></li>
+          <li><a href="/learn/activity-level-guidelines/">Activity Levels</a></li>
+          <li><a href="/learn/metabolic-adaptation/">Metabolic Adaptation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/methodology/">Methodology</a></li>
+          <li><a href="/disclaimer/">Medical Disclaimer</a></li>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms of Use</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 TDEEBMR. All rights reserved. For educational purposes only.
+    </div>
+  </div>
+</footer>
+
+<script src="/js/calculators.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  let currentUnit = 'metric';
+
+  initUnitToggle(unit => {
+    currentUnit = unit;
+    const isMetric = unit === 'metric';
+    document.getElementById('macro-weight-group').style.display = isMetric ? '' : 'none';
+    document.getElementById('macro-height-group').style.display = isMetric ? '' : 'none';
+    document.getElementById('macro-weight-lbs-group').style.display = isMetric ? 'none' : '';
+    document.getElementById('macro-height-ft-group').style.display = isMetric ? 'none' : '';
+    document.getElementById('macro-height-in-group').style.display = isMetric ? 'none' : '';
+  });
+
+  const splits = {
+    balanced:    { protein: 0.30, fat: 0.30, carbs: 0.40 },
+    highprotein: { protein: 0.35, fat: 0.25, carbs: 0.40 },
+    lowcarb:     { protein: 0.30, fat: 0.35, carbs: 0.35 },
+    keto:        { protein: 0.25, fat: 0.65, carbs: 0.10 }
+  };
+
+  document.getElementById('macro-calc-btn').addEventListener('click', () => {
+    const sex = document.getElementById('macro-sex').value;
+    const age = parseInt(document.getElementById('macro-age').value);
+    const activity = document.getElementById('macro-activity').value;
+    const goal = document.getElementById('macro-goal').value;
+    const splitKey = document.getElementById('macro-split').value;
+
+    let weightKg, heightCm;
+    if (currentUnit === 'metric') {
+      weightKg = parseFloat(document.getElementById('macro-weight').value);
+      heightCm = parseFloat(document.getElementById('macro-height').value);
+    } else {
+      weightKg = Calc.lbsToKg(parseFloat(document.getElementById('macro-weight-lbs').value));
+      heightCm = Calc.feetInchesToCm(
+        parseInt(document.getElementById('macro-height-ft').value) || 0,
+        parseInt(document.getElementById('macro-height-in').value) || 0
+      );
+    }
+
+    if (!age || !weightKg || !heightCm) { alert('Please fill in all required fields.'); return; }
+
+    const bmr = Calc.bmr.mifflin(weightKg, heightCm, age, sex);
+    const tdee = Calc.tdee(bmr, activity);
+    let calories;
+    if (goal === 'cut') calories = tdee - 500;
+    else if (goal === 'bulk') calories = tdee + 250;
+    else calories = tdee;
+
+    const split = splits[splitKey];
+    const proteinG = Math.round(calories * split.protein / 4);
+    const fatG = Math.round(calories * split.fat / 9);
+    const carbsG = Math.round(calories * split.carbs / 4);
+    const proteinCal = Math.round(calories * split.protein);
+    const fatCal = Math.round(calories * split.fat);
+    const carbsCal = Math.round(calories * split.carbs);
+
+    document.getElementById('macro-calories').textContent = Calc.format(calories);
+    document.getElementById('macro-protein-g').textContent = proteinG + 'g';
+    document.getElementById('macro-protein-cal').textContent = proteinCal + ' kcal';
+    document.getElementById('macro-fat-g').textContent = fatG + 'g';
+    document.getElementById('macro-fat-cal').textContent = fatCal + ' kcal';
+    document.getElementById('macro-carbs-g').textContent = carbsG + 'g';
+    document.getElementById('macro-carbs-cal').textContent = carbsCal + ' kcal';
+
+    document.getElementById('macro-bar-protein').style.width = (split.protein * 100) + '%';
+    document.getElementById('macro-bar-fat').style.width = (split.fat * 100) + '%';
+    document.getElementById('macro-bar-carbs').style.width = (split.carbs * 100) + '%';
+
+    document.getElementById('macro-results').classList.add('visible');
+    document.getElementById('macro-results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+</body>
+</html>

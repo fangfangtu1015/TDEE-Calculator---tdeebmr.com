@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<title>How to Calculate TDEE Manually: Step-by-Step Guide | TDEEBMR</title>
+<meta name="description" content="Learn to calculate your TDEE by hand using the Mifflin-St Jeor equation. Worked examples for different body types, activity levels, and when to use Katch-McArdle instead.">
+  <meta property="og:title" content="How to Calculate TDEE Manually: Step-by-Step Guide | TDEEBMR">
+  <meta property="og:description" content="Learn to calculate your TDEE by hand using the Mifflin-St Jeor equation. Worked examples for different body types, activity levels, and when to use Katch-McArdle instead.">
+  <meta property="og:image" content="https://tdeebmr.com/images/how-to-calculate-tdee-manually.png">
+  <meta property="og:url" content="https://tdeebmr.com/learn/how-to-calculate-tdee-manually/">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to Calculate TDEE Manually: Step-by-Step Guide | TDEEBMR">
+  <meta name="twitter:description" content="Learn to calculate your TDEE by hand using the Mifflin-St Jeor equation. Worked examples for different body types, activity levels, and when to use Katch-McArdle instead.">
+  <meta name="twitter:image" content="https://tdeebmr.com/images/how-to-calculate-tdee-manually.png">
+<link rel="canonical" href="https://tdeebmr.com/learn/how-to-calculate-tdee-manually/">
+<link rel="stylesheet" href="/css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tdeebmr.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Learn", "item": "https://tdeebmr.com/learn/" },
+    { "@type": "ListItem", "position": 3, "name": "How to Calculate TDEE Manually", "item": "https://tdeebmr.com/learn/how-to-calculate-tdee-manually/" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Calculate TDEE Manually: Step-by-Step Guide",
+  "description": "A complete walkthrough of manual TDEE calculation using Mifflin-St Jeor and Katch-McArdle equations, with worked examples for different scenarios.",
+  "datePublished": "2026-11-03",
+  "dateModified": "2026-11-08",
+  "author": { "@type": "Organization", "name": "TDEEBMR" },
+  "publisher": { "@type": "Organization", "name": "TDEEBMR", "url": "https://tdeebmr.com/" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the formula for calculating TDEE manually?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TDEE is calculated in two steps. First, calculate BMR using the Mifflin-St Jeor equation: For men: BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age) + 5. For women: BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age) - 161. Second, multiply BMR by an activity factor: Sedentary = 1.2, Lightly active = 1.375, Moderately active = 1.55, Very active = 1.725, Extra active = 1.9."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I use Katch-McArdle instead of Mifflin-St Jeor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use Katch-McArdle when you know your body fat percentage. The formula is: BMR = 370 + (21.6 × lean body mass in kg). It is more accurate than Mifflin-St Jeor for muscular individuals, those with obesity, and athletes because it accounts for body composition rather than using total body weight. If you do not know your body fat percentage, Mifflin-St Jeor is the better choice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I choose the right activity multiplier?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Choose based on your total weekly activity, not just gym sessions. Sedentary (1.2): desk job, no exercise. Lightly active (1.375): light exercise 1-3 days/week or a job requiring standing/walking. Moderately active (1.55): moderate exercise 3-5 days/week or a physically demanding job. Very active (1.725): hard exercise 6-7 days/week or a very physically demanding job. Extra active (1.9): professional athlete or laborer training twice daily. When in doubt, choose the lower level."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is manual TDEE calculation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Manual calculation using Mifflin-St Jeor is accurate within approximately 10% for about 82% of the population, according to research by Frankenfield et al. (2005). The activity multiplier introduces additional variability. For best results, use the manual calculation as a starting point and validate it by tracking your food intake and body weight for 2-3 weeks. If your weight is stable, your average intake equals your actual TDEE."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "How to Calculate TDEE Manually: Step-by-Step Guide | TDEEBMR",
+  "specialty": "Nutrition",
+  "audience": {
+    "@type": "MedicalAudience",
+    "audienceType": "Patients"
+  },
+  "url": "https://tdeebmr.com/learn/how-to-calculate-tdee-manually/",
+  "description": "Learn to calculate your TDEE by hand using the Mifflin-St Jeor equation. Worked examples for different body types, activity levels, and when to use Katch-McArdle instead."
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">TDEE<span>BMR</span></a>
+    <button class="mobile-menu-btn" aria-label="Toggle menu">&#9776;</button>
+    <nav>
+      <a href="/calculators/">Calculators</a>
+      <a href="/learn/">Learn</a>
+      <a href="/methodology/">Methodology</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">Home</a> <span>&rsaquo;</span>
+    <a href="/learn/">Learn</a> <span>&rsaquo;</span>
+    How to Calculate TDEE Manually
+  </div>
+</div>
+
+<div class="article-content container">
+
+  <h1>How to Calculate TDEE Manually: A Step-by-Step Guide</h1>
+
+  <div class="article-meta">
+    <span>November 8, 2026</span>
+    <span>&bull;</span>
+    <span>11 min read</span>
+    <span class="tag">Fundamentals</span>
+    <span class="tag accent">Science</span>
+  </div>
+
+  <img src="/images/how-to-calculate-tdee-manually.png" alt="Step-by-step manual TDEE calculation using BMR formulas and activity multipliers" style="border-radius:12px;margin-bottom:24px">
+
+  <p>Online calculators are convenient, but understanding how TDEE is calculated empowers you to make informed adjustments, compare formulas, and troubleshoot when results do not match expectations. This guide walks you through the entire manual calculation process using the two most respected equations in nutrition science: <strong>Mifflin-St Jeor</strong> and <strong>Katch-McArdle</strong>.</p>
+
+  <p>By the end, you will be able to calculate your own TDEE on paper, understand the assumptions behind each formula, and know when to switch from one to the other.</p>
+
+  <h2>The Two-Step Process</h2>
+
+  <p>Calculating TDEE manually always involves two steps:</p>
+
+  <ol>
+    <li><strong>Calculate BMR</strong> (Basal Metabolic Rate) using a prediction equation</li>
+    <li><strong>Multiply BMR by an activity factor</strong> (PAL multiplier) to get TDEE</li>
+  </ol>
+
+  <p>As explained in our <a href="/learn/tdee-vs-bmr/">TDEE vs. BMR article</a>, BMR represents your resting energy needs (about 60-75% of total expenditure), while TDEE adds the calories burned through digestion, movement, and exercise.</p>
+
+  <h2>Step 1: Calculate BMR Using Mifflin-St Jeor</h2>
+
+  <p>The Mifflin-St Jeor equation, published in 1990, is the most widely recommended formula for estimating BMR in the general population. The American Dietetic Association endorsed it as the most accurate prediction equation for non-obese and obese individuals alike (see our <a href="/learn/comparison-of-bmr-formulas/">comparison of BMR formulas</a> for how it stacks up against alternatives).</p>
+
+  <h3>The Equations</h3>
+
+  <p><strong>For men:</strong></p>
+  <p>BMR = (10 &times; weight in kg) + (6.25 &times; height in cm) - (5 &times; age in years) + 5</p>
+
+  <p><strong>For women:</strong></p>
+  <p>BMR = (10 &times; weight in kg) + (6.25 &times; height in cm) - (5 &times; age in years) - 161</p>
+
+  <h3>Unit Conversions</h3>
+
+  <p>If you measure in imperial units, convert first:</p>
+
+  <ul>
+    <li><strong>Weight:</strong> pounds &divide; 2.205 = kilograms</li>
+    <li><strong>Height:</strong> inches &times; 2.54 = centimeters</li>
+  </ul>
+
+  <h3>Worked Example: Male, 30 years old, 180 lbs, 5'10"</h3>
+
+  <p><strong>Convert units:</strong></p>
+  <ul>
+    <li>Weight: 180 &divide; 2.205 = 81.6 kg</li>
+    <li>Height: 70 inches &times; 2.54 = 177.8 cm</li>
+  </ul>
+
+  <p><strong>Apply formula:</strong></p>
+  <ul>
+    <li>BMR = (10 &times; 81.6) + (6.25 &times; 177.8) - (5 &times; 30) + 5</li>
+    <li>BMR = 816 + 1,111.25 - 150 + 5</li>
+    <li><strong>BMR = 1,782 kcal/day</strong></li>
+  </ul>
+
+  <h3>Worked Example: Female, 28 years old, 145 lbs, 5'5"</h3>
+
+  <p><strong>Convert units:</strong></p>
+  <ul>
+    <li>Weight: 145 &divide; 2.205 = 65.8 kg</li>
+    <li>Height: 65 inches &times; 2.54 = 165.1 cm</li>
+  </ul>
+
+  <p><strong>Applyet</strong></p>
+  <ul>
+    <li>BMR = (10 &times; 65.8) + (6.25 &times; 165.1) - (5 &times; 28) - 161</li>
+    <li>BMR = 658 + 1,031.9 - 140 - 161</li>
+    <li><strong>BMR = 1,389 kcal/day</strong></li>
+  </ul>
+
+  <h2>Step 2: Multiply by Activity Factor to Get TDEE</h2>
+
+  <p>Once you have BMR, multiply it by the appropriate Physical Activity Level (PAL) multiplier:</p>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Activity Level</th>
+          <th>PAL Multiplier</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Sedentary</strong></td>
+          <td>1.2</td>
+          <td>Desk job, little or no structured exercise, minimal movement throughout the day</td>
+        </tr>
+        <tr>
+          <td><strong>Lightly Active</strong></td>
+          <td>1.375</td>
+          <td>Light exercise or sports 1-3 days/week, or a job that requires standing/walking most of the day</td>
+        </tr>
+        <tr>
+          <td><strong>Moderately Active</strong></td>
+          <td>1.55</td>
+          <td>Moderate exercise or sports 3-5 days/week, or a physically demanding job (construction, nursing)</td>
+        </tr>
+        <tr>
+          <td><strong>Very Active</strong></td>
+          <td>1.725</td>
+          <td>Hard exercise or sports 6-7 days/week, or a very physically demanding job plus daily exercise</td>
+        </tr>
+        <tr>
+          <td><strong>Extra Active</strong></td>
+          <td>1.9</td>
+          <td>Professional athlete, manual laborer training twice daily, or extremely active lifestyle</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Continuing the Examples</h3>
+
+  <p><strong>Male (BMR = 1,782), moderately active (PAL = 1.55):</strong></p>
+  <p>TDEE = 1,782 &times; 1.55 = <strong>2,762 kcal/day</strong></p>
+
+  <p><strong>Female (BMR = 1,389), lightly active (PAL = 1.375):</strong></p>
+  <p>TDEE = 1,389 &times; 1.375 = <strong>1,910 kcal/day</strong></p>
+
+  <div class="info-box">
+    <h4>Choosing the Right Activity Level</h4>
+    <p>The activity multiplier is where most calculation errors occur. People consistently overestimate their activity level, which inflates TDEE and leads to overeating. When in doubt, choose the <strong>lower</strong> level. You can always increase calories later if weight loss stalls. See our <a href="/learn/activity-level-guidelines/">activity level guidelines</a> for detailed descriptions of what each level actually looks like in daily life.</p>
+  </div>
+
+  <h2>Alternative: Katch-McArdle Formula (When You Know Body Fat %)</h2>
+
+  <p>If you know your body fat percentage (from DEXA scan, hydrostatic weighing, or reliable skinfold measurements), the Katch-McArdle formula is more accurate than Mifflin-St Jeor, especially for muscular or overweight individuals.</p>
+
+  <h3>The Equation</h3>
+
+  <p>BMR = 370 + (21.6 &times; lean body mass in kg)</p>
+
+  <p>Where lean body mass = total body weight &times; (1 - body fat percentage)</p>
+
+  <h3>Worked Example: Male, 180 lbs, 15% body fat</h3>
+
+  <p><strong>Calculate lean body mass:</strong></p>
+  <ul>
+    <li>Total weight: 180 lbs = 81.6 kg</li>
+    <li>Fat mass: 81.6 &times; 0.15 = 12.24 kg</li>
+    <li>Lean body mass: 81.6 - 12.24 = 69.36 kg</li>
+  </ul>
+
+  <p><strong>Apply Katch-McArdle:</strong></p>
+  <ul>
+    <li>BMR = 370 + (21.6 &times; 69.36)</li>
+    <li>BMR = 370 + 1,498</li>
+    <li><strong>BMR = 1,868 kcal/day</strong></li>
+  </ul>
+
+  <p><strong>Compare with Mifflin-St Jeor for the same person:</strong></p>
+  <ul>
+    <li>Mifflin-St Jeor BMR (from earlier): 1,782 kcal/day</li>
+    <li>Katch-McArdle BMR: 1,868 kcal/day</li>
+    <li>Difference: +86 kcal/day (Katch-McArdle is higher because this person is muscular with low body fat)</li>
+  </ul>
+
+  <p>For a person with <strong>higher body fat</strong>, the pattern reverses: Katch-McArdle gives a <em>lower</em> BMR than Mifflin-St Jeor because it accounts for the fact that fat tissue burns fewer calories than muscle.</p>
+
+  <div class="key-takeaway">
+    <h4>When to Use Each Formula</h4>
+    <p><strong>Mifflin-St Jeor:</strong> Best for the general population when you do not know body fat percentage. Most accurate for people with average body composition.<br>
+    <strong>Katch-McArdle:</strong> Best when you know your body fat percentage. More accurate for muscular individuals (underestimates their BMR less) and those with obesity (overestimates their BMR less). See our <a href="/learn/comparison-of-bmr-formulas/">full formula comparison</a> for detailed accuracy data.</p>
+  </div>
+
+  <h2>Worked Examples for Different Scenarios</h2>
+
+  <h3>Scenario 1: Overweight Female Starting a Cut</h3>
+
+  <p><strong>Profile:</strong> Female, 42 years old, 200 lbs, 5'4", body fat approximately 32%, sedentary to lightly active.</p>
+
+  <p><strong>Using Mifflin-St Jeor:</strong></p>
+  <ul>
+    <li>Weight: 200 &divide; 2.205 = 90.7 kg</li>
+    <li>Height: 64 &times; 2.54 = 162.6 cm</li>
+    <li>BMR = (10 &times; 90.7) + (6.25 &times; 162.6) - (5 &times; 42) - 161</li>
+    <li>BMR = 907 + 1,016.25 - 210 - 161 = <strong>1,552 kcal/day</strong></li>
+    <li>TDEE (sedentary, 1.2) = 1,552 &times; 1.2 = <strong>1,862 kcal/day</strong></li>
+    <li>TDEE (lightly active, 1.375) = 1,552 &times; 1.375 = <strong>2,134 kcal/day</strong></li>
+  </ul>
+
+  <p><strong>Using Katch-McArdle (32% body fat):</strong></p>
+  <ul>
+    <li>Lean body mass: 90.7 &times; (1 - 0.32) = 61.7 kg</li>
+    <li>BMR = 370 + (21.6 &times; 61.7) = 370 + 1,333 = <strong>1,703 kcal/day</strong></li>
+    <li>TDEE (sedentary, 1.2) = 1,703 &times; 1.2 = <strong>2,044 kcal/day</strong></li>
+  </ul>
+
+  <p>Notice the significant difference: Mifflin-St Jeor gives a BMR of 1,552 while Katch-McArdle gives 1,703. For this individual, Katch-McArdle is likely more accurate because it accounts for her actual lean body mass. However, both are estimates. The true test is empirical validation: track intake and weight for 2-3 weeks.</p>
+
+  <h3>Scenario 2: Athletic Male Bulking</h3>
+
+  <p><strong>Profile:</strong> Male, 25 years old, 170 lbs, 5'11", body fat approximately 10%, very active (trains 6 days/week).</p>
+
+  <p><strong>Using Mifflin-St Jeor:</strong></p>
+  <ul>
+    <li>Weight: 170 &divide; 2.205 = 77.1 kg</li>
+    <li>Height: 71 &times; 2.54 = 180.3 cm</li>
+    <li>BMR = (10 &times; 77.1) + (6.25 &times; 180.3) - (5 &times; 25) + 5</li>
+    <li>BMR = 771 + 1,126.9 - 125 + 5 = <strong>1,778 kcal/day</strong></li>
+    <li>TDEE (very active, 1.725) = 1,778 &times; 1.725 = <strong>3,067 kcal/day</strong></li>
+    <li>Bulk target (TDEE + 300) = <strong>3,367 kcal/day</strong></li>
+  </ul>
+
+  <p><strong>Using Katch-McArdle (10% body fat):</strong></p>
+  <ul>
+    <li>Lean body mass: 77.1 &times; (1 - 0.10) = 69.4 kg</li>
+    <li>BMR = 370 + (21.6 &times; 69.4) = 370 + 1,499 = <strong>1,869 kcal/day</strong></li>
+    <li>TDEE (very active, 1.725) = 1,869 &times; 1.725 = <strong>3,224 kcal/day</strong></li>
+    <li>Bulk target (TDEE + 300) = <strong>3,524 kcal/day</strong></li>
+  </ul>
+
+  <p>For this very lean, muscular athlete, Katch-McArdle gives a BMR that is 91 kcal higher than Mifflin-St Jeor. This makes sense: his high muscle mass means his actual resting metabolism is higher than what total-body-weight-based equations predict. For a lean bulk, the difference between the two formulas translates to approximately 157 kcal at the final target.</p>
+
+  <h3>Scenario 3: Older Sedentary Male</h3>
+
+  <p><strong>Profile:</strong> Male, 58 years old, 220 lbs, 5'8", body fat approximately 28%, sedentary.</p>
+
+  <p><strong>Using Mifflin-St Jeor:</strong></p>
+  <ul>
+    <li>Weight: 220 &divide; 2.205 = 99.8 kg</li>
+    <li>Height: 68 &times; 2.54 = 172.7 cm</li>
+    <li>BMR = (10 &times; 99.8) + (6.25 &times; 172.7) - (5 &times; 58) + 5</li>
+    <li>BMR = 998 + 1,079.4 - 290 + 5 = <strong>1,792 kcal/day</strong></li>
+    <li>TDEE (sedentary, 1.2) = 1,792 &times; 1.2 = <strong>2,150 kcal/day</strong></li>
+  </ul>
+
+  <p><strong>Using Katch-McArdle (28% body fat):</strong></p>
+  <ul>
+    <li>Lean body mass: 99.8 &times; (1 - 0.28) = 71.9 kg</li>
+    <li>BMR = 370 + (21.6 &times; 71.9) = 370 + 1,553 = <strong>1,923 kcal/day</strong></li>
+    <li>TDEE (sedentary, 1.2) = 1,923 &times; 1.2 = <strong>2,308 kcal/day</strong></li>
+  </ul>
+
+  <p>Interestingly, Katch-McArdle gives a higher BMR here despite the man being overweight. This is because his lean body mass (71.9 kg) is still substantial, and the formula rewards that. Mifflin-St Jeor uses total body weight, which includes fat mass that is less metabolically active. In this case, Katch-McArdle is likely more accurate, but the true test is always empirical tracking.</p>
+
+  <h2>Adjusting Based on Results</h2>
+
+  <p>Regardless of which formula you use, the calculation is only a starting point. Here is how to refine your estimate:</p>
+
+  <h3>The Empirical Validation Protocol</h3>
+
+  <ol>
+    <li><strong>Track food intake</strong> using a digital kitchen scale for 14-21 days.</li>
+    <li><strong>Weigh yourself daily</strong> (morning, after bathroom, before eating) and calculate weekly averages.</li>
+    <li><strong>Compare average intake to average weight change:</strong>
+      <ul>
+        <li>If weight is stable: your average intake = your actual TDEE</li>
+        <li>If losing 0.5 lbs/week: your actual TDEE = average intake + 250 kcal</li>
+        <li>If gaining 0.5 lbs/week: your actual TDEE = average intake - 250 kcal</li>
+      </ul>
+    </li>
+    <li><strong>Adjust your calculator estimate</strong> to match your empirical TDEE.</li>
+    <li><strong>Recalculate</strong> every 10-15 lbs of body weight change.</li>
+  </ol>
+
+  <p>See our <a href="/learn/how-accurate-is-tdee/">TDEE accuracy guide</a> for a deeper dive into validation methodology and expected error ranges.</p>
+
+  <h2>Common Calculation Errors to Avoid</h2>
+
+  <ul>
+    <li><strong>Forgetting to convert units:</strong> The formulas require kilograms and centimeters. Using pounds and inches will give wildly incorrect results.</li>
+    <li><strong>Using the wrong sex constant:</strong> Men get +5, women get -161. Mixing these up changes BMR by 166 kcal.</li>
+    <li><strong>Choosing too high an activity level:</strong> This is the most impactful error. See our <a href="/learn/common-tdee-tracking-mistakes/">tracking mistakes article</a> for details.</li>
+    <li><strong>Not recalculating after weight change:</strong> Every 10-15 lbs of body weight change shifts TDEE by 50-150 kcal.</li>
+    <li><strong>Adding exercise calories on top of an already-active TDEE:</strong> If you used a 1.55 multiplier, exercise is already included. Adding more leads to double-counting.</li>
+  </ul>
+
+  <div class="info-box">
+    <h4>Shortcut: Use Our Calculator</h4>
+    <p>If you understand the math but do not want to do it by hand every time, our <a href="/calculators/">TDEE Calculator</a> performs all of these calculations automatically. It supports both Mifflin-St Jeor and Katch-McArdle formulas, handles unit conversions, and provides calorie targets for cutting, maintenance, and bulking. Understanding the manual process helps you interpret the results and make informed adjustments.</p>
+  </div>
+
+  <h2>Related Resources</h2>
+
+  <ul>
+    <li><a href="/calculators/">TDEE Calculator</a> &mdash; Automated calculation with both formulas</li>
+    <li><a href="/learn/comparison-of-bmr-formulas/">Comparison of BMR Formulas</a> &mdash; Detailed accuracy data for all major equations</li>
+    <li><a href="/learn/tdee-vs-bmr/">TDEE vs. BMR</a> &mdash; Understanding the components of energy expenditure</li>
+    <li><a href="/learn/activity-level-guidelines/">Activity Level Guidelines</a> &mdash; Choosing the right PAL multiplier</li>
+    <li><a href="/learn/how-accurate-is-tdee/">How Accurate Is TDEE?</a> &mdash; Understanding prediction equation limitations</li>
+  </ul>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question">What is the formula for calculating TDEE manually?</button>
+      <div class="faq-answer">
+        <p>TDEE is calculated in two steps. First, calculate BMR using the Mifflin-St Jeor equation: For men: BMR = (10 &times; weight in kg) + (6.25 &times; height in cm) - (5 &times; age) + 5. For women: BMR = (10 &times; weight in kg) + (6.25 &times; height in cm) - (5 &times; age) - 161. Second, multiply BMR by an activity factor: Sedentary = 1.2, Lightly active = 1.375, Moderately active = 1.55, Very active = 1.725, Extra active = 1.9.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">When should I use Katch-McArdle instead of Mifflin-St Jeor?</button>
+      <div class="faq-answer">
+        <p>Use Katch-McArdle when you know your body fat percentage. The formula is: BMR = 370 + (21.6 &times; lean body mass in kg). It is more accurate than Mifflin-St Jeor for muscular individuals, those with obesity, and athletes because it accounts for body composition rather than using total body weight. If you do not know your body fat percentage, Mifflin-St Jeor is the better choice.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">How do I choose the right activity multiplier?</button>
+      <div class="faq-answer">
+        <p>Choose based on your total weekly activity, not just gym sessions. Sedentary (1.2): desk job, no exercise. Lightly active (1.375): light exercise 1-3 days/week or a job requiring standing/walking. Moderately active (1.55): moderate exercise 3-5 days/week or a physically demanding job. Very active (1.725): hard exercise 6-7 days/week or a very physically demanding job. Extra active (1.9): professional athlete or laborer training twice daily. When in doubt, choose the lower level.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">How accurate is manual TDEE calculation?</button>
+      <div class="faq-answer">
+        <p>Manual calculation using Mifflin-St Jeor is accurate within approximately 10% for about 82% of the population, according to research by Frankenfield et al. (2005). The activity multiplier introduces additional variability. For best results, use the manual calculation as a starting point and validate it by tracking your food intake and body weight for 2-3 weeks. If your weight is stable, your average intake equals your actual TDEE.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    <strong>Medical Disclaimer</strong>
+    This article is for educational purposes only and does not constitute medical or dietary advice. Individual metabolic rates vary significantly. Consult a registered dietitian or healthcare professional before making significant changes to your diet.
+  </div>
+
+</div>
+
+<div class="site-disclaimer">
+  <div class="container">
+    This tool provides estimates for educational purposes only. Consult a healthcare professional before making dietary changes.
+  </div>
+</div>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">TDEE<span>BMR</span></a>
+        <p>Evidence-based nutrition calculators for smarter dietary decisions.</p>
+      </div>
+      <div>
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/calculators/">All Calculators</a></li>
+          <li><a href="/bmr-calculator/">BMR Calculator</a></li>
+          <li><a href="/bmi-calculator/">BMI Calculator</a></li>
+          <li><a href="/macros-calculator/">Macros Calculator</a></li>
+          <li><a href="/body-fat-calculator/">Body Fat Calculator</a></li>
+          <li><a href="/calorie-deficit-calculator/">Deficit Calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="/learn/">All Articles</a></li>
+          <li><a href="/learn/how-accurate-is-tdee/">How Accurate Is TDEE?</a></li>
+          <li><a href="/learn/tdee-vs-bmr/">TDEE vs BMR</a></li>
+          <li><a href="/learn/activity-level-guidelines/">Activity Levels</a></li>
+          <li><a href="/learn/metabolic-adaptation/">Metabolic Adaptation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/methodology/">Methodology</a></li>
+          <li><a href="/disclaimer/">Medical Disclaimer</a></li>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms of Use</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 TDEEBMR. All rights reserved. For educational purposes only.
+    </div>
+  </div>
+</footer>
+
+<script src="/js/calculators.js"></script>
+</body>
+</html>

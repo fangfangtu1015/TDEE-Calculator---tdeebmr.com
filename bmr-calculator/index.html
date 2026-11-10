@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<title>BMR Calculator - Basal Metabolic Rate (Mifflin, Harris-Benedict, Katch-McArdle)</title>
+<meta name="description" content="Calculate your Basal Metabolic Rate using three evidence-based formulas: Mifflin-St Jeor, Harris-Benedict, and Katch-McArdle. See how age, sex, and body composition affect your metabolism.">
+  <meta property="og:title" content="BMR Calculator - Basal Metabolic Rate (Mifflin, Harris-Benedict, Katch-McArdle)">
+  <meta property="og:description" content="Calculate your Basal Metabolic Rate using three evidence-based formulas: Mifflin-St Jeor, Harris-Benedict, and Katch-McArdle. See how age, sex, and body composition affect your metabolism.">
+  <meta property="og:image" content="https://tdeebmr.com/images/bmr-calculator-og.png">
+  <meta property="og:url" content="https://tdeebmr.com/bmr-calculator/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BMR Calculator - Basal Metabolic Rate (Mifflin, Harris-Benedict, Katch-McArdle)">
+  <meta name="twitter:description" content="Calculate your Basal Metabolic Rate using three evidence-based formulas: Mifflin-St Jeor, Harris-Benedict, and Katch-McArdle. See how age, sex, and body composition affect your metabolism.">
+  <meta name="twitter:image" content="https://tdeebmr.com/images/bmr-calculator-og.png">
+<link rel="canonical" href="https://tdeebmr.com/bmr-calculator/">
+<link rel="stylesheet" href="/css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tdeebmr.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://tdeebmr.com/calculators/" },
+    { "@type": "ListItem", "position": 3, "name": "BMR Calculator", "item": "https://tdeebmr.com/bmr-calculator/" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "BMR Calculator",
+  "url": "https://tdeebmr.com/bmr-calculator/",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "Calculate your Basal Metabolic Rate using Mifflin-St Jeor, Harris-Benedict, and Katch-McArdle formulas with TDEE estimation."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Basal Metabolic Rate (BMR)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BMR is the number of calories your body needs to perform vital functions at complete rest, including breathing, circulation, cell production, and nutrient processing. It accounts for 60-75% of your total daily energy expenditure. BMR is measured under strict conditions: after 8 hours of sleep and 12 hours of fasting, in a thermoneutral environment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which BMR formula is most accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Mifflin-St Jeor equation (1990) is considered the most accurate for the general population, with approximately 82% of predictions falling within 10% of measured values. The Katch-McArdle formula is more precise when you know your body fat percentage, especially for muscular individuals. The Harris-Benedict equation, while historically important, tends to overestimate BMR by about 5% for modern populations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does BMR decrease with age?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, BMR typically decreases by 1-2% per decade after age 20. This decline is primarily caused by loss of lean muscle mass (sarcopenia) and changes in hormonal profiles. However, regular resistance training and adequate protein intake can significantly slow this decline. All three BMR formulas account for age through their respective equations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is BMR different from RMR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BMR (Basal Metabolic Rate) is measured under stricter conditions: after 8 hours of sleep, 12 hours of fasting, and in a thermoneutral environment. RMR (Resting Metabolic Rate) has less restrictive protocols and is typically 5-10% higher than BMR. In practice, predictive equations like Mifflin-St Jeor estimate RMR, but the terms are often used interchangeably in fitness contexts. The difference is small enough that for dietary planning purposes, either value works."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I increase my BMR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, though the effect is modest. The most effective way to increase BMR is building lean muscle mass through resistance training, as muscle tissue burns more calories at rest than fat tissue. Each pound of muscle burns approximately 6-10 calories per day at rest. Other factors include eating adequate protein (which increases the thermic effect of food), staying hydrated, getting quality sleep, and avoiding severe calorie restriction which can cause metabolic adaptation (a decrease in BMR)."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "BMR Calculator - Basal Metabolic Rate (Mifflin, Harris-Benedict, Katch-McArdle)",
+  "datePublished": "2026-11-03",
+  "dateModified": "2026-11-07",
+  "specialty": "Nutrition",
+  "audience": {
+    "@type": "MedicalAudience",
+    "audienceType": "Patients"
+  },
+  "url": "https://tdeebmr.com/bmr-calculator/",
+  "description": "Calculate your Basal Metabolic Rate using three evidence-based formulas: Mifflin-St Jeor, Harris-Benedict, and Katch-McArdle. See how age, sex, and body composition affect your metabolism."
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">TDEE<span>BMR</span></a>
+    <button class="mobile-menu-btn" aria-label="Toggle menu">&#9776;</button>
+    <nav>
+      <a href="/calculators/">Calculators</a>
+      <a href="/learn/">Learn</a>
+      <a href="/methodology/">Methodology</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a> <span>/</span> <a href="/calculators/">Calculators</a> <span>/</span> BMR Calculator
+    </div>
+    <h1>BMR Calculator</h1>
+    <p>Calculate your Basal Metabolic Rate using three evidence-based formulas and see how your body composition affects your metabolism.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="page-layout">
+      <div>
+        <div class="calc-card">
+          <div class="unit-toggle">
+            <button class="active" data-unit="metric">Metric (kg/cm)</button>
+            <button data-unit="imperial">Imperial (lbs/in)</button>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="bmr-sex">Sex</label>
+              <select id="bmr-sex"><option value="male">Male</option><option value="female">Female</option></select>
+            </div>
+            <div class="form-group">
+              <label for="bmr-age">Age</label>
+              <input type="number" id="bmr-age" placeholder="30" min="15" max="100">
+            </div>
+            <div class="form-group" id="bmr-weight-group">
+              <label for="bmr-weight">Weight (kg)</label>
+              <input type="number" id="bmr-weight" placeholder="70" min="30" max="300" step="0.1">
+            </div>
+            <div class="form-group" id="bmr-height-group">
+              <label for="bmr-height">Height (cm)</label>
+              <input type="number" id="bmr-height" placeholder="175" min="100" max="250" step="0.1">
+            </div>
+            <div class="form-group" id="bmr-weight-lbs-group" style="display:none">
+              <label for="bmr-weight-lbs">Weight (lbs)</label>
+              <input type="number" id="bmr-weight-lbs" placeholder="154" min="60" max="700" step="0.1">
+            </div>
+            <div class="form-group" id="bmr-height-ft-group" style="display:none">
+              <label for="bmr-height-ft">Height (ft)</label>
+              <input type="number" id="bmr-height-ft" placeholder="5" min="3" max="8">
+            </div>
+            <div class="form-group" id="bmr-height-in-group" style="display:none">
+              <label for="bmr-height-in">Height (in)</label>
+              <input type="number" id="bmr-height-in" placeholder="9" min="0" max="11">
+            </div>
+            <div class="form-group">
+              <label for="bmr-bf">Body Fat % (optional, for Katch-McArdle)</label>
+              <input type="number" id="bmr-bf" placeholder="e.g. 18" min="2" max="65" step="0.1">
+            </div>
+            <div class="form-group full-width">
+              <label for="bmr-activity">Activity Level</label>
+              <select id="bmr-activity">
+                <option value="sedentary">Sedentary - Little or no exercise, desk job</option>
+                <option value="light">Lightly Active - Exercise 1-3 days/week</option>
+                <option value="moderate" selected>Moderately Active - Exercise 3-5 days/week</option>
+                <option value="active">Very Active - Hard exercise 6-7 days/week</option>
+                <option value="extraActive">Extra Active - Very hard exercise, physical job</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="btn" id="bmr-calc-btn">Calculate BMR</button>
+
+          <div class="results" id="bmr-results">
+            <div class="result-main">
+              <div class="value" id="bmr-mifflin-val">--</div>
+              <div class="label">Mifflin-St Jeor BMR (kcal/day)</div>
+            </div>
+            <div class="result-grid">
+              <div class="result-item">
+                <div class="value" id="bmr-harris-val">--</div>
+                <div class="label">Harris-Benedict BMR</div>
+              </div>
+              <div class="result-item">
+                <div class="value" id="bmr-katch-val">--</div>
+                <div class="label">Katch-McArdle BMR</div>
+              </div>
+              <div class="result-item highlight">
+                <div class="value" id="bmr-tdee-val">--</div>
+                <div class="label">Estimated TDEE (Mifflin)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:48px;max-width:800px">
+          <h2 id="what-is-bmr">What Is Basal Metabolic Rate (BMR)?</h2>
+          <p>Basal Metabolic Rate (BMR) represents the minimum number of calories your body requires to sustain vital functions at complete rest. These functions include breathing, blood circulation, cell production, nutrient processing, protein synthesis, and maintaining body temperature. BMR accounts for approximately 60-75% of your Total Daily Energy Expenditure (TDEE), making it the single largest component of how many calories you burn each day.</p>
+          <p>BMR is measured under strict clinical conditions: after 8 hours of sleep, 12 hours of fasting, and in a thermoneutral environment (approximately 22-25 degrees Celsius). In everyday contexts, Resting Metabolic Rate (RMR) is often used interchangeably with BMR, though RMR is measured under less restrictive conditions and is typically 5-10% higher.</p>
+
+          <h3>What Affects Your BMR?</h3>
+          <p>Several physiological and demographic factors influence your basal metabolic rate:</p>
+          <ul style="margin-bottom:16px;padding-left:24px;color:var(--text)">
+            <li><strong>Body size and composition:</strong> Larger bodies and those with more muscle mass have higher BMRs. Muscle tissue is metabolically more active than fat tissue, burning approximately 6-10 calories per pound per day at rest compared to 2-3 calories per pound for fat.</li>
+            <li><strong>Age:</strong> BMR peaks in early adulthood and declines approximately 1-2% per decade after age 20, largely due to sarcopenia (age-related muscle loss) and hormonal changes.</li>
+            <li><strong>Sex:</strong> Males typically have higher BMRs than females of the same age and weight because they tend to have more muscle mass and less body fat.</li>
+            <li><strong>Genetics:</strong> Some individuals are born with naturally faster or slower metabolisms, though the variation attributable to genetics alone is estimated at about 2-8%.</li>
+            <li><strong>Hormonal factors:</strong> Thyroid hormones (T3 and T4) are primary regulators of metabolic rate. Hyperthyroidism can increase BMR by 25-80%, while hypothyroidism can decrease it by 30-40%.</li>
+            <li><strong>Environmental temperature:</strong> Extreme cold or heat forces the body to work harder to maintain core temperature, temporarily increasing BMR.</li>
+          </ul>
+
+          <h2 id="formulas">The Three BMR Formulas</h2>
+          <h3>Mifflin-St Jeor Equation (1990)</h3>
+          <p>Developed by Mifflin, St Jeor, and colleagues and published in the <em>American Journal of Clinical Nutrition</em>, this equation is considered the most accurate predictive formula for resting energy expenditure in the general population. It was derived from a study of 498 subjects and has been validated in numerous subsequent studies.</p>
+          <div class="info-box">
+            <h4>Formula</h4>
+            <p><strong>Male:</strong> BMR = 10 x weight(kg) + 6.25 x height(cm) - 5 x age + 5<br>
+            <strong>Female:</strong> BMR = 10 x weight(kg) + 6.25 x height(cm) - 5 x age - 161</p>
+          </div>
+          <p>The Academy of Nutrition and Dietetics recommends the Mifflin-St Jeor equation as the most reliable for estimating BMR in healthy individuals, with approximately 82% of predictions falling within 10% of measured values via indirect calorimetry.</p>
+
+          <h3>Harris-Benedict Equation (1919, Revised 1984)</h3>
+          <p>Originally published by James Harris and G Benedict in 1919 and revised by Roza and Shizgal in 1984, this was the gold standard for decades. The revised equation improved accuracy for contemporary populations but still tends to overestimate BMR by approximately 5% compared to modern measurements.</p>
+          <div class="info-box">
+            <h4>Revised Formula (Roza &amp; Shizgal, 1984)</h4>
+            <p><strong>Male:</strong> BMR = 88.362 + 13.397 x weight(kg) + 4.799 x height(cm) - 5.677 x age<br>
+            <strong>Female:</strong> BMR = 447.593 + 9.247 x weight(kg) + 3.098 x height(cm) - 4.330 x age</p>
+          </div>
+
+          <h3>Katch-McArdle Formula (1996)</h3>
+          <p>Unlike the other two equations, the Katch-McArdle formula uses lean body mass (LBM) rather than total body weight, making it more accurate for individuals with known body fat percentages. This is particularly valuable for athletes and muscular individuals whose higher muscle mass would cause other formulas to underestimate their BMR.</p>
+          <div class="info-box">
+            <h4>Formula</h4>
+            <p>BMR = 370 + 21.6 x LBM(kg), where LBM = weight x (1 - body fat % / 100)</p>
+          </div>
+          <p>When accurate body fat data is available (from DEXA scan, hydrostatic weighing, or quality skinfold calipers), the Katch-McArdle formula achieves approximately 90% accuracy within 10% of measured values, outperforming both Mifflin-St Jeor and Harris-Benedict for this population.</p>
+
+          <h2 id="changes">How BMR Changes Over Time</h2>
+          <p>Your BMR is not a fixed number. It changes in response to several factors:</p>
+          <p><strong>Weight loss:</strong> When you lose weight, your BMR decreases because there is less body mass to maintain. This is partly why weight loss plateaus occur. A 10 kg weight loss can reduce BMR by approximately 100-150 calories per day. This reduction is sometimes greater than predicted by body composition changes alone, a phenomenon known as metabolic adaptation or adaptive thermogenesis.</p>
+          <p><strong>Muscle gain:</strong> Building lean muscle mass increases BMR, though the effect is more modest than many fitness claims suggest. Each kilogram of muscle burns approximately 13 calories per day at rest. Gaining 2 kg of muscle would increase BMR by roughly 26 calories per day.</p>
+          <p><strong>Aging:</strong> The age-related decline in BMR is largely mediated through muscle loss. Individuals who maintain regular resistance training throughout life can significantly attenuate this decline, preserving a higher BMR well into older age.</p>
+          <p><strong>Dieting:</strong> Prolonged caloric restriction (especially below BMR) can trigger metabolic adaptation, reducing BMR beyond what would be expected from weight loss alone. Research by Leibel et al. (1995) demonstrated that prolonged semi-starvation can reduce BMR by up to 15% below predicted values. This is why diet breaks and refeed days are sometimes recommended during extended cutting phases.</p>
+
+          <div class="key-takeaway">
+            <h4>Key Takeaway</h4>
+            <p>BMR is your metabolic baseline. Use the Mifflin-St Jeor equation as your default, switch to Katch-McArdle if you know your body fat percentage, and remember that all formulas are estimates. Track your actual weight changes over 2-3 weeks and adjust your intake accordingly for the most reliable results.</p>
+          </div>
+        </div>
+
+        <h2 id="faq" style="margin-top:48px">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">What is Basal Metabolic Rate (BMR)?</button>
+            <div class="faq-answer"><p>BMR is the number of calories your body needs to perform vital functions at complete rest, including breathing, circulation, cell production, and nutrient processing. It accounts for 60-75% of your total daily energy expenditure. BMR is measured under strict conditions: after 8 hours of sleep and 12 hours of fasting, in a thermoneutral environment.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Which BMR formula is most accurate?</button>
+            <div class="faq-answer"><p>The Mifflin-St Jeor equation (1990) is considered the most accurate for the general population, with approximately 82% of predictions falling within 10% of measured values. The Katch-McArdle formula is more precise when you know your body fat percentage, especially for muscular individuals. The Harris-Benedict equation, while historically important, tends to overestimate BMR by about 5% for modern populations.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Does BMR decrease with age?</button>
+            <div class="faq-answer"><p>Yes, BMR typically decreases by 1-2% per decade after age 20. This decline is primarily caused by loss of lean muscle mass (sarcopenia) and changes in hormonal profiles. However, regular resistance training and adequate protein intake can significantly slow this decline. All three BMR formulas account for age through their respective equations.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How is BMR different from RMR?</button>
+            <div class="faq-answer"><p>BMR (Basal Metabolic Rate) is measured under stricter conditions: after 8 hours of sleep, 12 hours of fasting, and in a thermoneutral environment. RMR (Resting Metabolic Rate) has less restrictive protocols and is typically 5-10% higher than BMR. In practice, predictive equations like Mifflin-St Jeor estimate RMR, but the terms are often used interchangeably in fitness contexts. The difference is small enough that for dietary planning purposes, either value works.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Can I increase my BMR?</button>
+            <div class="faq-answer"><p>Yes, though the effect is modest. The most effective way to increase BMR is building lean muscle mass through resistance training, as muscle tissue burns more calories at rest than fat tissue. Each pound of muscle burns approximately 6-10 calories per day at rest. Other factors include eating adequate protein (which increases the thermic effect of food), staying hydrated, getting quality sleep, and avoiding severe calorie restriction which can cause metabolic adaptation (a decrease in BMR).</p></div>
+          </div>
+        </div>
+
+        <div class="references" style="margin-top:48px">
+          <h2>References</h2>
+          <ol>
+            <li>Mifflin, M. D., St Jeor, S. T., Hill, L. A., Scott, B. J., Daugherty, S. A., &amp; Koh, Y. O. (1990). A new predictive equation for resting energy expenditure in healthy individuals. <em>American Journal of Clinical Nutrition</em>, 51(2), 241-247. <a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+            <li>Roza, A. M., &amp; Shizgal, H. M. (1984). The Harris Benedict equation reevaluated: resting metabolic requirements and the stress factor. <em>American Journal of Clinical Nutrition</em>, 40(1), 168-182. <a href="https://pubmed.ncbi.nlm.nih.gov/6741842/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+            <li>Katch, V. L., &amp; McArdle, W. D. (1996). <em>Essentials of Exercise Physiology</em> (2nd ed.). Lea &amp; Febiger.</li>
+            <li>Frankenfield, D., Roth-Yousey, L., &amp; Compher, C. (2005). Comparison of predictive equations for resting metabolic rate in healthy subjects. <em>Journal of the American Dietetic Association</em>, 105(5), 775-789. <a href="https://pubmed.ncbi.nlm.nih.gov/15883560/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+            <li>Leibel, R. L., Rosenbaum, M., &amp; Hirsch, J. (1995). Changes in energy expenditure resulting from altered body weight. <em>New England Journal of Medicine</em>, 332(10), 621-628. <a href="https://pubmed.ncbi.nlm.nih.gov/7845406/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+          </ol>
+        </div>
+
+        <h2 style="margin-top:48px">Related Calculators</h2>
+        <div class="cards-grid" style="margin-bottom:24px">
+          <div class="card">
+            <div class="card-icon card-icon-tdee">TDEE</div>
+            <h3>TDEE Calculator</h3>
+            <p>Calculate your total daily energy expenditure from BMR and activity level.</p>
+            <a href="/" class="card-link">Open Calculator &rarr;</a>
+          </div>
+          <div class="card">
+            <div class="card-icon card-icon-cal">CAL</div>
+            <h3>Calorie Calculator</h3>
+            <p>Get personalized daily calorie targets for cutting, maintaining, or bulking.</p>
+            <a href="/calorie-calculator/" class="card-link">Calculate Calories &rarr;</a>
+          </div>
+          <div class="card">
+            <div class="card-icon card-icon-bf">BF%</div>
+            <h3>Body Fat Calculator</h3>
+            <p>Estimate body fat percentage to use with the Katch-McArdle formula.</p>
+            <a href="/body-fat-calculator/" class="card-link">Calculate Body Fat &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <div class="sidebar-card">
+          <h3>Quick Navigation</h3>
+          <ul>
+            <li><a href="#bmr-mifflin-val">Results</a></li>
+            <li><a href="#what-is-bmr">What Is BMR?</a></li>
+            <li><a href="#formulas">The Three Formulas</a></li>
+            <li><a href="#changes">BMR Over Time</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Other Calculators</h3>
+          <ul>
+            <li><a href="/calorie-calculator/">Calorie Calculator</a></li>
+            <li><a href="/macros-calculator/">Macros Calculator</a></li>
+            <li><a href="/bmi-calculator/">BMI Calculator</a></li>
+            <li><a href="/protein-calculator/">Protein Calculator</a></li>
+            <li><a href="/body-fat-calculator/">Body Fat Calculator</a></li>
+            <li><a href="/calorie-deficit-calculator/">Calorie Deficit Calculator</a></li>
+            <li><a href="/water-intake-calculator/">Water Intake Calculator</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Learn More</h3>
+          <ul>
+            <li><a href="/learn/tdee-vs-bmr/">TDEE vs BMR Explained</a></li>
+            <li><a href="/learn/metabolic-adaptation/">Metabolic Adaptation</a></li>
+            <li><a href="/methodology/">Our Methodology</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="site-disclaimer">
+  <div class="container">
+    This tool provides estimates for educational purposes only. Consult a healthcare professional before making dietary changes.
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">TDEE<span>BMR</span></a>
+        <p>Evidence-based nutrition calculators for smarter dietary decisions.</p>
+      </div>
+      <div>
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/calculators/">All Calculators</a></li>
+          <li><a href="/bmr-calculator/">BMR Calculator</a></li>
+          <li><a href="/bmi-calculator/">BMI Calculator</a></li>
+          <li><a href="/macros-calculator/">Macros Calculator</a></li>
+          <li><a href="/body-fat-calculator/">Body Fat Calculator</a></li>
+          <li><a href="/calorie-deficit-calculator/">Deficit Calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="/learn/">All Articles</a></li>
+          <li><a href="/learn/how-accurate-is-tdee/">How Accurate Is TDEE?</a></li>
+          <li><a href="/learn/tdee-vs-bmr/">TDEE vs BMR</a></li>
+          <li><a href="/learn/activity-level-guidelines/">Activity Levels</a></li>
+          <li><a href="/learn/metabolic-adaptation/">Metabolic Adaptation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/methodology/">Methodology</a></li>
+          <li><a href="/disclaimer/">Medical Disclaimer</a></li>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms of Use</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 TDEEBMR. All rights reserved. For educational purposes only.
+    </div>
+  </div>
+</footer>
+
+<script src="/js/calculators.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  let currentUnit = 'metric';
+
+  initUnitToggle(unit => {
+    currentUnit = unit;
+    const isMetric = unit === 'metric';
+    document.getElementById('bmr-weight-group').style.display = isMetric ? '' : 'none';
+    document.getElementById('bmr-height-group').style.display = isMetric ? '' : 'none';
+    document.getElementById('bmr-weight-lbs-group').style.display = isMetric ? 'none' : '';
+    document.getElementById('bmr-height-ft-group').style.display = isMetric ? 'none' : '';
+    document.getElementById('bmr-height-in-group').style.display = isMetric ? 'none' : '';
+  });
+
+  document.getElementById('bmr-calc-btn').addEventListener('click', () => {
+    const sex = document.getElementById('bmr-sex').value;
+    const age = parseInt(document.getElementById('bmr-age').value);
+    const activity = document.getElementById('bmr-activity').value;
+    const bf = parseFloat(document.getElementById('bmr-bf').value);
+
+    let weightKg, heightCm;
+    if (currentUnit === 'metric') {
+      weightKg = parseFloat(document.getElementById('bmr-weight').value);
+      heightCm = parseFloat(document.getElementById('bmr-height').value);
+    } else {
+      weightKg = Calc.lbsToKg(parseFloat(document.getElementById('bmr-weight-lbs').value));
+      heightCm = Calc.feetInchesToCm(
+        parseInt(document.getElementById('bmr-height-ft').value) || 0,
+        parseInt(document.getElementById('bmr-height-in').value) || 0
+      );
+    }
+
+    if (!age || !weightKg || !heightCm) { alert('Please fill in all required fields.'); return; }
+
+    const mifflin = Calc.bmr.mifflin(weightKg, heightCm, age, sex);
+    const harris = Calc.bmr.harris(weightKg, heightCm, age, sex);
+    const tdee = Calc.tdee(mifflin, activity);
+
+    document.getElementById('bmr-mifflin-val').textContent = Calc.format(mifflin);
+    document.getElementById('bmr-harris-val').textContent = Calc.format(harris);
+
+    if (bf && bf > 0) {
+      const katch = Calc.bmr.katch(bf, weightKg);
+      document.getElementById('bmr-katch-val').textContent = Calc.format(katch);
+    } else {
+      document.getElementById('bmr-katch-val').textContent = 'N/A';
+    }
+
+    document.getElementById('bmr-tdee-val').textContent = Calc.format(tdee);
+    document.getElementById('bmr-results').classList.add('visible');
+    document.getElementById('bmr-results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<title>BMI Calculator - Body Mass Index with WHO Classification</title>
+<meta name="description" content="Calculate your Body Mass Index (BMI) instantly with our free calculator. See your WHO classification, learn about BMI limitations, and explore better body composition metrics.">
+  <meta property="og:title" content="BMI Calculator - Body Mass Index with WHO Classification">
+  <meta property="og:description" content="Calculate your Body Mass Index (BMI) instantly with our free calculator. See your WHO classification, learn about BMI limitations, and explore better body composition metrics.">
+  <meta property="og:image" content="https://tdeebmr.com/images/bmi-calculator-og.png">
+  <meta property="og:url" content="https://tdeebmr.com/bmi-calculator/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BMI Calculator - Body Mass Index with WHO Classification">
+  <meta name="twitter:description" content="Calculate your Body Mass Index (BMI) instantly with our free calculator. See your WHO classification, learn about BMI limitations, and explore better body composition metrics.">
+  <meta name="twitter:image" content="https://tdeebmr.com/images/bmi-calculator-og.png">
+<link rel="canonical" href="https://tdeebmr.com/bmi-calculator/">
+<link rel="stylesheet" href="/css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tdeebmr.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://tdeebmr.com/calculators/" },
+    { "@type": "ListItem", "position": 3, "name": "BMI Calculator", "item": "https://tdeebmr.com/bmi-calculator/" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "BMI Calculator",
+  "url": "https://tdeebmr.com/bmi-calculator/",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "Free BMI calculator with WHO classification, visual scale, and educational content about body composition assessment."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is BMI accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BMI is a useful population-level screening tool but has significant limitations for individuals. It does not distinguish between muscle mass and fat mass, meaning muscular athletes may be classified as overweight or obese despite having low body fat. Similarly, elderly individuals with low muscle mass may have a 'normal' BMI while carrying excess body fat (sarcopenic obesity). For individual assessment, BMI should be combined with other measures like waist circumference, body fat percentage, or waist-to-height ratio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the BMI categories?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The WHO classifies BMI into these categories: Underweight (below 18.5), Normal weight (18.5-24.9), Overweight (25-29.9), Obese Class I (30-34.9), Obese Class II (35-39.9), and Obese Class III (40 and above). These thresholds are based on epidemiological data linking BMI to health risks, though they were developed primarily for Caucasian populations and may not apply equally to all ethnic groups."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are alternatives to BMI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Better alternatives for individual body composition assessment include: body fat percentage (measured via DEXA, hydrostatic weighing, or skinfold calipers), waist-to-height ratio (a ratio above 0.5 indicates increased health risk), waist circumference (above 102cm for men or 88cm for women indicates elevated risk), and the Body Adiposity Index (BAI). The waist-to-height ratio is particularly valuable because it captures visceral fat distribution, which is more strongly linked to metabolic disease than overall weight."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a healthy BMI range?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The WHO defines a healthy BMI range as 18.5 to 24.9. Research consistently shows that mortality risk is lowest within this range for the general population. However, some studies suggest the optimal range may shift slightly with age, with adults over 65 potentially benefiting from a BMI of 23-27. The relationship between BMI and health outcomes follows a J-shaped curve, with increased risks at both extremes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do athletes have high BMI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BMI uses only total body weight relative to height and cannot distinguish between fat mass and lean mass. Athletes, particularly those in strength and power sports, often have significantly more muscle mass than the general population. Since muscle is denser than fat, an athlete may weigh more than expected for their height without carrying excess body fat. For example, a muscular male at 180cm weighing 90kg would have a BMI of 27.8 (classified as overweight) despite potentially having only 10-12% body fat."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "BMI Calculator - Body Mass Index with WHO Classification",
+  "datePublished": "2026-11-03",
+  "dateModified": "2026-11-07",
+  "specialty": "Nutrition",
+  "audience": {
+    "@type": "MedicalAudience",
+    "audienceType": "Patients"
+  },
+  "url": "https://tdeebmr.com/bmi-calculator/",
+  "description": "Calculate your Body Mass Index (BMI) instantly with our free calculator. See your WHO classification, learn about BMI limitations, and explore better body composition metrics."
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">TDEE<span>BMR</span></a>
+    <button class="mobile-menu-btn" aria-label="Toggle menu">&#9776;</button>
+    <nav>
+      <a href="/calculators/">Calculators</a>
+      <a href="/learn/">Learn</a>
+      <a href="/methodology/">Methodology</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a> <span>/</span> <a href="/calculators/">Calculators</a> <span>/</span> BMI Calculator
+    </div>
+    <h1>BMI Calculator</h1>
+    <p>Calculate your Body Mass Index and see where you fall on the WHO classification scale, with important context about what BMI can and cannot tell you.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="page-layout">
+      <div>
+        <div class="calc-card">
+          <div class="unit-toggle">
+            <button class="active" data-unit="metric">Metric (kg/cm)</button>
+            <button data-unit="imperial">Imperial (lbs/in)</button>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group" id="bmi-weight-group">
+              <label for="bmi-weight">Weight (kg)</label>
+              <input type="number" id="bmi-weight" placeholder="70" min="30" max="300" step="0.1">
+            </div>
+            <div class="form-group" id="bmi-height-group">
+              <label for="bmi-height">Height (cm)</label>
+              <input type="number" id="bmi-height" placeholder="175" min="100" max="250" step="0.1">
+            </div>
+            <div class="form-group" id="bmi-weight-lbs-group" style="display:none">
+              <label for="bmi-weight-lbs">Weight (lbs)</label>
+              <input type="number" id="bmi-weight-lbs" placeholder="154" min="60" max="700" step="0.1">
+            </div>
+            <div class="form-group" id="bmi-height-ft-group" style="display:none">
+              <label for="bmi-height-ft">Height (ft)</label>
+              <input type="number" id="bmi-height-ft" placeholder="5" min="3" max="8">
+            </div>
+            <div class="form-group" id="bmi-height-in-group" style="display:none">
+              <label for="bmi-height-in">Height (in)</label>
+              <input type="number" id="bmi-height-in" placeholder="9" min="0" max="11">
+            </div>
+          </div>
+
+          <button class="btn" id="bmi-calc-btn">Calculate BMI</button>
+
+          <div class="results" id="bmi-results">
+            <div class="result-main">
+              <div class="value" id="bmi-val">--</div>
+              <div class="label" id="bmi-cat-label">Body Mass Index</div>
+            </div>
+            <div id="bmi-scale" style="margin-top:20px;padding:16px;background:var(--bg);border-radius:var(--radius-sm);border:1px solid var(--border)">
+              <div style="display:flex;justify-content:space-between;font-size:0.75rem;color:var(--text-light);margin-bottom:8px">
+                <span>Underweight<br>&lt;18.5</span>
+                <span>Normal<br>18.5-24.9</span>
+                <span>Overweight<br>25-29.9</span>
+                <span>Obese I<br>30-34.9</span>
+                <span>Obese II<br>35-39.9</span>
+                <span>Obese III<br>40+</span>
+              </div>
+              <div style="height:12px;border-radius:6px;background:linear-gradient(to right,#3b82f6 0%,#22c55e 20%,#22c55e 35%,#f59e0b 50%,#ef4444 70%,#dc2626 85%,#991b1b 100%);position:relative">
+                <div id="bmi-marker" style="position:absolute;top:-4px;width:4px;height:20px;background:var(--text);border-radius:2px;transition:left 0.3s"></div>
+              </div>
+            </div>
+            <div class="result-grid" style="margin-top:16px">
+              <div class="result-item">
+                <div class="value" id="bmi-healthy-range">--</div>
+                <div class="label">Healthy Weight Range (kg)</div>
+              </div>
+              <div class="result-item">
+                <div class="value" id="bmi-category-val">--</div>
+                <div class="label">WHO Category</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:48px;max-width:800px">
+          <h2 id="understanding-bmi">Understanding Body Mass Index (BMI)</h2>
+          <p>Body Mass Index (BMI) is a simple calculation using a person's height and weight, defined as weight in kilograms divided by the square of height in meters (kg/m2). Developed by Belgian mathematician Adolphe Quetelet in the 1830s, BMI was never intended as an individual diagnostic tool but rather as a quick method for assessing body composition across populations.</p>
+          <p>Despite its limitations, BMI remains widely used in clinical settings because of its simplicity, low cost, and strong correlation with body fat percentage at the population level. The World Health Organization (WHO) uses BMI as the standard classification for underweight, normal weight, overweight, and obesity.</p>
+
+          <h3>The BMI Formula</h3>
+          <div class="info-box">
+            <h4>Calculation</h4>
+            <p><strong>Metric:</strong> BMI = weight(kg) / height(m)2<br>
+            <strong>Imperial:</strong> BMI = [weight(lbs) / height(in)2] x 703</p>
+          </div>
+          <p>For example, a person weighing 70 kg who is 175 cm tall would have a BMI of 70 / (1.75)2 = 22.9, placing them in the "Normal weight" category.</p>
+
+          <h2 id="who-classification">WHO BMI Classification</h2>
+          <p>The World Health Organization established the following BMI categories based on epidemiological data linking body mass index to health outcomes including mortality, cardiovascular disease, type 2 diabetes, and certain cancers:</p>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr><th>Classification</th><th>BMI (kg/m2)</th><th>Health Risk</th><th>Prevalence Note</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Severe Underweight</strong></td><td>&lt; 16.0</td><td>High</td><td>Rare in developed nations</td></tr>
+                <tr><td><strong>Moderate Underweight</strong></td><td>16.0 - 16.9</td><td>Elevated</td><td>May indicate malnutrition or illness</td></tr>
+                <tr><td><strong>Mild Underweight</strong></td><td>17.0 - 18.4</td><td>Low-Moderate</td><td>Common in young adults</td></tr>
+                <tr class="winner"><td><strong>Normal Weight</strong></td><td>18.5 - 24.9</td><td>Lowest</td><td>Reference category</td></tr>
+                <tr><td><strong>Pre-Obese (Overweight)</strong></td><td>25.0 - 29.9</td><td>Moderately Increased</td><td>Affects ~39% of adults globally</td></tr>
+                <tr><td><strong>Obese Class I</strong></td><td>30.0 - 34.9</td><td>High</td><td>~13% of global population</td></tr>
+                <tr><td><strong>Obese Class II</strong></td><td>35.0 - 39.9</td><td>Very High</td><td>~5% of global population</td></tr>
+                <tr><td><strong>Obese Class III</strong></td><td>&ge; 40.0</td><td>Extremely High</td><td>~1-2% of global population</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size:0.85rem;color:var(--text-light)">Source: World Health Organization (WHO), Global Database on BMI. Prevalence data from NCD Risk Factor Collaboration, 2016.</p>
+
+          <h2 id="limitations">Limitations of BMI</h2>
+          <p>While BMI is a useful screening tool at the population level, it has well-documented limitations when applied to individuals:</p>
+          <p><strong>Does not distinguish fat from muscle:</strong> BMI treats all mass equally. A competitive bodybuilder at 180 cm and 100 kg would have a BMI of 30.9 (classified as "Obese Class I") despite having 8-12% body fat. Conversely, a sedentary individual with the same BMI might have 35% body fat. Research by Romero-Corral et al. (2008) found that BMI has a sensitivity of only 50% for detecting excess adiposity.</p>
+          <p><strong>Age and sex differences:</strong> Women naturally carry more body fat than men at the same BMI. Older adults tend to have more body fat than younger adults at the same BMI due to sarcopenia (muscle loss). The standard BMI categories do not account for these differences.</p>
+          <p><strong>Ethnic variation:</strong> The WHO BMI thresholds were developed primarily from data on Caucasian populations. Research has shown that Asian populations experience elevated health risks at lower BMI values, leading the WHO to propose alternative thresholds for Asian populations: overweight at BMI 23-24.9 and obesity at BMI 25 or above.</p>
+          <p><strong>Fat distribution:</strong> BMI says nothing about where fat is stored. Visceral fat (around organs) carries significantly higher health risks than subcutaneous fat (under the skin). Two people with identical BMIs can have very different risk profiles based on fat distribution.</p>
+
+          <h3>Better Alternatives for Individual Assessment</h3>
+          <p>For a more complete picture of body composition and health risk, consider these complementary measurements:</p>
+          <ul style="margin-bottom:16px;padding-left:24px;color:var(--text)">
+            <li><strong>Waist-to-height ratio (WHtR):</strong> A ratio above 0.5 indicates increased health risk. This metric captures abdominal fat distribution and has been shown to outperform BMI for predicting cardiovascular disease and type 2 diabetes.</li>
+            <li><strong>Body fat percentage:</strong> Measured via DEXA scan (gold standard), hydrostatic weighing, or skinfold calipers. Use our <a href="/body-fat-calculator/">Body Fat Calculator</a> for an estimate based on the U.S. Navy method.</li>
+            <li><strong>Waist circumference:</strong> Above 102 cm (40 in) for men or 88 cm (35 in) for women indicates elevated disease risk regardless of BMI.</li>
+            <li><strong>Lean body mass:</strong> Knowing your fat-free mass provides a more actionable metric for fitness goals. See our <a href="/lean-body-mass-calculator/">Lean Body Mass Calculator</a>.</li>
+          </ul>
+
+          <div class="key-takeaway">
+            <h4>Key Takeaway</h4>
+            <p>BMI is a quick, free screening tool that works well at the population level but should never be the sole measure of individual health. Combine it with waist circumference, body fat percentage, and other markers for a more complete assessment. If your BMI falls outside the normal range, consult a healthcare professional for a comprehensive evaluation.</p>
+          </div>
+        </div>
+
+        <h2 id="faq" style="margin-top:48px">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">Is BMI accurate?</button>
+            <div class="faq-answer"><p>BMI is a useful population-level screening tool but has significant limitations for individuals. It does not distinguish between muscle mass and fat mass, meaning muscular athletes may be classified as overweight or obese despite having low body fat. Similarly, elderly individuals with low muscle mass may have a 'normal' BMI while carrying excess body fat (sarcopenic obesity). For individual assessment, BMI should be combined with other measures like waist circumference, body fat percentage, or waist-to-height ratio.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What are the BMI categories?</button>
+            <div class="faq-answer"><p>The WHO classifies BMI into these categories: Underweight (below 18.5), Normal weight (18.5-24.9), Overweight (25-29.9), Obese Class I (30-34.9), Obese Class II (35-39.9), and Obese Class III (40 and above). These thresholds are based on epidemiological data linking BMI to health risks, though they were developed primarily for Caucasian populations and may not apply equally to all ethnic groups.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What are alternatives to BMI?</button>
+            <div class="faq-answer"><p>Better alternatives for individual body composition assessment include: body fat percentage (measured via DEXA, hydrostatic weighing, or skinfold calipers), waist-to-height ratio (a ratio above 0.5 indicates increased health risk), waist circumference (above 102cm for men or 88cm for women indicates elevated risk), and the Body Adiposity Index (BAI). The waist-to-height ratio is particularly valuable because it captures visceral fat distribution, which is more strongly linked to metabolic disease than overall weight.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is a healthy BMI range?</button>
+            <div class="faq-answer"><p>The WHO defines a healthy BMI range as 18.5 to 24.9. Research consistently shows that mortality risk is lowest within this range for the general population. However, some studies suggest the optimal range may shift slightly with age, with adults over 65 potentially benefiting from a BMI of 23-27. The relationship between BMI and health outcomes follows a J-shaped curve, with increased risks at both extremes.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Why do athletes have high BMI?</button>
+            <div class="faq-answer"><p>BMI uses only total body weight relative to height and cannot distinguish between fat mass and lean mass. Athletes, particularly those in strength and power sports, often have significantly more muscle mass than the general population. Since muscle is denser than fat, an athlete may weigh more than expected for their height without carrying excess body fat. For example, a muscular male at 180cm weighing 90kg would have a BMI of 27.8 (classified as overweight) despite potentially having only 10-12% body fat.</p></div>
+          </div>
+        </div>
+
+        <div class="references" style="margin-top:48px">
+          <h2>References</h2>
+          <ol>
+            <li>World Health Organization. (2000). <em>Obesity: preventing and managing the global epidemic</em>. WHO Technical Report Series 894. <a href="https://www.who.int/publications/i/item/9241208945" rel="nofollow noopener" target="_blank">WHO</a></li>
+            <li>NCD Risk Factor Collaboration. (2016). Worldwide trends in body-mass index, underweight, overweight, and obesity from 1975 to 2016. <em>The Lancet</em>, 390(10113), 2627-2642. <a href="https://pubmed.ncbi.nlm.nih.gov/29029897/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+            <li>Romero-Corral, A., et al. (2008). Accuracy of body mass index in diagnosing obesity in the adult general population. <em>International Journal of Obesity</em>, 32(6), 959-966. <a href="https://pubmed.ncbi.nlm.nih.gov/18398400/" rel="nofollow noopener" target="_blank">PubMed</a></li>
+            <li>Quetelet, A. (1835). <em>A Treatise on Man and the Development of His Faculties</em>. Edinburgh: William and Robert Chambers.</li>
+          </ol>
+        </div>
+
+        <h2 style="margin-top:48px">Related Calculators</h2>
+        <div class="cards-grid" style="margin-bottom:24px">
+          <div class="card">
+            <div class="card-icon card-icon-bf">BF%</div>
+            <h3>Body Fat Calculator</h3>
+            <p>Estimate body fat percentage using the U.S. Navy method for a more complete picture.</p>
+            <a href="/body-fat-calculator/" class="card-link">Calculate Body Fat &rarr;</a>
+          </div>
+          <div class="card">
+            <div class="card-icon card-icon-lbm">LBM</div>
+            <h3>Lean Body Mass Calculator</h3>
+            <p>Calculate your fat-free mass using four established formulas.</p>
+            <a href="/lean-body-mass-calculator/" class="card-link">Calculate LBM &rarr;</a>
+          </div>
+          <div class="card">
+            <div class="card-icon card-icon-ibw">IBW</div>
+            <h3>Ideal Weight Calculator</h3>
+            <p>Compare four clinical formulas for ideal body weight at your height.</p>
+            <a href="/ideal-weight-calculator/" class="card-link">Calculate Ideal Weight &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <div class="sidebar-card">
+          <h3>Quick Navigation</h3>
+          <ul>
+            <li><a href="#bmi-val">Results</a></li>
+            <li><a href="#understanding-bmi">Understanding BMI</a></li>
+            <li><a href="#who-classification">WHO Classification</a></li>
+            <li><a href="#limitations">Limitations</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Other Calculators</h3>
+          <ul>
+            <li><a href="/bmr-calculator/">BMR Calculator</a></li>
+            <li><a href="/body-fat-calculator/">Body Fat Calculator</a></li>
+            <li><a href="/calorie-calculator/">Calorie Calculator</a></li>
+            <li><a href="/macros-calculator/">Macros Calculator</a></li>
+            <li><a href="/protein-calculator/">Protein Calculator</a></li>
+            <li><a href="/water-intake-calculator/">Water Intake Calculator</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="site-disclaimer">
+  <div class="container">
+    This tool provides estimates for educational purposes only. Consult a healthcare professional before making dietary changes.
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">TDEE<span>BMR</span></a>
+        <p>Evidence-based nutrition calculators for smarter dietary decisions.</p>
+      </div>
+      <div>
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/calculators/">All Calculators</a></li>
+          <li><a href="/bmr-calculator/">BMR Calculator</a></li>
+          <li><a href="/bmi-calculator/">BMI Calculator</a></li>
+          <li><a href="/macros-calculator/">Macros Calculator</a></li>
+          <li><a href="/body-fat-calculator/">Body Fat Calculator</a></li>
+          <li><a href="/calorie-deficit-calculator/">Deficit Calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="/learn/">All Articles</a></li>
+          <li><a href="/learn/how-accurate-is-tdee/">How Accurate Is TDEE?</a></li>
+          <li><a href="/learn/tdee-vs-bmr/">TDEE vs BMR</a></li>
+          <li><a href="/learn/activity-level-guidelines/">Activity Levels</a></li>
+          <li><a href="/learn/metabolic-adaptation/">Metabolic Adaptation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/methodology/">Methodology</a></li>
+          <li><a href="/disclaimer/">Medical Disclaimer</a></li>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms of Use</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 TDEEBMR. All rights reserved. For educational purposes only.
+    </div>
+  </div>
+</footer>
+
+<script src="/js/calculators.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  let currentUnit = 'metric';
+
+  initUnitToggle(unit => {
+    currentUnit = unit;
+    const isMetric = unit === 'metric';
+    document.getElementById('bmi-weight-group').style.display = isMetric ? '' : 'none';
+    document.getElementById('bmi-height-group').style.display = isMetric ? '' : 'none';
+    document.getElementById('bmi-weight-lbs-group').style.display = isMetric ? 'none' : '';
+    document.getElementById('bmi-height-ft-group').style.display = isMetric ? 'none' : '';
+    document.getElementById('bmi-height-in-group').style.display = isMetric ? 'none' : '';
+  });
+
+  document.getElementById('bmi-calc-btn').addEventListener('click', () => {
+    let weightKg, heightCm;
+    if (currentUnit === 'metric') {
+      weightKg = parseFloat(document.getElementById('bmi-weight').value);
+      heightCm = parseFloat(document.getElementById('bmi-height').value);
+    } else {
+      weightKg = Calc.lbsToKg(parseFloat(document.getElementById('bmi-weight-lbs').value));
+      heightCm = Calc.feetInchesToCm(
+        parseInt(document.getElementById('bmi-height-ft').value) || 0,
+        parseInt(document.getElementById('bmi-height-in').value) || 0
+      );
+    }
+
+    if (!weightKg || !heightCm) { alert('Please fill in all fields.'); return; }
+
+    const bmiVal = Calc.bmi(weightKg, heightCm);
+    const cat = Calc.bmiCategory(bmiVal);
+    const heightM = heightCm / 100;
+    const healthyLow = (18.5 * heightM * heightM).toFixed(1);
+    const healthyHigh = (24.9 * heightM * heightM).toFixed(1);
+
+    document.getElementById('bmi-val').textContent = bmiVal.toFixed(1);
+    document.getElementById('bmi-cat-label').textContent = 'BMI - ' + cat.label;
+    document.getElementById('bmi-category-val').textContent = cat.label;
+    document.getElementById('bmi-healthy-range').textContent = healthyLow + ' - ' + healthyHigh;
+
+    // Position marker on scale (BMI 14-45 range mapped to 0-100%)
+    const pct = Math.min(100, Math.max(0, ((bmiVal - 14) / 31) * 100));
+    document.getElementById('bmi-marker').style.left = pct + '%';
+
+    document.getElementById('bmi-results').classList.add('visible');
+    document.getElementById('bmi-results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+</body>
+</html>

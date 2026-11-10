@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<title>TDEE Calculator - Free Total Daily Energy Expenditure Tool | TDEEBMR</title>
+<meta name="description" content="Free TDEE calculator with BMR, calorie targets for cutting and bulking, and macro splits. Supports Mifflin-St Jeor and Katch-Mculking, and macro splits. Based on Mifflin-St Jeor equation.">
+<meta name="keywords" content="TDEE calculator, total daily energy expenditure, BMR calculator, calorie calculator, macros calculator">
+<link rel="canonical" href="https://tdeebmr.com/">
+<meta property="og:title" content="TDEE Calculator - Free Total Daily Energy Expenditure Calculator">
+<meta property="og:description" content="Calculate your TDEE instantly with our free calculator. Get BMR, calorie targets for cutting/bulking, and macro splits based on Mifflin-St Jeor equation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tdeebmr.com/">
+<meta property="og:image" content="https://tdeebmr.com/images/hero-tdee-calculator.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TDEE Calculator - Free Total Daily Energy Expenditure Calculator">
+<meta name="twitter:description" content="Calculate your TDEE instantly. Get BMR, calorie targets, and macro splits based on peer-reviewed research.">
+<meta name="twitter:image" content="https://tdeebmr.com/images/hero-tdee-calculator.png">
+<link rel="stylesheet" href="/css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "TDEEBMR",
+  "url": "https://tdeebmr.com/"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "TDEE Calculator",
+  "url": "https://tdeebmr.com/",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "Free TDEE calculator using the Mifflin-St Jeor and Katch-McArdle equations. Calculate your total daily energy expenditure, BMR, calorie targets for cutting and bulking, and macronutrient needs."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "TDEE Calculator - Total Daily Energy Expenditure",
+  "url": "https://tdeebmr.com/",
+  "description": "Evidence-based TDEE calculator providing personalized calorie targets and macronutrient breakdowns for weight management, cutting, and bulking goals.",
+  "specialty": "Nutrition",
+  "audience": { "@type": "MedicalAudience", "audienceType": "General public interested in nutrition and fitness" },
+  "datePublished": "2026-11-03",
+  "dateModified": "2026-11-09",
+  "isPartOf": { "@type": "WebSite", "name": "TDEEBMR", "url": "https://tdeebmr.com/" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is TDEE (Total Daily Energy Expenditure)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TDEE represents the total number of calories your body burns in a single day, including all physiological processes and physical activity. It is composed of four components: Basal Metabolic Rate (BMR, 60-75% of total), Thermic Effect of Food (TEF, ~10%), Exercise Activity Thermogenesis (EAT), and Non-Exercise Activity Thermogenesis (NEAT). TDEE is the single most important number for managing your weight, whether your goal is fat loss, muscle gain, or maintenance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is TDEE calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TDEE is calculated in two steps. First, your Basal Metabolic Rate (BMR) is estimated using a validated equation such as Mifflin-St Jeor (1990) or Katch-McArdle (1996). The Mifflin-St Jeor equation uses sex, age, weight, and height: for men, BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age + 5; for women, BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age − 161. Second, BMR is multiplied by a Physical Activity Level (PAL) factor ranging from 1.2 (sedentary) to 1.9 (extra active) to produce your TDEE."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good TDEE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A good TDEE is one that supports your specific health goals. For weight maintenance, consume calories equal to your TDEE. For sustainable fat loss, aim for a 300-500 calorie deficit below your TDEE, which typically produces 0.3-0.5 kg (0.7-1 lb) of weight loss per week. For lean muscle gain, add 200-350 calories above your TDEE. The average adult TDEE ranges from 1,600 to 3,000 calories per day, varying significantly based on body size, composition, and activity level."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a TDEE calculator accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TDEE calculators using the Mifflin-St Jeor equation are accurate within approximately 10% for about 82% of the population, according to a comprehensive review by Frankenfield et al. (2005) published in the Journal of the American Dietetic Association. However, individual variation exists due to genetics, hormonal factors, muscle mass, and non-exercise activity thermogenesis (NEAT). The calculator provides a scientifically grounded starting point; adjust your intake based on actual weight changes tracked over 2-3 weeks for the most reliable results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which BMR formula should I use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most people, the Mifflin-St Jeor equation (1990) is the best choice. It is recommended by the Academy of Nutrition and Dietetics as the most accurate predictive equation for resting energy expenditure in the general population. If you know your body fat percentage with reasonable accuracy (from DEXA scan, hydrostatic weighing, or quality calipers), the Katch-McArdle formula may be more precise, particularly if you are very muscular. The Harris-Benedict equation is still widely used but tends to overestimate BMR by about 5% for modern populations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I eat at my TDEE to maintain weight?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Your TDEE represents the total number of calories your body burns each day, including basal metabolic functions, digestion, and all physical activity. Eating at your TDEE should maintain your current weight. If you consistently eat at your calculated TDEE and notice weight changes of more than 0.5 kg (1 lb) over two weeks, recalculate your TDEE as your body composition may have shifted, or adjust your intake by 100-200 calories in the appropriate direction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I use TDEE for fat loss?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To lose fat, consume fewer calories than your TDEE. A moderate deficit of 300-500 kcal/day below TDEE produces sustainable fat loss of approximately 0.3-0.5 kg (0.7-1 lb) per week. This is based on the principle that one pound of body fat stores approximately 3,500 kcal. During a cut, increase protein intake to 1.6-2.2 g/kg body weight to preserve lean muscle mass. Avoid aggressive deficits larger than 25% of TDEE, which can trigger metabolic adaptation and muscle loss. Recalculate your TDEE every 4-6 weeks as your weight decreases."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I use TDEE for muscle gain?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To gain muscle, consume calories above your TDEE. For a lean bulk that minimizes fat gain, add 200-350 calories per day to your TDEE and pair this with a structured resistance training program. For faster weight gain, add 500 calories daily, though a larger proportion may be stored as fat. Ensure adequate protein intake of 1.6-2.2 g/kg body weight to support muscle protein synthesis. Monitor your weight weekly; if you are gaining more than 0.5% of body weight per week during a lean bulk, reduce your surplus slightly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I recalculate my TDEE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Recalculate your TDEE every 4-6 weeks during an active cutting or bulking phase, as changes in body weight directly affect your BMR. You should also recalculate whenever your activity level changes significantly (new exercise program, change in occupation activity), after a body weight change of 5 kg (10 lbs) or more, or at minimum every 3-6 months for general maintenance purposes. As you age, BMR naturally declines, making periodic recalculation important for accuracy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does TDEE change with age?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, TDEE decreases with age. Basal metabolic rate declines approximately 1-2% per decade after age 20, primarily due to loss of lean muscle mass (sarcopenia) and hormonal changes. The Mifflin-St Jeor equation accounts for this through its age variable. However, this decline is not inevitable at the rate most people experience it; regular resistance training and adequate protein intake can significantly preserve muscle mass and keep metabolic rate higher than age-predicted values."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my TDEE different from MyFitnessPal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Several factors cause discrepancies. MyFitnessPal uses the Mifflin-St Jeor equation but applies slightly different activity multipliers and rounds values differently. More significantly, MyFitnessPal adds exercise calories on top of your baseline TDEE, which can lead to substantial overestimation since the activity multiplier already accounts for exercise. Their activity level descriptions also differ from standard Physical Activity Level (PAL) values used in research. Our calculator uses standardized multipliers from peer-reviewed literature for consistency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are common TDEE mistakes to avoid?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most common mistakes include: overestimating your activity level (choose the lower option when unsure), eating back exercise calories on top of your TDEE (the activity multiplier already includes exercise), not adjusting your TDEE as you lose or gain weight, relying on fitness tracker calorie estimates which can be off by 20-40%, and expecting the calculator to be exact rather than using it as a starting point. Track your actual weight changes over 2-3 weeks and adjust your intake by 100-200 calories based on real results."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tdeebmr.com/" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">TDEE<span>BMR</span></a>
+    <button class="mobile-menu-btn" aria-label="Toggle menu">&#9776;</button>
+    <nav>
+      <a href="/#calculator">Calculator</a>
+      <a href="/calculators/">All Calculators</a>
+      <a href="/learn/">Learn</a>
+      <a href="/methodology/">Methodology</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="calculator">
+  <div class="container">
+    <h1>TDEE Calculator</h1>
+    <p>Calculate your Total Daily Energy Expenditure, get personalized calorie targets for cutting, maintaining, or bulking, and see your macros breakdown.</p>
+
+    <div class="calc-card">
+      <div class="unit-toggle">
+        <button class="active" data-unit="metric">Metric (kg/cm)</button>
+        <button data-unit="imperial">Imperial (lbs/in)</button>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="sex">Sex</label>
+          <select id="sex"><option value="male">Male</option><option value="female">Female</option></select>
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" id="age" placeholder="30" min="15" max="100">
+        </div>
+        <div class="form-group" id="weight-group">
+          <label for="weight">Weight (kg)</label>
+          <input type="number" id="weight" placeholder="70" min="30" max="300" step="0.1">
+        </div>
+        <div class="form-group" id="height-group">
+          <label for="height">Height (cm)</label>
+          <input type="number" id="height" placeholder="175" min="100" max="250" step="0.1">
+        </div>
+        <div class="form-group" id="height-ft-group" style="display:none">
+          <label for="height-ft">Height (ft)</label>
+          <input type="number" id="height-ft" placeholder="5" min="3" max="8">
+        </div>
+        <div class="form-group" id="height-in-group" style="display:none">
+          <label for="height-in">Height (in)</label>
+          <input type="number" id="height-in" placeholder="9" min="0" max="11">
+        </div>
+        <div class="form-group" id="weight-lbs-group" style="display:none">
+          <label for="weight-lbs">Weight (lbs)</label>
+          <input type="number" id="weight-lbs" placeholder="154" min="60" max="700" step="0.1">
+        </div>
+        <div class="form-group full-width">
+          <label for="activity">Activity Level</label>
+          <select id="activity">
+            <option value="sedentary">Sedentary - Little or no exercise, desk job</option>
+            <option value="light">Lightly Active - Exercise 1-3 days/week</option>
+            <option value="moderate" selected>Moderately Active - Exercise 3-5 days/week</option>
+            <option value="active">Very Active - Hard exercise 6-7 days/week</option>
+            <option value="extraActive">Extra Active - Very hard exercise, physical job</option>
+          </select>
+        </div>
+        <div class="form-group full-width">
+          <label for="bodyfat">Body Fat % <span style="font-weight:400;text-transform:none;font-size:0.8rem;color:var(--text-light)">(optional — enables Katch-McArdle formula)</span></label>
+          <input type="number" id="bodyfat" placeholder="e.g. 15" min="2" max="60" step="0.1">
+        </div>
+      </div>
+
+      <button class="btn" id="calc-btn">Calculate TDEE</button>
+
+      <div class="results" id="results">
+        <div class="result-main">
+          <div class="value" id="tdee-value">--</div>
+          <div class="label">Total Daily Energy Expenditure (kcal/day)</div>
+          <div class="result-formula"><span class="formula-badge" id="formula-badge">Mifflin-St Jeor</span></div>
+        </div>
+
+        <div class="result-mini-cards">
+          <div class="mini-card">
+            <div class="mc-label">BMR</div>
+            <div class="mc-value" id="bmr-value">--</div>
+            <div class="mc-sub">kcal/day</div>
+          </div>
+          <div class="mini-card">
+            <div class="mc-label">BMI</div>
+            <div class="mc-value" id="bmi-value">--</div>
+            <div class="mc-sub" id="bmi-cat">--</div>
+          </div>
+          <div class="mini-card">
+            <div class="mc-label">Maintain</div>
+            <div class="mc-value" id="maintain-cal">--</div>
+            <div class="mc-sub">kcal/day</div>
+          </div>
+        </div>
+
+        <div class="concept-cards">
+          <div class="concept-card">
+            <div class="cc-title">3,500 kcal &asymp; 1 lb body fat</div>
+            <div class="cc-desc">One pound of adipose tissue stores approximately 3,500 kcal of metabolizable energy &mdash; the basis of all deficit planning</div>
+          </div>
+          <div class="concept-card">
+            <div class="cc-title">500 kcal/day deficit &asymp; 0.45 kg/week</div>
+            <div class="cc-desc">A sustained 500 kcal daily deficit produces roughly 1 lb (0.45 kg) of fat loss per week, or about 2 kg per month</div>
+          </div>
+          <div class="concept-card">
+            <div class="cc-title">1.6&ndash;2.2 g/kg protein preserves muscle</div>
+            <div class="cc-desc">Research shows 1.6 g/kg is the minimum to preserve lean mass in a deficit; 2.2 g/kg provides a safety margin for aggressive cuts</div>
+          </div>
+        </div>
+
+        <div class="macro-section">
+          <h3 style="margin-bottom:12px;font-size:1.1rem">Macro Split Options</h3>
+          <div class="macro-tabs" id="macro-tabs">
+            <button class="macro-tab active" data-split="moderate">Moderate Carb<br><small>30P / 35C / 35F</small></button>
+            <button class="macro-tab" data-split="lower">Lower Carb<br><small>40P / 20C / 40F</small></button>
+            <button class="macro-tab" data-split="higher">Higher Carb<br><small>30P / 50C / 20F</small></button>
+          </div>
+        </div>
+
+        <h3 style="margin-top:24px;margin-bottom:12px;font-size:1.1rem">Calorie Targets &amp; Macros by Goal</h3>
+        <div class="goal-table-wrapper">
+          <table class="goal-table" id="goal-table">
+            <thead>
+              <tr>
+                <th>Goal</th>
+                <th>Calories</th>
+                <th>Expected Rate</th>
+                <th>Protein</th>
+                <th>Carbs</th>
+                <th>Fat</th>
+              </tr>
+            </thead>
+            <tbody id="goal-tbody"></tbody>
+          </table>
+        </div>
+
+        <div class="result-actions">
+          <button class="btn-sm" id="copy-btn">Copy Results</button>
+          <button class="btn-sm" id="share-btn">Share Link</button>
+        </div>
+
+        <div style="margin-top:16px;text-align:center">
+          <a href="/macros-calculator/" class="btn btn-outline" style="display:inline-block;width:auto;padding:10px 24px;font-size:0.9rem">Detailed Macros Breakdown</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>What Is TDEE (Total Daily Energy Expenditure)?</h2>
+    <div class="split">
+      <div class="split-visual">
+        <img src="/images/hero-tdee-calculator.png" alt="TDEE calculator concept showing nutrition tracking, calorie management, and fitness goals" width="800" height="450">
+      </div>
+      <div class="split-body">
+        <p>TDEE represents the total number of calories your body burns in a day, encompassing all physiological processes and physical activity. It is the single most important number for anyone looking to manage their weight, whether the goal is fat loss, muscle gain, or maintenance.</p>
+        <p>Your TDEE is composed of four components: <strong>Basal Metabolic Rate (BMR)</strong>, which accounts for 60-75% of total expenditure and represents the energy needed for vital functions at rest; <strong>Thermic Effect of Food (TEF)</strong>, approximately 10% of intake, which is the energy cost of digesting and processing nutrients; <strong>Exercise Activity Thermogenesis (EAT)</strong>, calories burned through structured exercise; and <strong>Non-Exercise Activity Thermogenesis (NEAT)</strong>, calories burned through all other movement like walking, fidgeting, and standing.</p>
+        <p>Understanding your TDEE gives you a scientifically grounded starting point for nutrition planning. From here, you create a caloric deficit for fat loss (typically 300-500 kcal below TDEE), a caloric surplus for muscle gain (200-350 kcal above TDEE), or eat at maintenance to sustain your current physique.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <h2>Related Calculators</h2>
+    <p>Core tools for every stage of your nutrition planning, from baseline assessment to targeted macro optimization.</p>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon card-icon-bmr">BMR</div>
+        <h3>BMR Calculator</h3>
+        <p>Calculate your Basal Metabolic Rate using Mifflin-St Jeor, Harris-Benedict, and Katch-McArdle formulas.</p>
+        <a href="/bmr-calculator/" class="card-link">Calculate BMR &rarr;</a>
+      </div>
+      <div class="card">
+        <div class="card-icon card-icon-bmi">BMI</div>
+        <h3>BMI Calculator</h3>
+        <p>Check your Body Mass Index and see where you fall on the WHO classification scale.</p>
+        <a href="/bmi-calculator/" class="card-link">Calculate BMI &rarr;</a>
+      </div>
+      <div class="card">
+        <div class="card-icon card-icon-macro">MACRO</div>
+        <h3>Macros Calculator</h3>
+        <p>Get a detailed macronutrient split (protein, carbs, fat) tailored to your cutting or bulking goals.</p>
+        <a href="/macros-calculator/" class="card-link">Calculate Macros &rarr;</a>
+      </div>
+      <div class="card">
+        <div class="card-icon card-icon-cal">CAL</div>
+        <h3>Calorie Calculator</h3>
+        <p>Find your daily calorie target for maintaining, cutting, or bulking with precision.</p>
+        <a href="/calorie-calculator/" class="card-link">Calculate Calories &rarr;</a>
+      </div>
+      <div class="card">
+        <div class="card-icon card-icon-protein">PRO</div>
+        <h3>Protein Calculator</h3>
+        <p>Determine your optimal daily protein intake based on activity level and body composition goals.</p>
+        <a href="/protein-calculator/" class="card-link">Calculate Protein &rarr;</a>
+      </div>
+      <div class="card">
+        <div class="card-icon card-icon-bf">BF%</div>
+        <h3>Body Fat Calculator</h3>
+        <p>Estimate your body fat percentage using the U.S. Navy circumference method or BMI-based formula.</p>
+        <a href="/body-fat-calculator/" class="card-link">Calculate Body Fat &rarr;</a>
+      </div>
+    </div>
+    <p style="margin-top:20px;text-align:center"><a href="/calculators/" style="font-weight:600">View all 10 calculators &rarr;</a></p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Activity Level Multipliers</h2>
+    <p>Physical Activity Level (PAL) multipliers convert your BMR into TDEE. Choose the level that best matches your typical week. When in doubt, select the lower option; most people overestimate their activity level.</p>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th>Activity Level</th><th>PAL Multiplier</th><th>Exercise Frequency</th><th>Typical Profile</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Sedentary</strong></td><td>1.2</td><td>Little or no exercise</td><td>Desk job, less than 4,000 steps/day</td></tr>
+          <tr><td><strong>Lightly Active</strong></td><td>1.375</td><td>Light exercise 1-3 days/week</td><td>Daily walks, light yoga, some household activity</td></tr>
+          <tr><td><strong>Moderately Active</strong></td><td>1.55</td><td>Moderate exercise 3-5 days/week</td><td>Regular gym sessions, active commute, 8,000-12,000 steps/day</td></tr>
+          <tr><td><strong>Very Active</strong></td><td>1.725</td><td>Hard exercise 6-7 days/week</td><td>Intense daily training, physically demanding job, 12,000+ steps/day</td></tr>
+          <tr><td><strong>Extra Active</strong></td><td>1.9</td><td>Very hard exercise, physical job, or 2x/day training</td><td>Professional athletes, military training, heavy labor plus training</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:12px;font-size:0.9rem">Source: FAO/WHO/UNU expert consultation on energy requirements (2001); updated recommendations in dietary reference intakes.</p>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <h2>BMR Formula Comparison</h2>
+    <p>Three evidence-based formulas are used worldwide to estimate Basal Metabolic Rate. Each was developed from different population samples and uses different input variables.</p>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th>Formula</th><th>Year</th><th>Input Variables</th><th>Accuracy</th><th>Best For</th></tr>
+        </thead>
+        <tbody>
+          <tr class="winner"><td><strong>Mifflin-St Jeor</strong></td><td>1990</td><td>Sex, age, weight, height</td><td>~82% within &plusmn;10%</td><td>General population (recommended)</td></tr>
+          <tr><td>Harris-Benedict (Revised)</td><td>1984</td><td>Sex, age, weight, height</td><td>~69% within &plusmn;10%</td><td>Historical reference; tends to overestimate by ~5%</td></tr>
+          <tr><td>Katch-McArdle</td><td>1996</td><td>Lean body mass (requires body fat %)</td><td>~90% within &plusmn;10% (with accurate BF%)</td><td>Athletes and muscular individuals</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:12px">References: Mifflin et al., <em>Am J Clin Nutr</em>, 1990; Roza &amp; Shizgal, <em>Am J Clin Nutr</em>, 1984; Katch &amp; McArdle, <em>Essentials of Exercise Physiology</em>, 1996; Frankenfield et al., <em>J Am Diet Assoc</em>, 2005.</p>
+    <p style="margin-top:8px"><a href="/methodology/">Read our full methodology &rarr;</a></p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Why Your TDEE Matters</h2>
+    <p style="max-width:800px">Most people guess their calorie needs based on what they read online, what a friend recommended, or what a fitness app suggests. These approaches share a critical flaw: they ignore your individual physiology. Your TDEE is not a generic number &mdash; it is a personalized estimate derived from your sex, age, body weight, height, and activity pattern. Two people of the same weight can have TDEEs that differ by 500 calories or more, depending on their muscle mass, daily movement, and metabolic history.</p>
+    <p style="max-width:800px">Knowing your TDEE transforms nutrition from guesswork into a measurable system. Instead of randomly cutting calories and hoping for results, you can set a precise target, track your intake against it, and adjust based on objective data. This is the difference between a diet that works for two weeks and a sustainable approach that produces consistent results over months and years.</p>
+    <div class="key-takeaway">
+      <h4>Key Insight</h4>
+      <p>Your TDEE is a starting point, not a final answer. The most effective approach is to calculate it, apply it for 2-3 weeks, track your actual weight change, and then adjust by 100-200 calories based on real-world results. This feedback loop is what separates evidence-based nutrition from guesswork.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <h2>How to Use Your TDEE Results</h2>
+    <p style="max-width:800px">Once you have your TDEE number, here is a step-by-step framework for putting it into practice.</p>
+    <h3>Step 1: Choose Your Goal</h3>
+    <p style="max-width:800px">Decide whether you want to lose fat, gain muscle, or maintain your current weight. This determines whether you eat below, above, or at your TDEE. If you are unsure, maintenance is always a valid starting point &mdash; it lets you establish a baseline before making changes.</p>
+    <h3>Step 2: Set Your Calorie Target</h3>
+    <p style="max-width:800px">Use the goal table in the calculator above to find your target calorie range. For fat loss, start with a mild deficit (&minus;10% of TDEE) and only increase to &minus;20% if progress stalls after 2 weeks. For muscle gain, a lean bulk surplus of +10% minimizes fat gain while supporting muscle protein synthesis.</p>
+    <h3>Step 3: Set Your Protein Target</h3>
+    <p style="max-width:800px">Regardless of your goal, protein is the most important macronutrient to get right. Aim for 1.6&ndash;2.2 g per kg of body weight per day. During a cut, lean toward the higher end (2.0&ndash;2.2 g/kg) to protect muscle mass. During a bulk, 1.6&ndash;1.8 g/kg is sufficient since the caloric surplus is already muscle-sparing.</p>
+    <h3>Step 4: Track and Adjust</h3>
+    <p style="max-width:800px">Weigh yourself daily under consistent conditions (morning, after bathroom, before eating) and take a weekly average. Compare your weekly average to the previous week. If the change aligns with your goal rate (0.3&ndash;0.5 kg/week for fat loss, 0.1&ndash;0.25 kg/week for lean bulk), stay the course. If not, adjust your intake by 100&ndash;200 calories and reassess after another 2 weeks.</p>
+    <div class="info-box">
+      <h4>Practical Tip</h4>
+      <p>Do not adjust your calories based on daily weight fluctuations. Body weight can vary by 1&ndash;2 kg within a single day due to water retention, sodium intake, and digestive contents. Weekly averages smooth out this noise and reveal the true trend.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Cutting and Bulking with TDEE</h2>
+    <p style="max-width:800px">The two most common applications of TDEE are cutting (fat loss) and bulking (muscle gain). Both require the same foundational number &mdash; your TDEE &mdash; but apply it in opposite directions. Understanding the science behind each approach helps you set realistic expectations and avoid common pitfalls.</p>
+    <h3>The Science of Cutting</h3>
+    <p style="max-width:800px">Fat loss requires a caloric deficit: consuming fewer calories than your TDEE. One pound of adipose tissue stores approximately 3,500 kcal of energy, so a daily deficit of 500 kcal produces roughly 1 lb (0.45 kg) of fat loss per week. However, this relationship is not perfectly linear. As you lose weight, your TDEE decreases because a smaller body requires fewer calories. This is why recalculating every 4&ndash;6 weeks during a cut is essential.</p>
+    <p style="max-width:800px">The biggest risk during a cut is losing lean muscle mass alongside fat. Research consistently shows that adequate protein intake (1.6&ndash;2.2 g/kg) combined with resistance training preserves the majority of lean mass even in significant deficits. Aggressive deficits larger than 25% of TDEE increase muscle loss risk and can trigger metabolic adaptation, where your body reduces non-exercise energy expenditure to conserve energy.</p>
+    <h3>The Science of Bulking</h3>
+    <p style="max-width:800px">Muscle gain requires a caloric surplus: consuming more calories than your TDEE. However, the body can only synthesize a limited amount of new muscle tissue per day, regardless of how much surplus you provide. Research suggests that a modest surplus of 200&ndash;350 kcal/day (approximately +10% of TDEE) is sufficient to maximize muscle protein synthesis in trained individuals. Larger surpluses do not produce more muscle &mdash; they produce more fat.</p>
+    <p style="max-width:800px">For beginners or those returning after a layoff, "newbie gains" allow for faster muscle growth, and a slightly larger surplus (+15&ndash;20%) may be appropriate. For advanced trainees, the lean bulk approach (+10%) is strongly preferred to minimize fat accumulation that would later require a cut to remove.</p>
+    <div class="key-takeaway">
+      <h4>Cutting vs Bulking Summary</h4>
+      <p><strong>Cut:</strong> TDEE &minus; 10-20%, protein 2.0-2.2 g/kg, expect 0.3-0.5 kg/week loss. <strong>Lean Bulk:</strong> TDEE + 10%, protein 1.6-1.8 g/kg, expect 0.1-0.25 kg/week gain. <strong>Standard Bulk:</strong> TDEE + 20%, faster gain but more fat accumulation.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <h2>Common TDEE Mistakes to Avoid</h2>
+    <p style="max-width:800px">Even with an accurate TDEE calculation, several common mistakes can prevent you from achieving your goals. Being aware of these pitfalls helps you avoid months of frustration.</p>
+    <h3>Mistake 1: Overestimating Your Activity Level</h3>
+    <p style="max-width:800px">The most common error is selecting a higher activity level than your lifestyle warrants. The "Moderately Active" category (PAL 1.55) requires structured exercise 3-5 days per week plus an otherwise active day. If you work a desk job and exercise 2-3 times per week, "Lightly Active" (PAL 1.375) is more accurate. When in doubt, choose the lower option &mdash; you can always increase calories if you are losing weight too fast, but it is harder to recover from overeating.</p>
+    <h3>Mistake 2: Eating Back Exercise Calories</h3>
+    <p style="max-width:800px">Many fitness apps display "net calories" by subtracting exercise calories from your TDEE target. This is fundamentally wrong because your TDEE already includes exercise through the activity multiplier. If your TDEE is 2,500 kcal at "Moderately Active" and you eat back the 400 kcal your fitness tracker says you burned, you are actually consuming 2,900 kcal &mdash; a surplus that will lead to weight gain.</p>
+    <h3>Mistake 3: Not Adjusting as You Lose or Gain Weight</h3>
+    <p style="max-width:800px">Your TDEE changes as your body weight changes. A 10 kg weight loss reduces your BMR by approximately 100-150 kcal/day. If you continue eating the same calories that produced a deficit at your starting weight, the deficit gradually shrinks until you plateau. Recalculate every 4-6 weeks during active phases, or whenever your weight changes by 5 kg (10 lbs) or more.</p>
+    <h3>Mistake 4: Trusting Fitness Tracker Calorie Estimates</h3>
+    <p style="max-width:800px">Studies show that wrist-worn fitness trackers can overestimate calorie expenditure by 20-40%, particularly during resistance training and high-intensity intervals. Using these estimates to justify additional food intake is one of the fastest ways to undermine a caloric deficit. If you use a tracker, treat its calorie estimate as an upper bound, not a precise number.</p>
+    <h3>Mistake 5: Expecting Perfect Accuracy from a Calculator</h3>
+    <p style="max-width:800px">No equation can predict your exact TDEE. The Mifflin-St Jeor formula is accurate within &plusmn;10% for about 82% of people, which means for a TDEE of 2,500 kcal, the true value could be anywhere from 2,250 to 2,750 kcal. This is not a limitation &mdash; it is a feature. The calculator gives you a scientifically grounded starting point. The real precision comes from tracking your actual results and adjusting based on data, not from finding the "perfect" formula.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">What is TDEE (Total Daily Energy Expenditure)?</button>
+        <div class="faq-answer"><p>TDEE represents the total number of calories your body burns in a single day, including all physiological processes and physical activity. It is composed of four components: <strong>Basal Metabolic Rate (BMR, 60-75% of total)</strong>, <strong>Thermic Effect of Food (TEF, ~10%)</strong>, <strong>Exercise Activity Thermogenesis (EAT)</strong>, and <strong>Non-Exercise Activity Thermogenesis (NEAT)</strong>. TDEE is the single most important number for managing your weight, whether your goal is fat loss, muscle gain, or maintenance.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How is TDEE calculated?</button>
+        <div class="faq-answer"><p>TDEE is calculated in two steps. First, your <strong>Basal Metabolic Rate (BMR)</strong> is estimated using a validated equation such as Mifflin-St Jeor (1990) or Katch-McArdle (1996). The Mifflin-St Jeor equation uses sex, age, weight, and height: for men, BMR = 10 &times; weight(kg) + 6.25 &times; height(cm) &minus; 5 &times; age + 5; for women, BMR = 10 &times; weight(kg) + 6.25 &times; height(cm) &minus; 5 &times; age &minus; 161. Second, BMR is multiplied by a <strong>Physical Activity Level (PAL) factor</strong> ranging from 1.2 (sedentary) to 1.9 (extra active) to produce your TDEE.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What is a good TDEE?</button>
+        <div class="faq-answer"><p>A good TDEE is one that supports your specific health goals. For weight maintenance, consume calories equal to your TDEE. For sustainable fat loss, aim for a 300-500 calorie deficit below your TDEE, which typically produces 0.3-0.5 kg (0.7-1 lb) of weight loss per week. For lean muscle gain, add 200-350 calories above your TDEE. The average adult TDEE ranges from 1,600 to 3,000 calories per day, varying significantly based on body size, composition, and activity level.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Is a TDEE calculator accurate?</button>
+        <div class="faq-answer"><p>TDEE calculators using the Mifflin-St Jeor equation are accurate within approximately 10% for about 82% of the population, according to a comprehensive review by Frankenfield et al. (2005) published in the Journal of the American Dietetic Association. However, individual variation exists due to genetics, hormonal factors, muscle mass, and non-exercise activity thermogenesis (NEAT). The calculator provides a scientifically grounded starting point; adjust your intake based on actual weight changes tracked over 2-3 weeks for the most reliable results.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Which BMR formula should I use?</button>
+        <div class="faq-answer"><p>For most people, the <strong>Mifflin-St Jeor equation</strong> (1990) is the best choice. It is recommended by the Academy of Nutrition and Dietetics as the most accurate predictive equation for resting energy expenditure in the general population. If you know your body fat percentage with reasonable accuracy (from DEXA scan, hydrostatic weighing, or quality calipers), the <strong>Katch-McArdle formula</strong> may be more precise, particularly if you are very muscular. The <strong>Harris-Benedict equation</strong> is still widely used but tends to overestimate BMR by about 5% for modern populations.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Should I eat at my TDEE to maintain weight?</button>
+        <div class="faq-answer"><p>Yes. Your TDEE represents the total number of calories your body burns each day, including basal metabolic functions, digestion, and all physical activity. Eating at your TDEE should maintain your current weight. If you consistently eat at your calculated TDEE and notice weight changes of more than 0.5 kg (1 lb) over two weeks, recalculate your TDEE as your body composition may have shifted, or adjust your intake by 100-200 calories in the appropriate direction.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How do I use TDEE for fat loss?</button>
+        <div class="faq-answer"><p>To lose fat, consume fewer calories than your TDEE. A moderate deficit of 300-500 kcal/day below TDEE produces sustainable fat loss of approximately 0.3-0.5 kg (0.7-1 lb) per week. This is based on the principle that one pound of body fat stores approximately 3,500 kcal. During a cut, increase protein intake to 1.6-2.2 g/kg body weight to preserve lean muscle mass. Avoid aggressive deficits larger than 25% of TDEE, which can trigger metabolic adaptation and muscle loss. Recalculate your TDEE every 4-6 weeks as your weight decreases.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How do I use TDEE for muscle gain?</button>
+        <div class="faq-answer"><p>To gain muscle, consume calories above your TDEE. For a lean bulk that minimizes fat gain, add 200-350 calories per day to your TDEE and pair this with a structured resistance training program. For faster weight gain, add 500 calories daily, though a larger proportion may be stored as fat. Ensure adequate protein intake of 1.6-2.2 g/kg body weight to support muscle protein synthesis. Monitor your weight weekly; if you are gaining more than 0.5% of body weight per week during a lean bulk, reduce your surplus slightly.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How often should I recalculate my TDEE?</button>
+        <div class="faq-answer"><p>Recalculate your TDEE every 4-6 weeks during an active cutting or bulking phase, as changes in body weight directly affect your BMR. You should also recalculate whenever your activity level changes significantly (new exercise program, change in occupation activity), after a body weight change of 5 kg (10 lbs) or more, or at minimum every 3-6 months for general maintenance purposes. As you age, BMR naturally declines, making periodic recalculation important for accuracy.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Does TDEE change with age?</button>
+        <div class="faq-answer"><p>Yes, TDEE decreases with age. Basal metabolic rate declines approximately 1-2% per decade after age 20, primarily due to loss of lean muscle mass (sarcopenia) and hormonal changes. The Mifflin-St Jeor equation accounts for this through its age variable. However, this decline is not inevitable at the rate most people experience it; regular resistance training and adequate protein intake can significantly preserve muscle mass and keep metabolic rate higher than age-predicted values.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Why is my TDEE different from MyFitnessPal?</button>
+        <div class="faq-answer"><p>Several factors cause discrepancies. MyFitnessPal uses the Mifflin-St Jeor equation but applies slightly different activity multipliers and rounds values differently. More significantly, MyFitnessPal adds exercise calories on top of your baseline TDEE, which can lead to substantial overestimation since the activity multiplier already accounts for exercise. Their activity level descriptions also differ from standard Physical Activity Level (PAL) values used in research. Our calculator uses standardized multipliers from peer-reviewed literature for consistency.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What are common TDEE mistakes to avoid?</button>
+        <div class="faq-answer"><p>The most common mistakes include: <strong>overestimating your activity level</strong> (choose the lower option when unsure), <strong>eating back exercise calories</strong> on top of your TDEE (the activity multiplier already includes exercise), <strong>not adjusting your TDEE</strong> as you lose or gain weight, <strong>relying on fitness tracker calorie estimates</strong> which can be off by 20-40%, and <strong>expecting the calculator to be exact</strong> rather than using it as a starting point. Track your actual weight changes over 2-3 weeks and adjust your intake by 100-200 calories based on real results.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container" style="max-width:800px">
+    <h2>About TDEEBMR</h2>
+    <p>TDEEBMR provides evidence-based nutrition calculators built on peer-reviewed research. Our primary TDEE calculations use the <strong>Mifflin-St Jeor equation</strong> (1990), recommended by the Academy of Nutrition and Dietetics as the most accurate predictive equation for resting energy expenditure in healthy individuals. Body fat estimates use the <strong>U.S. Navy circumference method</strong> (Hodgdon &amp; Beckett, 1984). Ideal weight calculations reference four established clinical formulas: Devine (1974), Robinson (1983), Miller (1983), and Hamwi (1964).</p>
+    <p>All tools are designed for educational purposes and are not a substitute for professional medical or nutritional advice. Our methodology is transparent and fully documented. We do not store personal data; all calculations are performed locally in your browser.</p>
+    <p><a href="/methodology/">View our complete methodology &rarr;</a> &nbsp; | &nbsp; <a href="/about/">Meet the editorial team &rarr;</a></p>
+  </div>
+</section>
+
+<div class="site-disclaimer">
+  <div class="container">
+    This tool provides estimates for educational purposes only. Consult a healthcare professional before making dietary changes.
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">TDEE<span>BMR</span></a>
+        <p>Evidence-based nutrition calculators for smarter dietary decisions. Built on peer-reviewed research, free to use.</p>
+      </div>
+      <div>
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/calculators/">All Calculators</a></li>
+          <li><a href="/bmr-calculator/">BMR Calculator</a></li>
+          <li><a href="/bmi-calculator/">BMI Calculator</a></li>
+          <li><a href="/macros-calculator/">Macros Calculator</a></li>
+          <li><a href="/body-fat-calculator/">Body Fat Calculator</a></li>
+          <li><a href="/calorie-deficit-calculator/">Deficit Calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="/learn/">All Articles</a></li>
+          <li><a href="/learn/how-accurate-is-tdee/">How Accurate Is TDEE?</a></li>
+          <li><a href="/learn/tdee-vs-bmr/">TDEE vs BMR</a></li>
+          <li><a href="/learn/activity-level-guidelines/">Activity Levels</a></li>
+          <li><a href="/learn/metabolic-adaptation/">Metabolic Adaptation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/methodology/">Methodology</a></li>
+          <li><a href="/disclaimer/">Medical Disclaimer</a></li>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms of Use</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 TDEEBMR. All rights reserved. For educational purposes only.
+    </div>
+  </div>
+</footer>
+
+<script src="/js/calculators.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  let currentUnit = 'metric';
+  let lastResults = null;
+  let currentSplit = 'moderate';
+
+  const splits = {
+    moderate: { protein: 0.30, carbs: 0.35, fat: 0.35, label: 'Moderate Carb' },
+    lower:    { protein: 0.40, carbs: 0.20, fat: 0.40, label: 'Lower Carb' },
+    higher:   { protein: 0.30, carbs: 0.50, fat: 0.20, label: 'Higher Carb' }
+  };
+
+  initUnitToggle(unit => {
+    currentUnit = unit;
+    const isMetric = unit === 'metric';
+    document.getElementById('weight-group').style.display = isMetric ? '' : 'none';
+    document.getElementById('height-group').style.display = isMetric ? '' : 'none';
+    document.getElementById('weight-lbs-group').style.display = isMetric ? 'none' : '';
+    document.getElementById('height-ft-group').style.display = isMetric ? 'none' : '';
+    document.getElementById('height-in-group').style.display = isMetric ? 'none' : '';
+  });
+
+  document.getElementById('calc-btn').addEventListener('click', calculate);
+  document.getElementById('copy-btn').addEventListener('click', copyResults);
+  document.getElementById('share-btn').addEventListener('click', shareLink);
+
+  document.querySelectorAll('.macro-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.macro-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      currentSplit = tab.dataset.split;
+      if (lastResults) buildGoalTable(lastResults.tdeeVal, lastResults.weightKg, lastResults.activity, currentSplit);
+    });
+  });
+
+  function getWeightKg() {
+    return currentUnit === 'metric'
+      ? parseFloat(document.getElementById('weight').value)
+      : Calc.lbsToKg(parseFloat(document.getElementById('weight-lbs').value));
+  }
+
+  function getHeightCm() {
+    if (currentUnit === 'metric') return parseFloat(document.getElementById('height').value);
+    const ft = parseInt(document.getElementById('height-ft').value) || 0;
+    const inches = parseInt(document.getElementById('height-in').value) || 0;
+    return Calc.feetInchesToCm(ft, inches);
+  }
+
+  function getActivityMultiplier(level) {
+    return Calc.activityLevels[level] ? Calc.activityLevels[level].factor : 1.55;
+  }
+
+  function calculate() {
+    const sex = document.getElementById('sex').value;
+    const age = parseInt(document.getElementById('age').value);
+    const activity = document.getElementById('activity').value;
+    const weightKg = getWeightKg();
+    const heightCm = getHeightCm();
+    const bfInput = document.getElementById('bodyfat').value;
+    const bfPercent = bfInput ? parseFloat(bfInput) : null;
+
+    if (!age || !weightKg || !heightCm) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+    if (bfPercent !== null && (bfPercent < 2 || bfPercent > 60)) {
+      alert('Body fat percentage must be between 2% and 60%.');
+      return;
+    }
+
+    let bmrVal, formulaUsed;
+    if (bfPercent !== null) {
+      bmrVal = Calc.bmr.katch(bfPercent, weightKg);
+      formulaUsed = 'Katch-McArdle';
+    } else {
+      bmrVal = Calc.bmr.mifflin(weightKg, heightCm, age, sex);
+      formulaUsed = 'Mifflin-St Jeor';
+    }
+
+    const tdeeVal = Calc.tdee(bmrVal, activity);
+    const bmiVal = Calc.bmi(weightKg, heightCm);
+    const bmiCat = Calc.bmiCategory(bmiVal);
+
+    lastResults = { sex, age, weightKg, heightCm, activity, bfPercent, bmrVal, tdeeVal, bmiVal, bmiCat, formulaUsed };
+
+    document.getElementById('tdee-value').textContent = Calc.format(tdeeVal);
+    document.getElementById('formula-badge').textContent = formulaUsed;
+    document.getElementById('bmr-value').textContent = Calc.format(bmrVal);
+    document.getElementById('bmi-value').textContent = bmiVal.toFixed(1);
+    document.getElementById('bmi-cat').textContent = bmiCat.label;
+    document.getElementById('maintain-cal').textContent = Calc.format(tdeeVal);
+
+    buildGoalTable(tdeeVal, weightKg, activity, currentSplit);
+
+    document.getElementById('results').classList.add('visible');
+    document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    saveToLocalStorage();
+  }
+
+  function buildGoalTable(tdee, weightKg, activity, split) {
+    const tiers = [
+      { name: 'Aggressive Cut', pct: -0.25, tag: 'cut', tagLabel: 'Cut' },
+      { name: 'Standard Cut',   pct: -0.20, tag: 'cut', tagLabel: 'Cut' },
+      { name: 'Mild Cut',       pct: -0.10, tag: 'cut', tagLabel: 'Cut' },
+      { name: 'Maintain',       pct:  0.00, tag: 'maintain', tagLabel: 'Maintain' },
+      { name: 'Lean Bulk',      pct: +0.10, tag: 'bulk', tagLabel: 'Bulk' },
+      { name: 'Standard Bulk',  pct: +0.20, tag: 'bulk', tagLabel: 'Bulk' }
+    ];
+
+    const s = splits[split] || splits.moderate;
+    const tbody = document.getElementById('goal-tbody');
+    tbody.innerHTML = '';
+
+    tiers.forEach(tier => {
+      const cal = Math.round(tdee * (1 + tier.pct));
+      const pG = Math.round(cal * s.protein / 4);
+      const cG = Math.round(cal * s.carbs / 4);
+      const fG = Math.round(cal * s.fat / 9);
+
+      const dailySurplus = cal - tdee;
+      const weeklyKg = Math.abs(dailySurplus * 7 / 7700);
+      let rate;
+      if (tier.pct === 0) rate = '\u2014';
+      else if (tier.pct > 0) rate = '+' + weeklyKg.toFixed(2) + ' kg/wk';
+      else rate = '\u2212' + weeklyKg.toFixed(2) + ' kg/wk';
+
+      const tr = document.createElement('tr');
+      tr.className = tier.tag === 'maintain' ? 'goal-row-maintain' : '';
+      tr.innerHTML =
+        '<td><strong>' + tier.name + '</strong> <span class="goal-tag ' + tier.tag + '">' + tier.tagLabel + ' ' + (tier.pct > 0 ? '+' : '') + Math.round(tier.pct * 100) + '%</span></td>' +
+        '<td><strong>' + Calc.format(cal) + ' kcal</strong></td>' +
+        '<td>' + rate + '</td>' +
+        '<td>' + pG + 'g <small style="color:var(--text-light)">(' + Math.round(s.protein * 100) + '%)</small></td>' +
+        '<td>' + cG + 'g <small style="color:var(--text-light)">(' + Math.round(s.carbs * 100) + '%)</small></td>' +
+        '<td>' + fG + 'g <small style="color:var(--text-light)">(' + Math.round(s.fat * 100) + '%)</small></td>';
+      tbody.appendChild(tr);
+    });
+  }
+
+  function buildCopyText() {
+    if (!lastResults) return '';
+    const r = lastResults;
+    const s = splits[currentSplit];
+    const cal = r.tdeeVal;
+    let text = '=== TDEE Calculator Results ===\n\n';
+    text += 'Formula: ' + r.formulaUsed + '\n';
+    text += 'BMR: ' + Calc.format(r.bmrVal) + ' kcal/day\n';
+    text += 'TDEE: ' + Calc.format(r.tdeeVal) + ' kcal/day\n';
+    text += 'BMI: ' + r.bmiVal.toFixed(1) + ' (' + r.bmiCat.label + ')\n';
+    text += 'Activity: ' + Calc.activityLevels[r.activity].label + '\n';
+    text += 'Macro Split: ' + s.label + ' (' + Math.round(s.protein * 100) + 'P / ' + Math.round(s.carbs * 100) + 'C / ' + Math.round(s.fat * 100) + 'F)\n\n';
+    text += '--- Calorie Targets & Macros ---\n';
+    const tiers = [
+      { name: 'Aggressive Cut', pct: -0.25 },
+      { name: 'Standard Cut', pct: -0.20 },
+      { name: 'Mild Cut', pct: -0.10 },
+      { name: 'Maintain', pct: 0 },
+      { name: 'Lean Bulk', pct: 0.10 },
+      { name: 'Standard Bulk', pct: 0.20 }
+    ];
+    tiers.forEach(t => {
+      const tCal = Math.round(cal * (1 + t.pct));
+      const pG = Math.round(tCal * s.protein / 4);
+      const cG = Math.round(tCal * s.carbs / 4);
+      const fG = Math.round(tCal * s.fat / 9);
+      const sign = t.pct > 0 ? '+' : '';
+      text += t.name + ' (' + sign + Math.round(t.pct * 100) + '%): ' + Calc.format(tCal) + ' kcal | P:' + pG + 'g C:' + cG + 'g F:' + fG + 'g\n';
+    });
+    text += '\nCalculated at tdeebmr.com';
+    return text;
+  }
+
+  function copyResults() {
+    if (!lastResults) return;
+    const text = buildCopyText();
+    const btn = document.getElementById('copy-btn');
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => {
+        btn.classList.add('copied');
+        btn.innerHTML = '&#x2713; Copied!';
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          btn.innerHTML = '&#x1F4CB; Copy Results';
+        }, 2000);
+      }).catch(() => fallbackCopy(text, btn));
+    } else {
+      fallbackCopy(text, btn);
+    }
+  }
+
+  function fallbackCopy(text, btn) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand('copy');
+      btn.classList.add('copied');
+      btn.innerHTML = '&#x2713; Copied!';
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        btn.innerHTML = '&#x1F4CB; Copy Results';
+      }, 2000);
+    } catch (e) {
+      alert('Copy failed. Please select and copy manually.');
+    }
+    document.body.removeChild(ta);
+  }
+
+  function shareLink() {
+    if (!lastResults) return;
+    const r = lastResults;
+    const params = new URLSearchParams();
+    params.set('s', r.sex === 'male' ? 'm' : 'f');
+    params.set('a', r.age);
+    params.set('w', Math.round(r.weightKg * 10) / 10);
+    params.set('h', Math.round(r.heightCm * 10) / 10);
+    params.set('act', r.activity);
+    if (r.bfPercent) params.set('bf', r.bfPercent);
+    params.set('split', currentSplit);
+    const url = window.location.origin + '/?' + params.toString();
+    const btn = document.getElementById('share-btn');
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(() => {
+        btn.classList.add('copied');
+        btn.innerHTML = '&#x2713; Link Copied!';
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          btn.innerHTML = '&#x1F517; Share Link';
+        }, 2000);
+      }).catch(() => prompt('Copy this link:', url));
+    } else {
+      prompt('Copy this link:', url);
+    }
+    const newUrl = window.location.pathname + '?' + params.toString();
+    window.history.replaceState({}, '', newUrl);
+  }
+
+  function saveToLocalStorage() {
+    if (!lastResults) return;
+    const data = {
+      unit: currentUnit,
+      sex: document.getElementById('sex').value,
+      age: document.getElementById('age').value,
+      activity: document.getElementById('activity').value,
+      bodyfat: document.getElementById('bodyfat').value,
+      split: currentSplit
+    };
+    if (currentUnit === 'metric') {
+      data.weight = document.getElementById('weight').value;
+      data.height = document.getElementById('height').value;
+    } else {
+      data.weightLbs = document.getElementById('weight-lbs').value;
+      data.heightFt = document.getElementById('height-ft').value;
+      data.heightIn = document.getElementById('height-in').value;
+    }
+    try { localStorage.setItem('tdeecalc_inputs', JSON.stringify(data)); } catch (e) {}
+  }
+
+  function restoreFromLocalStorage() {
+    try {
+      const raw = localStorage.getItem('tdeecalc_inputs');
+      if (!raw) return false;
+      const data = JSON.parse(raw);
+      applyFormData(data);
+      return true;
+    } catch (e) { return false; }
+  }
+
+  function restoreFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    if (!params.has('w')) return false;
+    const data = {
+      sex: params.get('s') === 'f' ? 'female' : 'male',
+      age: params.get('a'),
+      weight: params.get('w'),
+      height: params.get('h'),
+      activity: params.get('act') || 'moderate',
+      bodyfat: params.get('bf') || '',
+      split: params.get('split') || 'moderate',
+      unit: 'metric'
+    };
+    applyFormData(data);
+    return true;
+  }
+
+  function applyFormData(data) {
+    if (data.sex) document.getElementById('sex').value = data.sex;
+    if (data.age) document.getElementById('age').value = data.age;
+    if (data.activity) document.getElementById('activity').value = data.activity;
+    if (data.bodyfat) document.getElementById('bodyfat').value = data.bodyfat;
+    if (data.unit === 'imperial') {
+      document.querySelectorAll('.unit-toggle button').forEach(b => {
+        b.classList.toggle('active', b.dataset.unit === 'imperial');
+      });
+      currentUnit = 'imperial';
+      document.getElementById('weight-group').style.display = 'none';
+      document.getElementById('height-group').style.display = 'none';
+      document.getElementById('weight-lbs-group').style.display = '';
+      document.getElementById('height-ft-group').style.display = '';
+      document.getElementById('height-in-group').style.display = '';
+      if (data.weightLbs) document.getElementById('weight-lbs').value = data.weightLbs;
+      if (data.heightFt) document.getElementById('height-ft').value = data.heightFt;
+      if (data.heightIn) document.getElementById('height-in').value = data.heightIn;
+    } else {
+      if (data.weight) document.getElementById('weight').value = data.weight;
+      if (data.height) document.getElementById('height').value = data.height;
+    }
+    if (data.split) {
+      currentSplit = data.split;
+      document.querySelectorAll('.macro-tab').forEach(t => {
+        t.classList.toggle('active', t.dataset.split === currentSplit);
+      });
+    }
+  }
+
+  // Prefill the form only — results stay hidden until the user clicks Calculate.
+  if (!restoreFromURL()) restoreFromLocalStorage();
+});
+</script>
+</body>
+</html>
